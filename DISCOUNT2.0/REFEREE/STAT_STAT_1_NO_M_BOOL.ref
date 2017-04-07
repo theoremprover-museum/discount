@@ -1,0 +1,35 @@
+GUTACHTERNAME           STAT_STAT_1_NO_M_BOOL
+
+BEURTEILE_FKT  STATISTIC   GROESSE_REGELN : -5,0; -2
+			   GROESSE_GLEICH : -20,-5; -10
+			   GROESSE_CP     : -2,0; -6
+			   GROESSE_ZIELE  : -5,0; -2
+			   GROESSE_CG     : -2,0;-1
+		           GESAMT_RED     :  0,5; 10
+
+RESULTATE_FKT  STATISTIC   MAX_REGELN        : 0,10;8
+                           MAX_GLEICH        : 0,5; 1
+                           MAX_ZIELE         : 0,5; 1
+                           SCHWELLE_REGELN   : 0,200; 20
+                           SCHWELLE_GLEICH   : 0,200; 20
+                           SCHWELLE_ZIELE    : 0,200; 20
+                           ANZAHL_RED        : 0,10; 5
+                           ANZAHL_RED_R      : 0,10; 2
+                           ANZAHL_RED_L      : 0,100; 10
+                           ANZAHL_RED_GLEICH : 0,200; 2
+                           ANZAHL_RED_ZIELE  : 0,2000; 500
+                           ANZAHL_SUBSUM     : 0,10; 0
+                           ANZAHL_CP         : -10,10; 1
+                           ANZAHL_CG         : -10,10; -1
+
+GEEIGNETE_EXP
+
+GEEIGNETE_DOM
+
+ROBUSTHEIT                 0.8
+
+WISSENSANTEIL              0
+
+AEHNLICHE_GA
+
+LEITER_MOEGLICH            0   /* Experte kann kein Leiter werden */

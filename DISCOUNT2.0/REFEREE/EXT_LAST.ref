@@ -1,0 +1,41 @@
+# Der Experte wird um so besser eingestuft je hoeher seine Bewertung ist!
+GUTACHTERNAME           EXT_LAST 
+
+BEURTEILE_FKT  EXTENDED    GROESSE_REGELN : -40,0; -20
+			   GROESSE_GLEICH : -80,0; -60
+			   GROESSE_CP     : -20,0; -10
+			   GROESSE_ZIELE  : -30,0; 0  
+			   GROESSE_CG     : -2,0;  0
+
+			   NEUE_REGELN    : -10,10; 0
+			   RED_REGELN     : -20,10; 2
+			   LOESCH_REGELN  : -20,10; 1
+			   NEUE_GLEICH    : -10,10; 0
+			   RED_GLEICH     : -20,10; 4
+			   LOESCH_GLEICH  : -20,10; 2
+			   NEUE_CP        : -10,10; 0
+			   LOESCH_CP      : -20,10; 0
+			   NEUE_ZIELE     : -10,10; 0
+			   RED_ZIELE      : -50,10; 0
+			   NEUE_CG        : -10,10; 0
+
+		           GESAMT_RED     : -5,0; 2
+
+RESULTATE_FKT  LAST        MAX_REGELN     : 0,10;3
+			   MAX_GLEICH     : 0,5; 1
+			   MAX_ZIELE      : 0,5; 1
+			   SCHWELLE_REGELN: 0,20; 10
+			   SCHWELLE_GLEICH: 0,20; 10
+			   SCHWELLE_ZIELE : 0,20; 10
+
+GEEIGNETE_EXP
+
+GEEIGNETE_DOM
+
+ROBUSTHEIT                 0.8
+
+WISSENSANTEIL              0
+
+AEHNLICHE_GA
+
+LEITER_MOEGLICH            1   /* Experte kann Leiter werden */

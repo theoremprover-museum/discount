@@ -1,0 +1,13 @@
+#!/usr/bin/csh
+
+limit cputime 500
+foreach file (lat2a lat2b lat4 p02a p02b p03a p03d p05a p05b p08b p09a\
+p09b p10 p11 p18 p21 p22b p39a p39b p39c p39d p8_9a p8_9b)
+ln -s ../$file
+echo $file
+Time discount2 -s -t -C ../../../CONFIG/learn2.cfg $file
+rsh christie /usr/bin/kill -9 -1
+rm $file.0
+rm $file.1.christie
+rm $file
+end

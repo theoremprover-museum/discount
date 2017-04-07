@@ -1,0 +1,53 @@
+EXPERTENNAME                 TEAM_FIFO
+
+EXP_OR_SPEC                  E
+
+CP_FUNKTION                  TEAM_FIFO 
+
+CG_FUNKTION                  UNIF_GOAL   
+                             F_GEWICHT : 1,5 ; 2
+                             V_GEWICHT : 1,5 ; 1
+                             MIN_STRUCT : 0,10 ; 4
+
+
+FAIRNESS                     Y
+
+
+
+GUTE_GUTACHTER               (STATISTIC, ,1)
+                             (STATISTIC, 
+                               V_GEWICHT : 11, 121 ; 101
+                               F_GEWICHT : 2,2 ; 2
+                               V_GEWICHT : 11,111 ; 101 ,
+                             0.5)
+                             (STATISTIC, 
+                               V_GEWICHT : 11, 121 ; 101
+                               V_GEWICHT : 11,111 ; 101 ,
+                             0.8)
+
+GUTE_DOMAENEN                
+
+ROBUSTHEIT                   0.5
+
+WISSENSANTEIL                0.0
+
+BEWEISPHASE                  ANFANG  0.5       
+                             MITTE   0.5
+                             ENDE    0.5
+
+ZYKLUSDAUER                  ANFANG  (1,10)
+                             MITTE   (1,10)
+                             ENDE    (1,10)
+
+
+AEHNLICHE_EXP                (FIFO,,10)
+
+NACHFOLGER
+
+UNVERTRAEGL
+
+MOEGL_TEAMEXP
+
+PROZEDUR                     xyz
+
+BESCHREIBUNG                TEAM_FIFO-Experte zum Testen...

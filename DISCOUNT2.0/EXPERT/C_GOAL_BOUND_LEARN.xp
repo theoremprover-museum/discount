@@ -1,0 +1,53 @@
+EXPERTENNAME                 C_GOAL_BOUND_LEARN
+
+EXP_OR_SPEC                  E
+
+CP_FUNKTION                  GOAL_BOUND_LEARN
+                             ALL_DATA         : 0,1    ; 1
+	                     RED_INST         : 0,1    ; 0
+			     DIST_STRAT       : 0,3    ; 0
+	                     TOT_WEIGHT       : -1000,1000 ; 1
+		             AVE_WEIGHT       : -1000,1000 ; 2
+                             PROOFS_WEIGHT    : -1000,1000 ; 1
+                             GOAL_DIST_WEIGHT : -1000,1000 ; 1
+                             CLEVER_BACKUP    : 0,1    ; 1
+
+
+CG_FUNKTION                  DIFF_GOAL
+                             F_GEWICHT    : 1,5 ; 2
+                             V_GEWICHT    : 1,5 ; 1
+                             MIN_STRUCT   : 0,5 ; 4
+
+FAIRNESS                     Y
+
+GUTE_GUTACHTER               (STATISTIC, ,1)
+
+GUTE_DOMAENEN                
+
+ROBUSTHEIT                   0.8
+
+WISSENSANTEIL                1.0
+
+BEWEISPHASE                  ANFANG  1.0
+                             MITTE   1.0
+                             ENDE    1.0
+
+ZYKLUSDAUER                  ANFANG  (1,10)
+                             MITTE   (1,10)
+                             ENDE    (1,10)
+
+AEHNLICHE_EXP
+
+NACHFOLGER                   (GOALMATCH, RED_INST     : 0,1  ; 0
+					 NO_MATCH     : 0,1000 ; 10
+					 DOUBLE_MATCH : 0,100 ; 1
+					 SINGLE_MATCH : 0,100 ; 50, 0.5 )
+# Die letzte Zahl ( hier 0.5 ) gibt die Guete des Experten an !)
+
+UNVERTRAEGL
+
+MOEGL_TEAMEXP
+
+PROZEDUR    xyz
+
+BESCHREIBUNG q	ywetryqt2eyrtqwyetryqtwey

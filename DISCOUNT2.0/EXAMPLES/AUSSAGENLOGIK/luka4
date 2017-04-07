@@ -1,0 +1,22 @@
+#------------------------------------------------------------------------------
+#   Beispiel3 : luka3 bzw. al3  (auch pl4)
+#
+#------------------------------------------------------------------------------
+
+MODE            PROOF  , PARAMOD ( 1 )
+
+NAME            luka3
+
+ORDERING        LPO
+                C > N > T > Ap > Aq > Ar
+
+EQUATIONS       C (T,x) = x
+                C (p,C (q,p)) = T
+                C (C (p,C (q,r)),C (C (p,q),C (p,r))) = T
+                C (C (p,C (q,r)),C (q,C (p,r))) = T
+                C (C (p,q), C (N (q),N (p))) = T
+                C (N (N (p)), p) = T
+                C (p, N (N (p))) = T
+
+CONCLUSION      C (C (N(Ap),N(Aq)),C (Aq,Ap)) = T
+

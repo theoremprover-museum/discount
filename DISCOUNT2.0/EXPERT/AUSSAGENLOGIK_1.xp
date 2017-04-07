@@ -1,0 +1,48 @@
+EXPERTENNAME                 AUSSAGENLOGIK_1
+
+EXP_OR_SPEC                  E
+
+CP_FUNKTION                  ADD_FWEIGHT
+			     F_GEWICHT  : 1,5 ; 2
+                             V_GEWICHT  : 1,5 ; 1
+                             RED_INST   : 0,1 ; 1
+			     F_GEW_LIST : N : 40  ;  M : 40
+
+CG_FUNKTION                  DIFF_GOAL
+                             F_GEWICHT    : 1,5 ; 2
+                             V_GEWICHT    : 1,5 ; 1
+                             MIN_STRUCT   : 0,5 ; 4
+
+FAIRNESS                     Y
+
+GUTE_GUTACHTER               (STATISTIC, ,1)
+
+GUTE_DOMAENEN                (AUSSAGENLOGIK, 0.9)
+
+ROBUSTHEIT                   0.8
+
+WISSENSANTEIL                0.7
+
+BEWEISPHASE                  ANFANG  0.5
+                             MITTE   0.5
+                             ENDE    0.5
+
+ZYKLUSDAUER                  ANFANG  (1,10)
+                             MITTE   (1,10)
+                             ENDE    (1,10)
+
+AEHNLICHE_EXP
+
+NACHFOLGER                   (GOALMATCH, RED_INST     : 0,1  ; 0
+					 NO_MATCH     : 0,1000 ; 10
+					 DOUBLE_MATCH : 0,100 ; 1
+					 SINGLE_MATCH : 0,100 ; 50, 0.5 )
+# Die letzte Zahl ( hier 0.5 ) gibt die Guete des Experten an !)
+
+UNVERTRAEGL
+
+MOEGL_TEAMEXP
+
+PROZEDUR    xyz
+
+BESCHREIBUNG q	ywetryqt2eyrtqwyetryqtwey

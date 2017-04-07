@@ -1,0 +1,63 @@
+#===============================================================================#
+# Makefile.common enthaelt die gemeinsamen Teile der Makefiles fuer
+# die 2 verschiedenen DISCOUNT-Versionen. Das erleichtert die
+# Wartbarkeit und verringert die Fehlerwahrscheinlichkeit. Dieses File
+# wird von Makefile.{discount, pcl} und dem zentralen Makefile
+# includiert. 
+#
+# Stephan Schulz, 5.12.1994
+#
+#===============================================================================
+
+CC      = gcc
+
+#
+# Edit section as appropriate by commenting out:
+#
+# LINUX 
+#
+LIBS    = -lm -ldl
+DEFS    = -D SVR4 -D LINUX -m486
+#
+# SunOs 4.*
+#
+# LIBS    = -lm -ldl -L/usr/5lib
+# DEFS    =
+#
+# Solaris 2.X 
+#
+# LIBS     = -lm -ldl -L/usr/5lib -lsocket -lnsl
+# DEFS     = -D SVR4
+#
+# End installation editable section
+#
+
+# -D SPARC sets the alignment to 8 and is sensible on all RISC-like
+# machines 
+GLOBAL = -O6 -D SPARC $(DEFS) $(VERSION)
+
+# VERSION is defined in Makefile.{pcl,discount}
+CFLAGS  = $(GLOBAL)
+
+WARN = -Wall -Wno-implicit
+
+
+DIRTY_OBJECTS = discount.o complet.o cpweight.o team.o transfer.o referee.o\
+     parser.o scanner.o reduce.o subst.o termpair.o order.o term.o\
+     vartree.o socket.o systime.o error.o history.o buildcp.o\
+     polynom.o memory.o list.o br_send.o br_recv.o br_util.o\
+     br_error.o br_time.o br_stat.o parseprk.o database.o comphase.o\
+     domain.o exp_class_nont_exp.o exp_class_t_exp.o exp_def_break.o\
+     exp_def_next_cycletime.o exp_form_next_t.o\
+     exp_handle_domain_phase.o exp_handle_static_exp.o\
+     exp_prepare_t_select.o exp_set_next_config.o  exp_value_exp.o\
+     expert.o parseexp.o parseplan.o parseref.o parsedom.o
+
+WALL_OBJECTS = learn_cpweight.o learn_tets.o learn_tsm.o\
+     learn_tsmexperts.o learn_nterms.o s_scanner.o learn_lterms.o\
+     newmem.o learn_lpairs.o pcl.o learn_mixterms.o learn_specific.o\
+     learn_exaselect.o
+
+OBJECTS = $(DIRTY_OBJECTS) $(WALL_OBJECTS)
+
+

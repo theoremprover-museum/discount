@@ -1,0 +1,150 @@
+DOMAENENNAME           LATTICE
+
+SIGNATUR         n : 2  u : 2  f : 2  i : 1  1 : 0  a : 0  b : 0
+
+DEF_GLEICH       n(x,y) = n(y,x)
+		 u(x,y) = u(y,x)
+		 n(x,n(y,z)) = n(n(x,y),z)
+		 u(x,u(y,z)) = u(u(x,y),z)
+		 u(x,x) = x
+		 n(x,x) = x
+		 u(x,n(x,y)) = x
+		 n(x,u(x,y)) = x
+
+		 f(x,f(y,z)) = f(f(x,y),z)
+		 f(1,x) = x
+		 f(i(x),x) = 1
+		 f(x,u(y,z)) = u(f(x,y),f(x,z))
+		 f(x,n(y,z)) = n(f(x,y),f(x,z))
+		 f(u(y,z),x) = u(f(y,x),f(z,x))
+	         f(n(y,z),x) = n(f(y,x),f(z,x))
+
+#DEF_GLEICH       u(a,b) = b       # f"ur p1a
+	# 
+		 #n(x,y) = n(y,x)
+		 #u(x,y) = u(y,x)
+		 #n(x,n(y,z)) = n(n(x,y),z)
+		 #u(x,u(y,z)) = u(u(x,y),z)
+		 #u(x,x) = x
+		 #n(x,x) = x
+		 #u(x,n(x,y)) = x
+		 #n(x,u(x,y)) = x
+#
+		 #f(x,f(y,z)) = f(f(x,y),z)
+		 #f(1,x) = x
+		 #f(i(x),x) = 1
+		 #f(x,u(y,z)) = u(f(x,y),f(x,z))
+		 #f(x,n(y,z)) = n(f(x,y),f(x,z))
+		 #f(u(y,z),x) = u(f(y,x),f(z,x))
+	         #f(n(y,z),x) = n(f(y,x),f(z,x))
+
+		 
+#DEF_GLEICH	 n(i(a),i(b)) = i(a)
+#
+                 #n(x,y) = n(y,x)
+		 #u(x,y) = u(y,x)
+		 #n(x,n(y,z)) = n(n(x,y),z)
+		 #u(x,u(y,z)) = u(u(x,y),z)
+		 #u(x,x) = x
+		 #n(x,x) = x
+		 #u(x,n(x,y)) = x
+		 #n(x,u(x,y)) = x
+
+		 #f(x,f(y,z)) = f(f(x,y),z)
+		 #f(1,x) = x
+		 #f(i(x),x) = 1
+		 #f(x,u(y,z)) = u(f(x,y),f(x,z))
+		 #f(x,n(y,z)) = n(f(x,y),f(x,z))
+		 #f(u(y,z),x) = u(f(y,x),f(z,x))
+	         #f(n(y,z),x) = n(f(y,x),f(z,x))
+
+
+#DEF_GLEICH       i(1) = 1               #f"ur P10  P2A  P8B
+		 #i(i(x)) = x
+		 #i(f(x,y)) = f(i(y),i(x))
+#
+		 #n(x,y) = n(y,x)
+		 #u(x,y) = u(y,x)
+		 #n(x,n(y,z)) = n(n(x,y),z)
+		 #u(x,u(y,z)) = u(u(x,y),z)
+		 #u(x,x) = x
+		 #n(x,x) = x
+		 #u(x,n(x,y)) = x
+		 #n(x,u(x,y)) = x
+#
+		 #f(x,f(y,z)) = f(f(x,y),z)
+		 #f(1,x) = x
+		 #f(i(x),x) = 1
+		 #f(x,u(y,z)) = u(f(x,y),f(x,z))
+		 #f(x,n(y,z)) = n(f(x,y),f(x,z))
+		 #f(u(y,z),x) = u(f(y,x),f(z,x))
+	         #f(n(y,z),x) = n(f(y,x),f(z,x))
+
+#DEF_GLEICH       #u(1,a) = a       # f"ur p4a  und p4b  und p6a
+                 #u(1,b) = b 
+	# 
+		 #n(x,y) = n(y,x)
+		 #u(x,y) = u(y,x)
+		 #n(x,n(y,z)) = n(n(x,y),z)
+		 #u(x,u(y,z)) = u(u(x,y),z)
+		 #u(x,x) = x
+		 #n(x,x) = x
+		 #u(x,n(x,y)) = x
+		 #n(x,u(x,y)) = x
+
+		 #f(x,f(y,z)) = f(f(x,y),z)
+		 #f(1,x) = x
+		 #f(i(x),x) = 1
+		 #f(x,u(y,z)) = u(f(x,y),f(x,z))
+		 #f(x,n(y,z)) = n(f(x,y),f(x,z))
+		 #f(u(y,z),x) = u(f(y,x),f(z,x))
+	         #f(n(y,z),x) = n(f(y,x),f(z,x))
+
+#DEF_GLEICH       n(1,b) = b   #f"ur p6b
+	# 
+		 #n(x,y) = n(y,x)
+		 #u(x,y) = u(y,x)
+		 #n(x,n(y,z)) = n(n(x,y),z)
+		 #u(x,u(y,z)) = u(u(x,y),z)
+		 #u(x,x) = x
+		 #n(x,x) = x
+		 #u(x,n(x,y)) = x
+		 #n(x,u(x,y)) = x
+#
+		 #f(x,f(y,z)) = f(f(x,y),z)
+		 #f(1,x) = x
+		 #f(i(x),x) = 1
+		 #f(x,u(y,z)) = u(f(x,y),f(x,z))
+		 #f(x,n(y,z)) = n(f(x,y),f(x,z))
+		 #f(u(y,z),x) = u(f(y,x),f(z,x))
+	         #f(n(y,z),x) = n(f(y,x),f(z,x))
+
+
+STARTTEAM       (LATTICE_1, ; STAT_LAST_1,)
+		(LATTICE_2, ; STAT_LAST_1,)
+
+ZYKLENZAHL        2
+
+#ZYKLENDAUER     (2,50;2)
+ZYKLENDAUER     (2,50;5)
+#ZYKLENDAUER     (2,50;100)
+
+GUTE_EXP           
+
+UNGEEIGN_EXP
+
+GUTE_GA              
+
+UEBER_DOM
+
+SPEZIAL_DOM
+
+VERWANDT_DOM
+
+BEKANNTE_RES         #n (f (b,d),f (a,c)) = f (a,c)
+
+BESCHREIBUNG
+
+LITERATUR
+
+BEISPIELE

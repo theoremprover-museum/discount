@@ -1,0 +1,25 @@
+MODE        PROOF
+
+NAME        glb
+
+ORDERING    LPO
+            i > f > n > u > 1 > a > b > c
+
+EQUATIONS   n(x,y) = n(y,x)
+            u(x,y) = u(y,x)
+            n(x,n(y,z)) = n(n(x,y),z)
+            u(x,u(y,z)) = u(u(x,y),z)
+            u(x,x) = x
+            n(x,x) = x
+            u(x,n(x,y)) = x
+            n(x,u(x,y)) = x
+            f(x,f(y,z)) = f(f(x,y),z)
+            f(1,x) = x
+            f(i(x),x) = 1
+            f(x,u(y,z)) = u(f(x,y),f(x,z))
+            f(x,n(y,z)) = n(f(x,y),f(x,z))
+            f(u(y,z),x) = u(f(y,x),f(z,x))
+            f(n(y,z),x) = n(f(y,x),f(z,x))
+            n(a,b) = a
+
+CONCLUSION  n(f(a,c),f(b,c)) = f(a,c)

@@ -1,0 +1,500 @@
+Ergebnisse der Testlaeufe fuer die Ermittlung einer guten
+Distanz-Strategie:
+
+
+=====================================================================
+                       Testserie 1
+=====================================================================
+
+Initialisierung der allgemeinen Parameter:
+
+long             tot_weight = 1,
+                 ave_weight = 1,
+                 proofs_weight = 1,
+                 goal_dist_weight = 20; /*  Kuenstlich ueberhoeht! */
+
+
+Es sind alle anderen Einfluesse auf konstant 1 gesetzt, der Einfluss
+des Zielabstandes wurde auf einen extremen Wert gesetzt, um moeglichst
+deutliche Ergenisse zu erhalten.
+
+
+Aufruf: discount2 -x c_global_learn -K ../../KNOWLEDGE lusk6
+
+
+
+------------------dist_strat = aggressive;-------------------------
+
+Laufzeit                 : 905.384 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                           898.150 s
+system time used:                           2.990 s
+maximum of resident set size utilized:   1674
+page reclaims:                             97
+page faults:                               33
+
+  144 Regeln gebildet.
+   24 Gleichungen gebildet.
+13712 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+58321 Reduktionen.
+
+
+------------------dist_strat = opportunistic;-------------------------
+
+Laufzeit                 : 53.425 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                            52.780 s
+system time used:                           0.890 s
+maximum of resident set size utilized:    562
+page reclaims:                             95
+page faults:                               24
+
+   93 Regeln gebildet.
+    7 Gleichungen gebildet.
+ 3381 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+13470 Reduktionen.
+
+
+------------------dist_strat = adaptive;-------------------------
+
+Laufzeit                 : 52.843 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                            52.380 s
+system time used:                           0.710 s
+maximum of resident set size utilized:    562
+page reclaims:                             93
+page faults:                               24
+
+   90 Regeln gebildet.
+    7 Gleichungen gebildet.
+ 3353 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+13398 Reduktionen.
+
+
+------------------dist_strat = conservative;-------------------------
+
+
+Laufzeit                 : 3017.307 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                          2982.960 s
+system time used:                           8.980 s
+maximum of resident set size utilized:   3704
+page reclaims:                            119
+
+  219 Regeln gebildet.
+   29 Gleichungen gebildet.
+31354 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+160018 Reduktionen.
+
+
+
+=====================================================================
+                       Testserie 2
+=====================================================================
+Die Ergebnisse der ersten Testserie deuten einen extremen Vorteil fuer
+die adaptiven Strategien an. Zur naehren Untersuchung wird der
+Zielabstand nun _voellig_ isoliert betrachtet - alle anderen
+Einfluesse sind 0!
+
+Initialisierung der allgemeinen Parameter:
+
+long             tot_weight = 0,
+                 ave_weight = 0,
+                 proofs_weight = 0,
+                 goal_dist_weight = 20; /*  Kuenstlich ueberhoeht! */
+
+Aufruf: discount2 -x c_global_learn -K ../../KNOWLEDGE lusk6
+
+
+
+------------------dist_strat = aggressive;-------------------------
+
+Laufzeit                 : 1017.039 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                           903.480 s
+system time used:                           9.930 s
+maximum of resident set size utilized:   1615
+page reclaims:                            112
+page faults:                               33
+
+  144 Regeln gebildet.
+   24 Gleichungen gebildet.
+13705 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+58312 Reduktionen.
+
+
+
+------------------dist_strat = opportunistic;-------------------------
+
+Laufzeit                 : 1590.992 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                          1396.080 s
+system time used:                          12.880 s
+maximum of resident set size utilized:   1378
+page reclaims:                            206
+page faults:                              257
+
+  159 Regeln gebildet.
+   22 Gleichungen gebildet.
+14639 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+69995 Reduktionen.
+
+
+------------------dist_strat = adaptive;-------------------------
+
+Laufzeit                 : 1196.395 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                          1143.240 s
+system time used:                          11.770 s
+maximum of resident set size utilized:   1516
+page reclaims:                            123
+page faults:                               25
+
+
+  142 Regeln gebildet.
+   23 Gleichungen gebildet.
+13178 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+56316 Reduktionen.
+
+
+------------------dist_strat = conservative;-------------------------
+
+Laufzeit                 : 927.378 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                           903.930 s
+system time used:                          11.160 s
+maximum of resident set size utilized:   1759
+page reclaims:                            122
+page faults:                               26
+
+
+  154 Regeln gebildet.
+   23 Gleichungen gebildet.
+14363 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+61057 Reduktionen.
+
+
+
+=====================================================================
+                       Testserie 3
+=====================================================================
+
+Die Ergebnisse von Serie 2 ergeben keinen signifikanten Vorteil fuer
+irgendeine Abstandsstrategie - es gibt nur eine leichte Tendenz
+_gegen_ die adaoptiven Straegien. Mal sehen, was ganz ohne
+Irgendeine Differenzierung passiert
+
+
+Initialisierung der allgemeinen Parameter:
+
+DistanceStrategy dist_strat = conservative; 
+	/* In diesem Fall uninteressant! */
+
+
+long             tot_weight = 0,
+                 ave_weight = 0,
+                 proofs_weight = 0,
+                 goal_dist_weight = 0;
+
+Aufruf: discount2 -x c_global_learn -K ../../KNOWLEDGE lusk6
+
+
+Laufzeit                 : 1496.041 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                          1377.180 s
+system time used:                          14.800 s
+maximum of resident set size utilized:   1748
+page reclaims:                            115
+page faults:                               27
+
+  159 Regeln gebildet.
+   22 Gleichungen gebildet.
+14639 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+69995 Reduktionen.
+
+
+=====================================================================
+                       Testserie 5
+=====================================================================
+
+Hmmm...mal die anderen Faktoren untersuchen. Jetzt Bewertung _nur_
+nach durchschnittlicher Haeufigkeit: Verschiedene Werte spielen keine
+Rolle, das es sich dabei nur um eine Streckung handelt, die die
+Ordnung erhaelt.
+
+
+DistanceStrategy dist_strat = conservative;
+
+long             tot_weight = 0,
+                 ave_weight = 1,
+                 proofs_weight = 0,
+                 goal_dist_weight = 0;
+
+
+Laufzeit                 : 400.144 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                           332.480 s
+system time used:                           6.920 s
+maximum of resident set size utilized:    911
+page reclaims:                            107
+page faults:                               32
+swaps:                                      0
+
+  105 Regeln gebildet.
+   16 Gleichungen gebildet.
+ 6890 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+27253 Reduktionen.
+
+=====================================================================
+Und jetzt _nur_ die absolute Haeufigkeit:
+
+
+DistanceStrategy dist_strat = conservative;
+
+long             tot_weight = 1,
+                 ave_weight = 0,
+                 proofs_weight = 0,
+                 goal_dist_weight = 0;
+
+Laufzeit                 : 56.355 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                            52.960 s
+system time used:                           1.400 s
+maximum of resident set size utilized:    560
+page reclaims:                            111
+page faults:                               24
+
+   93 Regeln gebildet.
+    7 Gleichungen gebildet.
+ 3379 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+13540 Reduktionen.
+
+=====================================================================
+Diese Ergebnis legt eine von 2 Vermutungen nahe: Entweder ist die
+_absolute_ H"aufigkeit _das_ relevante Merkmal, oder in der Berechnung
+des durchschnittlichen Zielabstandes wird dauernd auf 0 gerundet, so
+das viel Information wegfaellt. Zum Vergleich noch ein Lauf, in der
+nur die Anzahl der Beweise gewertet wird:
+
+DistanceStrategy dist_strat = conservative;
+
+long             tot_weight = 0,
+                 ave_weight = 0,
+                 proofs_weight = 1,
+                 goal_dist_weight = 0;
+
+Laufzeit                 : 193.689 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                           167.950 s
+system time used:                           3.030 s
+maximum of resident set size utilized:    893
+page reclaims:                             95
+page faults:                               26
+
+  115 Regeln gebildet.
+   14 Gleichungen gebildet.
+ 6895 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+25182 Reduktionen.
+
+
+
+=====================================================================
+                       Testserie 6
+=====================================================================
+
+Jetzt untersuche ich, wie sich die Distanz-Strategie in Verbindung mit
+der (bisher besten) Strategie auswirkt - es werden also dist_strat und
+tot_weight eingebracht, tot_weight mit 3-fachem Gewicht.
+
+
+long             tot_weight = 3,
+                 ave_weight = 0,
+                 proofs_weight = 0,
+                 goal_dist_weight = 1;
+
+
+
+------------------dist_strat = aggressive;-------------------------
+
+
+
+------------------dist_strat = opportunistic;-------------------------
+
+
+------------------dist_strat = adaptive;-------------------------
+
+
+------------------dist_strat = conservative;-------------------------
+
+
+
+=====================================================================
+                       Testserie 7
+=====================================================================
+
+
+------------------dist_strat = aggressive;-------------------------
+
+Laufzeit                 : 51.439 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                            50.770 s
+system time used:                           0.970 s
+maximum of resident set size utilized:    543
+page reclaims:                             97
+page faults:                               24
+
+   89 Regeln gebildet.
+    7 Gleichungen gebildet.
+ 3251 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+12984 Reduktionen.
+
+
+------------------dist_strat = opportunistic;-------------------------
+
+Laufzeit                 : 52.712 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                            52.300 s
+system time used:                           0.850 s
+maximum of resident set size utilized:    562
+page reclaims:                             99
+page faults:                               24
+
+   93 Regeln gebildet.
+    7 Gleichungen gebildet.
+ 3379 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+13540 Reduktionen.
+
+
+------------------dist_strat = adaptive;-------------------------
+
+Laufzeit                 : 56.716 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                            56.250 s
+system time used:                           0.950 s
+maximum of resident set size utilized:    622
+page reclaims:                             97
+page faults:                               24
+
+   94 Regeln gebildet.
+   10 Gleichungen gebildet.
+ 3833 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+14683 Reduktionen.
+
+
+------------------dist_strat = conservative;-------------------------
+
+
+Laufzeit                 : 54.858 s
+
+Davon fuer Planungsphase : 0.000 s
+
+System Information:
+-------------------
+
+user time used:                            54.240 s
+system time used:                           0.820 s
+maximum of resident set size utilized:    595
+page reclaims:                             97
+page faults:                               24
+
+   87 Regeln gebildet.
+   10 Gleichungen gebildet.
+ 3552 kritische Paare gebildet.
+    0 kritische Ziele gebildet.
+14275 Reduktionen.
+
+
+Die Zielstrategie scheint einen kleinen Einfluss zu haben - allerdings
+sind die Werte in keiner Weise eindeutig. Ich werde mal eine groessere
+Serie mit mehreren Beispielen machen! Siehe Directory
+PRELIMINARY/mix.experiments

@@ -1,0 +1,28 @@
+GUTACHTERNAME           STAT_LAST_2
+
+BEURTEILE_FKT  STATISTIC   GROESSE_REGELN : -5,0; -2
+                           GROESSE_GLEICH : -20,-5; -10
+                           GROESSE_CP     : -2,0; -1
+                           GROESSE_ZIELE  : -5,0; -2
+                           GROESSE_CG     : -2,0;-1
+                           GESAMT_RED     :  0,5; 2
+
+
+RESULTATE_FKT  LAST        MAX_REGELN     : 0,10;3
+			   MAX_GLEICH     : 0,5; 1
+			   MAX_ZIELE      : 0,5; 1
+			   SCHWELLE_REGELN: 0,20; 10
+			   SCHWELLE_GLEICH: 0,20; 10
+			   SCHWELLE_ZIELE : 0,20; 10
+
+GEEIGNETE_EXP
+
+GEEIGNETE_DOM
+
+ROBUSTHEIT                 0.8
+
+WISSENSANTEIL              0
+
+AEHNLICHE_GA
+
+LEITER_MOEGLICH            0    /* Experte kann kein Leiter werden */

@@ -1,0 +1,59 @@
+EXPERTENNAME                 STANDARD_3
+
+EXP_OR_SPEC                  E
+
+CP_FUNKTION                  ADD_WEIGHT
+		             F_GEWICHT : 1,5 ; 2
+		             V_GEWICHT : 1,5 ; 1
+			     RED_INST  : 0,1 ; 1
+
+CG_FUNKTION                  DIFF_GOAL   
+		             F_GEWICHT : 1,5 ; 2
+                             V_GEWICHT : 1,5 ; 1
+			     NO_UNIF   : 0,10 ; 4
+
+FAIRNESS                     Y
+
+
+
+GUTE_GUTACHTER               (STATISTIC, ,1)
+			     (STATISTIC, 
+			       V_GEWICHT : 11, 121 ; 101
+			       F_GEWICHT : 2,2 ; 2
+			       V_GEWICHT : 11,111 ; 101 ,
+			     0.5)
+			     (STATISTIC, 
+			       V_GEWICHT : 11, 121 ; 101
+			       V_GEWICHT : 11,111 ; 101 ,
+			     0.8)
+
+#GUTE_DOMAENEN                ALL
+GUTE_DOMAENEN                (GROUP,0.11)
+                             (GROUP, 1)
+			     (GROUP, 0.7)
+                             
+
+ROBUSTHEIT                   0.8
+
+WISSENSANTEIL                0.2
+
+BEWEISPHASE                  ANFANG  0.5       	
+			     MITTE   0.5
+			     ENDE    0.5
+
+ZYKLUSDAUER                  ANFANG  (1,10)
+			     MITTE   (1,10)
+			     ENDE    (1,10)
+
+
+AEHNLICHE_EXP              (MAX_WEIGHT, V_GEWICHT : 1,10;6, 0)
+
+NACHFOLGER
+
+UNVERTRAEGL
+
+MOEGL_TEAMEXP
+
+PROZEDUR                   xyz
+
+BESCHREIBUNG               wertljwejlhrtyiwehrjtgjwehrtgjwehjrkhtgjkwerjhkghse

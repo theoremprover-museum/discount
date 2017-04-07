@@ -1,0 +1,14 @@
+# OPEN PROBLEM: is a Robinson algebra a boolean algebra ?
+
+MODE        PROOF
+
+NAME        rabool
+
+ORDERING    LPO
+            n > o > a > b
+
+EQUATIONS   o (x,y) = o (y,x)
+            o(o(x,y),z) = o(x,o(y,z))
+            n(o(n(o(x,y)),n(o(x,n(y))))) = x     # Robinson's axiom
+
+CONCLUSION  o(n(o(n(a),b)),n(o(n(a),n(b)))) = a  # Huntington's axiom

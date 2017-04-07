@@ -1,0 +1,13 @@
+#############################################################
+##      DISCOUNT
+##
+##      Aufgabenstellung:       luka4
+##      Konfigurationsdatei:    ../../CONFIG/learn.cfg
+
+cycle 0
+
+master:0
+process 0 using configuration 0 (C_GLOBAL_LEARN) did 0 steps and 43 steps
+process 1 using configuration -1 (NO_CONFIG) did 0 steps and 0 steps
+
+team terminated by process 0 during completion

@@ -1,0 +1,1716 @@
+
+br_error.c,53
+void br_Error 100,2145
+void br_PrintError 136,2774
+
+br_error.h,85
+#define __ERRORS__29,480
+typedef void (*Terminatefunction)Terminatefunction39,578
+
+br_recv.c,251
+int br_OpenRecvBroadcast 140,3421
+int br_CloseRecvBroadcast 329,8207
+void br_ReadInt 370,8987
+void br_ReadLong 417,10075
+void br_ReadData 465,11217
+int GetBuffer 549,13308
+static void DoAcknowledge 688,16506
+static int RecvBroadcast 749,17999
+
+br_recv.h,24
+#define BR_RECV_H5,129
+
+br_send.c,325
+int br_OpenSendBroadcast 173,4541
+int br_CloseSendBroadcast 377,9328
+int br_ConfigureBroadcast 419,10314
+void br_WriteInt 473,11801
+void br_WriteLong 526,13253
+void br_WriteData 582,14765
+int br_FlushBuffer 653,16700
+static int HandleAckn 822,20010
+int SendBroadcast 925,22423
+static tbool ReceiversReady 978,23674
+
+br_send.h,24
+#define BR_SEND_H5,129
+
+br_stat.c,306
+void stat_Init 64,1064
+int stat_IncBroadcastCount 117,2250
+int stat_IncPacketCount 146,2717
+int stat_PacketLost 178,3295
+int stat_IncAcknReqCount 207,3837
+int stat_AcknReqLost 237,4358
+int stat_AddInt 268,4932
+int stat_AddString 299,5475
+int stat_AddTime 330,6013
+int stat_ShowStatistic 361,6689
+
+br_stat.h,119
+#define __STAT__27,388
+#define MAXBROADCASTS 39,496
+typedef struct stat{stat41,523
+} tStatistic;tStatistic65,996
+
+br_time.c,53
+int br_StartWatch 45,560
+int br_StoppWatch 80,1206
+
+br_time.h,79
+#define __BRTIME__24,299
+typedef struct tme{tme34,410
+} tTime;tTime37,458
+
+br_types.h,828
+#define __TYPES__47,848
+#define TRUE 60,985
+#define FALSE 61,1000
+#define ERROR 64,1018
+#define NOERROR 65,1037
+#define STRINGLEN 68,1057
+#define MAXMSGLEN 71,1080
+#define ACKNREQUESTS 72,1103
+#define ACKNnPACKETS 73,1126
+#define TIMES 74,1151
+#define PACKETSIZE 75,1174
+#define MAXPACKETS 76,1200
+#define DATABUFSIZE 77,1242
+#define TIMEOUTLENGTH 80,1338
+#define RECEIVETIMEOUT 83,1374
+#define RECEIVETIMEOUT 85,1407
+#define MAXRECEIVERS 90,1460
+#define INTERFACENAME 93,1486
+#define BR_BUFSIZE 96,1516
+typedef char tString[tString103,1568
+typedef int tbool;tbool106,1603
+} tErrorcode;tErrorcode138,1824
+} tPacketType;tPacketType146,1918
+} tOpcode;tOpcode156,2015
+typedef struct msg{msg159,2028
+} tMessage;tMessage189,2625
+typedef struct recver{recver192,2639
+} tReceiver;tReceiver198,2740
+
+br_util.c,292
+int br_OpenAcceptSock 99,2150
+int br_CloseAcceptSock 152,3106
+int br_ConnectPtP 186,3826
+int br_AcceptPtP 233,4944
+int br_SendPtP 264,5580
+int br_RecvPtP 307,6360
+long br_GetBroadcastAddress 348,7062
+int br_GetHostId 419,8707
+int br_GetConnection 451,9259
+int br_SetMaster 481,9669
+
+br_util.h,24
+#define BR_UTIL_H5,129
+
+buildcp.c,551
+#define ProvedBy(ProvedBy98,3107
+#define Paramodul(Paramodul106,3408
+static void CritPair 124,4161
+static term *rplacsubst 153,5159
+static void BuildCP 251,8082
+static void makecp 321,9883
+static void MakeCP 356,10880
+void CPRuleRule 393,11812
+void CPRuleEqu 448,13300
+void CPEquRule 488,14502
+void CPEquEqu 528,15701
+static void BuildPara 629,19278
+static void MakePara 688,21148
+void ParaRule 727,22361
+void ParaNewRule 759,23442
+void ParaEqu 791,24531
+void ParaNewEqu 826,25783
+void ParaGoal 854,26648
+bool UnifyGoal 878,27287
+
+buildcp.h,29
+#define     __BUILDCP27,877
+
+comphase.c,996
+#define END_OF_TP 54,2200
+#define NO_WINNER 58,2382
+void ReceiveJudges 149,7373
+void SendJudges 390,17018
+static void expert_kzg_senden 454,20322
+static void experten_daten_senden 506,22994
+static void spezialisten_daten_senden 547,25311
+static void domaene_kzg_senden(602,27679
+static void domaenen_daten_senden 639,29967
+static void zyklus_zeit_daten_senden 677,31906
+void SendLeaderInfo 700,33476
+static void expert_kzg_empfangen 733,35150
+static void experten_daten_empfangen 788,37931
+static void spezialisten_daten_empfangen 829,40173
+static void domaene_kzg_empfangen 883,42494
+static void domaenen_daten_empfangen 917,44452
+static void zyklus_zeit_daten_empfangen 955,46381
+void ReceiveLeaderInfo 979,48029
+void ReceiveResults 1023,50632
+void SendResults 1329,64815
+void SendWinnerNo 1551,73562
+void ReceiveWinnerNo 1585,75171
+void SendCycleTime 1634,77427
+void ReceiveCycleTime 1666,79122
+void DistributeTeam 1703,81424
+void ReceiveNextConfiguration 1856,87955
+
+comphase.h,27
+#define __COMPHASE17,1140
+
+complet.c,1501
+#define START(START181,6493
+#define STOP(STOP184,6618
+#define STEP(STEP187,6717
+#define DEMOINFO(DEMOINFO191,6866
+    #define timetag(timetag206,7784
+    #define timetag(timetag210,7997
+#define RedRule(RedRule213,8028
+#define DelRule(DelRule231,9142
+#define RedEquation(RedEquation248,10182
+#define DelEquation(DelEquation266,11296
+#define RedGoal(RedGoal283,12336
+#define ProvedBy(ProvedBy296,13080
+#define Paramodul(Paramodul309,13751
+static void    RedGoalR 334,14881
+static void    RedGoalE 408,16587
+static void    RedRuleR 490,18631
+static void    RedEquR 533,19802
+static void    SubsumEqu 585,21093
+static void    RedRuleE 607,21664
+static void    RedEquE 644,22560
+void    NewRule 706,24194
+void    NewEquation 755,25293
+static bool testnewgoal(851,30012
+static bool testredgoal(928,33143
+void    NewGoal 1010,35350
+void    Initialize 1081,37279
+void    Proved 1185,39763
+void    Completed 1210,40439
+void    Completion 1417,47744
+void prt 1552,50595
+void    ParallelCompletion 1569,51021
+void    ParallelCheckCPs 1831,57230
+void    ParallelCheckCPPs 1971,60807
+void    ParallelCheckCGs 1996,62392
+void    ParallelCheckCGPs 2153,66651
+void    Interreduce 2176,67468
+void InterreduceGoals 2268,70769
+void    CheckCPs 2330,72284
+bool    ClearCPs 2365,73072
+static void delrule 2426,74466
+static void delequ 2435,74619
+static void delcp 2444,74770
+static void delgoal 2453,74919
+static void delcg 2462,75072
+void    ClearData 2481,75511
+
+complet.h,90
+#define     __COMPLETION32,1203
+#define NO_CONFIG 50,2072
+}StateType;StateType63,2491
+
+cpweight.c,1728
+void    SetCGFunc 180,5882
+void    SetCPWeight 195,6323
+static long tweight 226,7327
+static long cg_tweight 256,8262
+void    SetWeights 281,8969
+void    SetCGWeights 300,9606
+double    fifo_weight 330,10389
+double    team_fifo_weight 354,11198
+double    sum_tweight 376,11875
+double    max_tweight 395,12455
+double    gt_tweight 420,13248
+static long kbo 449,14076
+double    max_kbo 477,14774
+double    sum_kbo 499,15421
+double    gt_kbo 520,16082
+static void     fcounth 540,16571
+static long     fcount 552,16753
+double    gt_fcount 584,17542
+double    sum_fcount 614,18470
+static long tfweight 664,20104
+double    max_tfweight 690,20830
+double    sum_tfweight 712,21497
+double    gt_tfweight 734,22225
+static long    pweight 764,23094
+double    sum_poly 796,23944
+double    max_poly 815,24519
+double    gt_poly 840,25308
+double    diff_weight 859,25785
+double    divergence 892,26719
+static long     testgmatch 935,28021
+static long     testgunify 974,29110
+static void     testgoalmatch 1017,30350
+double    goalmatch 1116,33360
+long     testmatch 1152,34421
+long     testunify 1192,35534
+void     testgoal 1233,36602
+double    goaltest 1475,44290
+void    SpecialWeight 1501,45069
+static long    part_match 1517,45449
+void    simgoal 1544,46132
+double    goalsim 1597,47699
+#define PSI(PSI1622,48443
+double occnest 1626,48500
+static short measure0 1653,49061
+static short measure1 1670,49330
+void init_goal_fn_m 1691,49742
+static void add_fn 1758,51516
+long diff_goal_weight_terms(1806,53863
+long diff_goal_weight 1831,54386
+long diff_goal_terms 1859,56167
+double diff_goal 1884,56660
+long max_right_unif 1912,58349
+long max_unif 1966,60557
+double unif_goal 2034,63293
+
+cpweight.h,49
+#define __CPWEIGHT25,844
+} XInfo;XInfo42,1435
+
+database.c,918
+#define          varstrlen 156,7277
+#define subst_belegen(subst_belegen173,8450
+#define subst_freigeben(subst_freigeben180,8908
+static void    local_prettyprint 248,12310
+static void    local_printtpair 305,14576
+static void print_aktuelle_substitution(350,16581
+static void print_subst_zustand(383,18514
+static void match_eintragen(434,21018
+static bool fkt_not_used(475,23419
+static bool rule_and_equ_empty 513,25579
+static void interRedRule 556,27762
+static void interRedEqu 630,30948
+static void interRed 714,33759
+bool   FindRules 741,35353
+static term  *buildterm 943,41824
+static termpair *buildtermpair 990,44004
+static void   BuildResults 1029,46224
+static void print_subst_matrix(1070,47140
+static short NextFktSymbMatch 1115,49787
+static bool restliche_subst_best 1191,53267
+static bool NextMatches 1289,57946
+bool FindAndTestAllMatches 1402,63136
+void    DatabaseExpert 1508,67789
+
+database.h,93
+#define     __DATABASE24,676
+	       } SubstituierendesFSymb;SubstituierendesFSymb45,1817
+
+defines.h,1922
+#define __DEFINES24,753
+#define         ANSI37,898
+ #define         NOHISTORY 47,1232
+ #define         NOPAGEOPT 48,1267
+typedef enum { false, true } bool;bool57,1510
+typedef signed char          byte;byte58,1585
+#define         CR 60,1661
+#define         TAB 61,1736
+#define         BS 62,1811
+#define         LENGTH 64,1887
+#define         IDENTLENGTH 65,1962
+#define         MAXLITERAL 66,2037
+#define         VTSIZE 68,2114
+#define         VTMASK 71,2339
+#define         SUBSIZE 73,2415
+#define         SUBMASK 76,2640
+#define         LISTALLOC 79,2717
+#define         POLYALLOC 81,2867
+#define         TREEALLOC 83,3017
+#define         SUBSTALLOC 85,3166
+#define         TERMALLOC 87,3316
+#define         PAIRALLOC 89,3466
+#define         VARALLOC 91,3616
+#define         function 94,3767
+#define         variable 95,3842
+#define         MAXFUNCTION 96,3917
+#define         MAXORDER 97,3992
+#define         MAXARITY 98,4067
+#define         MAXAXIOMS 99,4144
+#define         TLESS 103,4437
+#define         TEQUAL 104,4512
+#define         TGREATER 105,4587
+#define         TANY 106,4662
+#define         KBO_ALPHA 108,4738
+#define         MAXPARAXPERT 110,4814
+#define         MAXPARAREF 112,4964
+#define         MAXPARASELECT 114,5114
+#define         MAXEXPERT 116,5264
+#define         MAXREDSPEC 117,5339
+#define         MAXREFRULE 123,5575
+#define         MAXREFEQU 125,5725
+#define         SYNCCODE 128,5879
+#define         MAXGA_ANZ 130,5955
+#define         MAXDOM_ANZ 131,6043
+#define         MAXEXP_ANZ 132,6131
+#define         min(min135,6221
+#define         max(max136,6265
+#define         ABS(ABS137,6309
+#define         Dummy(Dummy139,6359
+#define         DEBUG(DEBUG140,6385
+#define     Malloc(Malloc143,6433
+#define     Mfree(Mfree144,6478
+#define     flush(flush145,6513
+    #define         ALIGN 154,6683
+    #define         ALIGN 156,6764
+
+discount.c,290
+               FEATURE_OPT } Option;Option180,5039
+                 Option code;        } CommandOption;CommandOption184,5147
+static void CommandLine 256,8053
+}ExtOption;ExtOption764,28504
+ExtractType FindExtOpt(793,29356
+static void CommandError 826,30085
+short   main 982,39272
+
+domain.c,943
+typedef enum { ALLGEMEINER, NEUTRAL, SPEZIELLER } relation_typ;relation_typ39,2041
+void initialize_dom 274,14075
+bool exp_bei_dom_geeignet(329,16892
+bool exp_bei_dom_ungeeignet(371,19135
+function FindFuncInDom 410,21183
+bool new_rel_dom 454,23648
+static bool neues_match 499,25971
+static void match_eintragen 557,28637
+static relation_typ neu_dom_gef_dom_bez 622,31966
+static relation_typ neu_dom_alt_dom_bez 655,34252
+static relation_typ Relation 696,37178
+static void AnalyseFoundDomains 801,42446
+static void DefineKnownDomains 870,46079
+static long berechne_akt_dom_bewertung 1045,54258
+static void JudgeDomains 1093,56776
+bool domaene_in_startphase 1166,60222
+static short beste_dom_best 1213,63106
+static bool dom_spezieller 1266,65788
+static void SelectDomains 1319,69646
+static void DefineWeights 1476,76815
+void ResetDomainVariables 1524,79186
+void DomainManagement 1549,80682
+void dom_global_debug 1596,82751
+
+domain.h,1076
+#define __DOMAIN17,1138
+#define NODOMAIN 34,1925
+#define MAXRELDOMAIN 40,2210
+#define MAXPARAM 46,2495
+#define MAX_DEF 51,2708
+#define MAX_ZYKLEN_ANZ 56,2927
+#define MAXCYCLE 62,3213
+#define MAXFUNCMATCH 74,3862
+#define NODOMEXP 80,4147
+#define  D_EXPDOMFAKTOR 89,4562
+#define  D_EXPROBFAKTOR 90,4589
+#define  D_EXPBEWFAKTOR 91,4616
+#define  D_EXPKZGFAKTOR 92,4643
+#define  NOD_EXPDOMFAKTOR 97,4792
+#define  NOD_EXPROBFAKTOR 98,4821
+#define  NOD_EXPBEWFAKTOR 99,4850
+#define  NOD_EXPKZGFAKTOR 100,4879
+#define  NO_CYCLE_TIME 108,5284
+typedef enum { SUPPOSED, KNOWN } DomStatusType;DomStatusType121,5975
+	       } F_Info;F_Info147,7304
+               } ParameterElement;ParameterElement158,7746
+	       } ObjectInFrameInfo;ObjectInFrameInfo176,8576
+               } Zyklen_Info;Zyklen_Info185,8977
+	       } DomMatchSpec;DomMatchSpec195,9439
+               } KZGDomainFrame;KZGDomainFrame208,9992
+               } DomainFrame;DomainFrame242,11830
+#define domaene_relevant(domaene_relevant395,19801
+#define domaene_neu(domaene_neu405,20306
+
+error.c,23
+void    Error 56,1449
+
+error.h,27
+#define     __ERROR23,736
+
+exp_class_nont_exp.c,203
+#define __j(__j33,1539
+void initialisiere_eignungsliste 77,4317
+static void exp_in_eignungsliste_einfuegen 103,5934
+short exp_aus_eignungsliste_lesen 182,9186
+void ClassifyNonTeamExperts(234,12096
+
+exp_class_nont_exp.h,159
+#define  __EXP_CLASS_NONT_EXP18,1231
+#define DOMAIN_SUITED 28,1751
+#define WINNER_SUITED 29,1784
+#define J_NOT_IN_TEAM 30,1817
+#define NOT_JUDGED 31,1850
+
+exp_class_t_exp.c,242
+#define __j(__j34,1565
+static long siegergrenze_best 137,6310
+static long verlierergrenze_best 187,9288
+static bool siegerkriterien_erfuellt 254,13675
+static bool verlierekriterien_erfuellt 376,20156
+void ClassifyTeamExperts 544,28770
+
+exp_class_t_exp.h,1215
+#define  __EXP_CLASS_T_EXP18,1228
+#define INCREASE_PERCENT 27,1737
+#define DECREASE_PERCENT 30,1850
+#define VERLIERERMAXCYCL 31,1882
+#define VERLIERERGRENZE3 32,1914
+#define TEAMNOTCHANGED 35,2027
+#define     W_SIZE_R 40,2176
+#define     W_SIZE_E 41,2211
+#define     W_SIZE_G 42,2245
+#define     W_SIZE_CP 43,2279
+#define     W_SIZE_CG 44,2314
+#define     W_NEW_R 45,2349
+#define     W_RED_R 46,2383
+#define     W_DEL_R 47,2417
+#define     W_NEW_E 48,2450
+#define     W_RED_E 49,2483
+#define     W_DEL_E 50,2517
+#define     W_NEW_G 51,2550
+#define     W_RED_G 52,2583
+#define     W_NEW_CP 53,2616
+#define     W_DEL_CP 54,2651
+#define     W_NEW_CG 55,2685
+#define     W_REDCOUNT 56,2719
+#define     L_SIZE_R 61,2876
+#define     L_SIZE_E 62,2910
+#define     L_SIZE_G 63,2944
+#define     L_SIZE_CP 64,2978
+#define     L_SIZE_CG 65,3013
+#define     L_NEW_R 66,3048
+#define     L_RED_R 67,3082
+#define     L_DEL_R 68,3115
+#define     L_NEW_E 69,3148
+#define     L_RED_E 70,3181
+#define     L_DEL_E 71,3214
+#define     L_NEW_G 72,3247
+#define     L_RED_G 73,3280
+#define     L_NEW_CP 74,3313
+#define     L_DEL_CP 75,3348
+#define     L_NEW_CG 76,3382
+#define     L_REDCOUNT 77,3416
+
+exp_def_break.c,283
+#define __j(__j34,1568
+static bool loser_ganz_schlecht 108,5722
+static short anzahl_zu_betrachtender_exp_best 163,7891
+static short anzahl_besserer_exp_best 207,10126
+void DefineBreakOffs 255,13473
+void abbruch_daten_aktualisieren 293,15409
+bool TestFurtherExperts 327,17231
+
+exp_def_break.h,334
+#define  __EXP_DEF_BREAK18,1226
+#define MIN_INSPECTED_X 27,1688
+#define EXP_PART 28,1721
+#define EXTRA_EXP1 29,1754
+#define LOSER_PART 30,1787
+#define EXTRA_EXP2 31,1820
+#define LOSER_PERCENT 32,1853
+#define EXTRA_EXP3 33,1888
+#define MIN_BETTER_EXP 34,1921
+#define DIFFERENCE_TO_LOSER 35,1954
+#define DIFF_PERCENT 38,2027
+
+exp_def_next_cycletime.c,190
+#define __j(__j33,1543
+static bool gut_beurteiltes_team 114,6226
+static bool schlecht_beurteiltes_team 162,8629
+static bool zielorientiert 202,10402
+long DefineNextCycleTime 259,13680
+
+exp_def_next_cycletime.h,408
+#define  __EXP_DEF_NEXT_CYCLETIME18,1235
+#define TIMEBASE 29,1872
+#define TP_PART 30,1907
+#define TIME_EXTRA 31,1942
+#define GOOD_TEAM_T_FAC 32,1977
+#define BAD_TEAM_T_FAC 33,2012
+#define UPPER_LIMIT1 36,2089
+#define UPPER_LIMIT2 37,2124
+#define DOWN_LIMIT1 40,2205
+#define DOWN_LIMIT2 41,2240
+#define GOALFAKTOR 43,2276
+typedef enum { SECONDS, MILLISECONDS } timeunit_type;timeunit_type50,2714
+
+exp_form_next_t.c,605
+#define __j(__j33,1490
+static bool exp_in_neuem_team 105,5242
+static bool fairer_exp_in_neuem_team 140,6907
+bool leiter_faehiger_exp_in_neuem_team 174,8590
+static void leiter_einbauen 228,11454
+static void fairen_exp_einbauen 312,15236
+static bool database_bed_erfuellt 391,19670
+static void databaseexperten_einbauen 444,22105
+static bool krit_paar_spez_bed_erfuellt 518,24913
+static bool krit_ziel_spez_bed_erfuellt 599,28601
+static void reduktionsspezialisten_einbauen 703,34148
+void spezialisten_einbauen 813,38736
+static short besten_exp_einbauen 880,41981
+void FormNextTeam 941,44872
+
+exp_form_next_t.h,317
+#define  __EXP_FORM_NEXT_T18,1228
+#define HOST_LIMIT_DB 31,1939
+#define CYCLE_DIFF_DB 32,1966
+#define DOM_LIMIT_DB 33,1993
+#define HOST_LIMIT_CP 39,2308
+#define CYCLE_DIFF_CP 40,2343
+#define CRIT_P_LIMIT_CP 41,2378
+#define HOST_LIMIT_CG 47,2701
+#define CYCLE_DIFF_CG 48,2736
+#define CRIT_G_LIMIT_CG 49,2771
+
+exp_handle_domain_phase.c,194
+#define __j(__j34,1529
+static void starte_neue_domaenenphase(79,4574
+static void continue_domaene_phase(246,11621
+static void nach_domaenenphase(383,17657
+void HandleDomainPhase(413,19597
+
+exp_handle_domain_phase.h,43
+#define  __EXP_HANDLE_DOMAIN_PHASE17,1156
+
+exp_handle_static_exp.c,59
+#define __j(__j32,1462
+void HandleStaticExperts(63,3738
+
+exp_handle_static_exp.h,41
+#define  __EXP_HANDLE_STATIC_EXP17,1154
+
+exp_prepare_t_select.c,295
+#define __j(__j36,1627
+void initialisiere_bewertungsliste 80,4451
+static void exp_in_bewertungsliste_einfuegen 107,6115
+short exp_aus_bewertungsliste_lesen 186,9400
+bool exp_aus_bewertungsliste_loeschen 230,11635
+static void JudgeNonWinners 286,14152
+void PrepareTeamSelection 360,17278
+
+exp_prepare_t_select.h,65
+#define  __EXP_PREPARE_T_SELECT18,1233
+#define NOLOSER 26,1667
+
+exp_set_next_config.c,90
+#define __j(__j33,1540
+void set_parameter 91,5353
+void SetNextConfiguration 340,15349
+
+exp_set_next_config.h,39
+#define  __EXP_SET_NEXT_CONFIG18,1232
+
+exp_value_exp.c,646
+#define __j(__j34,1552
+typedef enum { DOM_GEEIGNET, DOM_UNGEEIGNET, DOM_KEINE_ANGABEN } dom_bez_typ;dom_bez_typ41,1987
+void DefineProofPhase 126,6163
+static double bew_phas_anf 149,7648
+static double bew_phas_mit 178,9163
+static double bew_phas_end 211,10800
+static double bew_wissensanteil_best 243,12633
+static dom_bez_typ exp_dom_bez_best 293,15544
+static double dom_wissensanteil_best 367,18924
+static bool exp_eingesetzt 435,22540
+static double norm_abs_mittelwert 481,24574
+static double rel_mittelwert 518,26597
+static bool exp_konstant_test(564,29195
+static double kzg_anteil_best 622,32619
+double ValueExperts 698,36288
+
+exp_value_exp.h,416
+#define  __EXP_VALUE_EXP18,1229
+#define GOOD_DOM_EXP_KNO 27,1736
+#define BAD_DOM_EXP_KNO 28,1765
+#define NO_DOM_EXP_KNO 29,1794
+#define RELEVANTLASTCYCL 32,1859
+#define MINIMUMOFACTIONS 33,1892
+#define INSPECTEDACTIONS 34,1925
+#define TESTKZGWERTE 39,2199
+#define MAXDIFFERENCE 48,2540
+#define CONSTANTFACTOR 50,2576
+#define TRENDEXPFACTOR 51,2604
+#define RELKZGFACTOR 53,2633
+#define PROOF_MID 55,2662
+
+expert.c,547
+#define __j(__j42,1890
+void initialize_exp 196,10532
+bool ziel_experte 244,12754
+bool exp_im_alten_team 276,14608
+bool exp_im_neuen_team 363,17616
+char *get_exp_name(397,19290
+bool DomStartExp(439,21256
+bool exp_bei_exp_geeignet 497,23693
+short get_exp_nr 535,25645
+void prae_orderedliste_aus(570,27496
+void orderedliste_aus(603,29582
+void exp_global_debug 637,31548
+void SelectNextTeamExperts 712,35267
+static void  exp_winnerlist_aus(779,36240
+static void  exp_loserlist_aus(789,36515
+static void  exp_averagelist_aus(799,36783
+
+expert.h,1088
+#define  __EXPERT19,1299
+#define LISTENENDE 33,1976
+#define NOEXPERT 39,2239
+#define DATABASE 48,2686
+#define REDUCE_1 49,2726
+#define REDUCE_2 50,2766
+#define REDUCE_3 51,2806
+	       } exp_listen_elt;exp_listen_elt71,3894
+               } ExpertConfig;ExpertConfig81,4394
+               }  ExpertFrame;ExpertFrame202,10338
+typedef enum { CP, CG, UNDEFINED } RedTyp;RedTyp210,10752
+	       } ReduceFrame;ReduceFrame243,12021
+#define exp_ist_spezialist(exp_ist_spezialist425,21770
+#define GetRedSpecIdx(GetRedSpecIdx433,22195
+#define RedSpecNo(RedSpecNo440,22565
+#define StaticExp(StaticExp446,22872
+#define InitialExp(InitialExp453,23196
+#define StaticRedSpec(StaticRedSpec460,23522
+#define InitialRedSpec(InitialRedSpec467,23849
+#define robustheit_best(robustheit_best475,24237
+#define freie_plaetze(freie_plaetze481,24547
+#define team_besetzt(team_besetzt489,24970
+#define leiterfaehig(leiterfaehig495,25269
+#define set_exp_leiterfaehig(set_exp_leiterfaehig502,25688
+#define speziellere_domaenen_bekannt(speziellere_domaenen_bekannt510,26142
+
+history.c,201
+typedef struct Tentry Tentry60,1483
+                          struct Tentry   *next;    } Entry;Entry61,1533
+void    AddReport 78,2020
+void    PrintReport 126,3281
+void    PrintHistory 174,4616
+
+history.h,25
+#define __HISTORY19,560
+
+learn_cpweight.c,581
+long read_global_knowledge(88,2808
+long calc_new_goal_dist(139,4116
+double eval_linear_original(178,5244
+double eval_linear_improved(229,6805
+void SetLearnEvalParams(293,8859
+void SetFLearnParams(342,10179
+double ErodeQuality(369,10910
+double GoalDistAim(393,11697
+double CGlobalLearnWeight(442,12797
+double LGlobalLearnWeight(496,14398
+double LGlobalLearnWeight(553,16018
+double CGoalBoundLearnWeight(617,18024
+double LGoalBoundLearnWeight(703,20750
+double CSpecBoundLearnWeight(796,23652
+double LSpecBoundLearnWeight(898,26641
+double CGFloatLearnWeight(977,28881
+
+learn_cpweight.h,143
+#define _learn_cpweight17,425
+}DistanceStrategy;DistanceStrategy33,1015
+#define UNK_BASE_DEFAULT 35,1035
+#define DEFAULT_EVAL_FCT 74,2282
+
+learn_exaselect.c,124
+example_p InsertExample(46,1414
+double DeltaAF(97,2676
+example_p GetExaList(129,3740
+bool IsEmptyIntersection(356,10289
+
+learn_exaselect.h,60
+#define _learn_exaselect15,321
+#define delta(delta24,626
+
+learn_exaselect_notree.c,123
+example_p InsertExample(46,1414
+double DeltaAF(97,2676
+example_p GetExaList(129,3740
+bool IsEmptyIntersection(347,9836
+
+learn_exaselect_notree.h,60
+#define _learn_exaselect15,321
+#define delta(delta24,626
+
+learn_exaselect_tree.c,156
+exampletree_p InsertExample(46,1379
+example_p InOrder(87,2313
+double DeltaAF(116,2945
+example_p GetExaList(148,4009
+bool IsEmptyIntersection(363,10061
+
+learn_exaselect_tree.h,193
+#define _learn_exaselect16,377
+#define delta(delta25,682
+typedef struct treecelltreecell27,774
+}TreeCell, *exampletree_p;exampletree_p33,973
+#define AllocTreeCell(AllocTreeCell48,1598
+
+learn_lpairs.c,621
+void parse_annotation(38,1039
+Lpair_p ParseLpair(101,2721
+Lpair_p ParseLpairLine(134,3498
+long    ParseLpairTree(198,5005
+Lpair_p ParseSpecTree(239,6444
+long ParseLpair1TET(268,7150
+long ParseLpair2TET(301,8041
+void PrintLpair(335,8826
+void PrintLpairLine(360,9443
+void PrintExampleList(395,10255
+void FreeExampleList(419,10796
+void FreeLpair(450,11431
+void FreeLpairTree(480,12058
+long CmpLpairs(507,12649
+void LpairTreeInsert(543,13431
+void PrintLpairTree(598,14881
+LearnSig_p ParseLearnSig(626,15621
+void PrintLearnSig(680,16922
+bool LearnSigCompare(711,17644
+Lpair_p TermpairToNormLpair(745,18381
+
+learn_lpairs.h,729
+#define _learn_lpair19,575
+typedef struct examplecellexamplecell28,854
+}ExampleCell, *example_p;example_p33,982
+typedef struct lpaircelllpaircell35,1009
+}LpairCell, *Lpair_p;Lpair_p51,1722
+typedef struct learnsigcelllearnsigcell53,1745
+}LearnSigCell, LearnSigCell_p;LearnSigCell_p57,1814
+typedef struct learnsiglearnsig59,1846
+}LearnSig, *LearnSig_p;LearnSig_p64,1993
+}LpairTreeParams, *LpairTreeParams_p;LpairTreeParams_p76,2197
+#define AllocExampleCell(AllocExampleCell83,2466
+#define FreeExampleCell(FreeExampleCell85,2549
+#define AllocLpairCell(AllocLpairCell88,2625
+#define FreeLpairCell(FreeLpairCell90,2702
+#define AllocLearnSig(AllocLearnSig93,2767
+#define FreeLearnSig(FreeLearnSig96,2842
+
+learn_lterms.c,412
+Lterm_p parse_lterm_args(52,1801
+long cmp_term_cell(97,2760
+void FreeLterm(145,3863
+Lterm_p ParseLterm(176,4476
+long CmpLterms(225,5570
+short LtermArity(266,6421
+void PrintLterm(304,7225
+TET_p AllocEmptyTET(351,8275
+TAT_p AllocEmptyTAT(377,8801
+void FreeTET(404,9347
+void FreeTAT(432,9862
+void PrintTET(461,10403
+void PrintTAT(501,11226
+void LtermTATInsert(539,12082
+void LtermTETInsert(573,12882
+
+learn_lterms.h,516
+#define _learn_lterms23,814
+typedef struct ltermcellltermcell35,1158
+}LtermCell, *Lterm_p;Lterm_p47,1709
+typedef struct tet_celltet_cell54,1832
+}TETCell, *TET_p;TET_p61,2111
+typedef struct tat_celltat_cell64,2131
+}TATCell, *TAT_p;TAT_p76,2498
+#define AllocLtermCell(AllocLtermCell85,2749
+#define FreeLtermCell(FreeLtermCell87,2826
+#define AllocTETCell(AllocTETCell90,2898
+#define FreeTETCell(FreeTETCell92,2969
+#define AllocTATCell(AllocTATCell95,3037
+#define FreeTATCell(FreeTATCell97,3108
+
+learn_mixterms.c,194
+long CmpLtermNterm(53,1795
+Lpair_p FindTwoNtermsLtermTree(129,3765
+term* LtermToDomTerm(179,5002
+Lterm_p NtermToLterm(238,6452
+termpair* LpairToDomPair(295,7884
+void LpairTreeAdd(322,8652
+
+learn_mixterms.h,31
+#define _learn_mixterms19,530
+
+learn_nterms.c,306
+void FreeDNormSubst(53,1564
+DNormSubst_p AllocEmptyDNormSubst(77,2120
+DNormSubst_p DNormTermVars(111,2989
+DNormSubst_p DNormTermFuns(157,3957
+DNormSubst_p DNormTerm(210,5242
+long CmpNormTerms(272,6493
+DNormSubst_p OrderNormTerms(333,8068
+void PrintDNormSubst(373,8897
+void PrintDNormTerm(407,9788
+
+learn_nterms.h,247
+#define _learn_nterms16,370
+typedef struct dnormsubstcelldnormsubstcell47,1844
+}DNormSubstCell, *DNormSubst_p;DNormSubst_p55,2041
+#define AllocDNormSubstCell(AllocDNormSubstCell67,2367
+#define FreeDNormSubstCell(FreeDNormSubstCell69,2460
+
+learn_specific.c,404
+LpairTreeParams read_goaldata(67,2398
+LpairTreeParams read_specdata(117,3747
+LpairTreeParams find_fist_compat_specdom(174,5493
+void find_rest_compat_specdom(271,8639
+char* get_kb_variable_value(352,11269
+char* KBFullName(422,13216
+bool GetBoolKBVariable(459,14048
+DNormSubst_p FindEquivalentGoal(496,14966
+LpairTreeParams InitGoalDomExpert(535,15893
+LpairTreeParams InitSpecDomExpert(610,17904
+
+learn_specific.h,64
+#define _learn_specific17,468
+#define MAX_KB_VARIABLES 34,951
+
+learn_tets.c,463
+long read_global_tet(63,2271
+long read_global_2tet(128,4134
+long sink_args_TAT(188,5550
+long  sink_args_TAT2(221,6412
+double sink_args_TAT3(250,7111
+void norm_TAT_anno(278,7732
+#define SCAN_TET_BRANCHES(SCAN_TET_BRANCHES307,8608
+long FindMaxProofs(338,10038
+long SinkNTermTET(425,12363
+long SinkNTermTET2(461,13234
+double SinkNTermTET3(490,14007
+double C1TETLearnWeight(525,14818
+double C2TETLearnWeight(573,16128
+double C3TETLearnWeight(614,17252
+
+learn_tets.h,27
+#define _learn_tets17,470
+
+learn_tsm.c,587
+void print_tsa(52,1563
+int standard_tsm_map(101,2629
+long traverse_tsa(154,3956
+double DeltaTSA(189,4595
+TSMDesc_p AllocEmptyTSMDesc(223,5437
+void FreeTSMDesc(249,6018
+TSM_p AllocEmptyTSM(272,6476
+void FreeTSM(312,7414
+TSA_p AllocEmptyTSA(338,7887
+void FreeTSA(369,8488
+int StandardTSMLtermMap(395,8970
+int StandardTSMNtermMap(412,9420
+void PrintTSM(437,9993
+TSA_p TSAInsertLterm(496,11382
+TSM_p TSMInsertLterm(530,12200
+long ParseLpairTSM(568,13276
+long ParsePlainLpairTSM(611,14540
+long ParseLpairOTSM(645,15526
+long TraverseTSM(689,16872
+double DeltaTSM(725,17529
+
+learn_tsm.h,970
+#define learn_tsm20,361
+typedef struct tsmdatatsmdata32,791
+}TSMData;TSMData40,927
+typedef struct tsmdisttsmdist45,1048
+}TSMDist;TSMDist52,1181
+typedef int (*tsm_lterm_map)tsm_lterm_map68,1907
+typedef int (*tsm_nterm_map)tsm_nterm_map70,1969
+typedef struct tsmdesccelltsmdesccell72,2020
+}TSMDescCell,*TSMDesc_p;TSMDesc_p79,2278
+#define TSM_MAX_VARS 81,2304
+#define TSM_MAX_FUNS 82,2328
+#define TSM_MAX_ALTS 83,2352
+typedef struct tsmcelltsmcell85,2402
+}TSMCell,*TSM_p;TSM_p92,2599
+typedef struct tsa_celltsa_cell98,2753
+}TSACell,*TSA_p;TSA_p106,2987
+typedef void (*process_tsm_cell)process_tsm_cell110,3140
+typedef void (*process_tsa_cell)process_tsa_cell111,3181
+#define AllocTSMDescCell(AllocTSMDescCell118,3447
+#define FreeTSMDescCell(FreeTSMDescCell119,3520
+#define AllocTSMCell(AllocTSMCell121,3598
+#define FreeTSMCell(FreeTSMCell122,3659
+#define AllocTSACell(AllocTSACell124,3725
+#define FreeTSACell(FreeTSACell125,3786
+
+learn_tsmexperts.c,310
+#define calc_prop(calc_prop42,1325
+void tsm_calc_altdistrib(57,1744
+void tsa_calc_argdistrib(118,3425
+double tsm_distrib_eval(157,4291
+double tsa_distrib_eval(204,5360
+long CreateTSMFromKB(245,6514
+long CreateOTSMFromKB(327,8895
+double StandardTSMWeight(428,12288
+double StandardOTSMWeight(464,13237
+
+learn_tsmexperts.h,32
+#define learn_tsmexperts20,345
+
+list.c,216
+listcell     *newlist 60,1751
+void     deletelist 99,2762
+DList_p newdlist(119,3200
+void    DeleteList 143,3812
+short   Length 169,4478
+void    AddList 187,4988
+void    *First 209,5665
+void    *Next 215,5783
+
+list.h,328
+#define __LIST20,594
+typedef struct lclc32,870
+} listcell;listcell36,930
+} list;list47,1087
+#define EmptyList 49,1096
+typedef struct dlcdlc53,1187
+} DListCell,*DList_p;DList_p57,1245
+#define AllocDListCell(AllocDListCell59,1268
+#define FreeDListCell(FreeDListCell60,1335
+#define deletedlist(deletedlist73,1728
+
+memory.c,158
+struct block block35,847
+void AllocReserve(56,1529
+void FreeReserve(73,1911
+void    *Allocate 94,2409
+void    Free 130,3128
+void    Statistic 154,3664
+
+memory.h,322
+#define     __MEMORY19,565
+#define LOWBITS 40,1057
+#define STARTSHIFT 41,1132
+#define DIFFSHIFT 42,1207
+#define ARRAYSIZE 43,1282
+#define BITMASK 44,1357
+#define TESTMASK 45,1387
+#define REORG_PROTOTYPE(REORG_PROTOTYPE48,1419
+#define REORG_FUNCTION(REORG_FUNCTION51,1540
+#define TEST_REORG(TEST_REORG102,5096
+
+newmem.c,195
+#define MEM_ARR_SIZE 29,938
+void* SizeMalloc(55,1770
+void SizeFree(95,2719
+void FreeListFlush(136,3685
+void* SecureMalloc(167,4400
+void* SecureRealloc(200,5115
+char* SecureStrdup(233,5879
+
+newmem.h,93
+#define _newmem22,702
+typedef struct memcellmemcell32,989
+}MemCell, *Mem_p;Mem_p35,1039
+
+order.c,467
+static long kbo_weight 124,3786
+static bool kbo_greater 159,4619
+static short    kbo_cmp 192,5452
+static function  MaxFunc 251,6866
+bool    lpo_greater 284,7639
+short   lpo_cmp 361,9663
+bool    rpo_greater 418,11072
+short   rpo_cmp 485,12692
+static bool     xkbo_gt 528,13890
+bool   xkbo_greater 561,14715
+short   xkbo_cmp 604,15683
+bool   wxkbo_greater 682,17430
+short   wxkbo_cmp 737,18716
+void    SetOrdering 791,20107
+short   GetOrdering 842,21420
+
+order.h,27
+#define     __ORDER27,998
+
+parsedom.c,607
+#define DOMFILESUFFIX 29,857
+term *newterm_dom 78,4177
+void delterm_dom 125,6244
+void deleteterm_dom 151,7741
+static void    SyntaxError 178,8645
+static void CheckError 197,9211
+static int ReadGanzzahl(251,12049
+static short Read_Param_list 294,14778
+static void  ReadRealzahl 377,18547
+static short ReadGa(439,21724
+static short ReadExp 507,24926
+static function findfunc 562,27361
+static term *ReadTerm 605,29709
+static termpair *ReadTermpair 684,33428
+static void ReadSignatur 744,36286
+static short ReadStartteam(800,39352
+static void ReadZyklenInfo(871,42850
+short ParseDom 924,45415
+
+parsedom.h,24
+#define __PARSEDOM2,19
+
+parseexp.c,558
+#define EXPFILESUFFIX 13,491
+static void    SyntaxError 57,2581
+static void CheckError 75,3141
+static int ReadGanzzahl(106,4598
+static void ReadZahlPaar(138,6287
+double exp_10 170,7758
+static void  ReadRealzahl 218,10581
+static short parameter_anz_best 271,13052
+static short Read_Param_list 371,17366
+static short ReadExp 449,20659
+static short ReadGa(524,24182
+static short ReadDom(590,27308
+static short ReadPolynomExp 644,29407
+static short Read_Param_list2(689,32507
+static short ReadParameter(825,38134
+ExpertType ParseExpert 910,41391
+
+parseexp.h,85
+#define __PARSEEXP2,19
+typedef enum { EXP, DAT, RED } ExpertType;ExpertType23,827
+
+parseplan.c,155
+static void    SyntaxError 80,3479
+static void CheckError 97,4038
+static void ReadZeile 135,6134
+void SetPlanParams 203,9015
+void ParsePlan 331,13139
+
+parseplan.h,28
+#define __PARSEPLAN17,1141
+
+parseprk.c,101
+long ReadPrk(55,1747
+long parse_expert(81,2367
+long parse_cycle(125,3298
+long parse_prk(179,4546
+
+parseprk.h,125
+#define _parseprk18,464
+typedef struct cyclelistcellcyclelistcell30,924
+}CycleListCell, *CycleList_p;CycleList_p37,1166
+
+parser.c,1092
+typedef struct lc lc84,2613
+                      struct lc *next; } listcell;listcell85,2652
+                      short     length; } list;list90,2821
+#define EmptyList 93,2871
+static listcell     *new 138,4336
+static void     deletelist 178,5347
+static void    DeleteList 197,5893
+static short   Length 223,6566
+static void    AddList 241,7083
+static term    *First 263,7759
+static term    *Next 269,7884
+typedef struct varcell varcell286,8451
+                         variable        code;               } VarCell;VarCell289,8608
+                  VarCell    *last;  } varlist;varlist293,8768
+static VarCell *newvar 322,9789
+static void deletevar 367,11155
+void     ClearVariables 387,11676
+variable     FindVariable 422,12599
+variable     CreateVariable 455,13392
+static void    SyntaxError 506,14854
+static void CheckError 525,15415
+static short readordering 547,15903
+static short readaltordering 641,19357
+static term    *readterm 753,23597
+static bool prologVar 805,24896
+void    Parse 824,25416
+static void ptp 1053,32564
+void PrintFile 1059,32644
+
+parser.h,24
+#define __PARSER28,925
+
+parseref.c,271
+static void    SyntaxError 55,2136
+static void CheckError 73,2696
+static int ReadGanzzahl(104,4152
+static void ReadZahlPaar(136,5841
+static void  ReadRealzahl 187,8843
+static void Read_Parameter 240,11229
+static short ReadObjekt 293,13897
+void ParseRef(337,15785
+
+parseref.h,24
+#define __PARSEREF2,19
+
+pcl.c,965
+#define     PCL_POSLEN 62,1759
+#define          varstrlen 105,3279
+static void    pcl_fprettyprint 125,4082
+void    pcl_fprinttpair 174,5575
+bool   myequal 208,6731
+static void     tpppair 240,7501
+static void tptype 276,8726
+static void    pcl_cp 314,9944
+static void     pcl_final 343,10802
+static void     FindPos 358,11120
+static bool     findpos 365,11226
+void pcl_open 401,12319
+void pcl_comment(444,13458
+void    pcl_close 470,14072
+void pcl_extract(491,14653
+void    pcl_fextract(561,16724
+void    pcl_clean(637,19040
+void    pcl_init 667,19715
+void    pcl_exit 685,20136
+void    pcl_subsum 707,20714
+void    pcl_rreduce 745,21829
+void    pcl_ereduce 794,23426
+void pcl_orient(841,24837
+void    pcl_newcp 872,25883
+void    pcl_intermed(915,27283
+void    InitPclIds(963,28591
+void    StorePclId(987,29171
+PclId_p RetrievePclId(1011,29887
+PclId_p NextPclId(1035,30596
+PclId_p CurrentPclId(1058,31165
+void fPrintPclId(1080,31793
+
+pcl.h,1927
+#define     __PCL63,2841
+typedef enum extracttypeextracttype76,3099
+}ExtractType;ExtractType83,3204
+#define PCL_ECHO_SYSTEM 121,4062
+#define SYSTEM(SYSTEM125,4113
+#define SYSTEM(SYSTEM142,4932
+    #define PCL_INIT(PCL_INIT158,5630
+    #define PCL_EXIT(PCL_EXIT159,5682
+    #define PCL_OPEN(PCL_OPEN160,5738
+    #define PCL_COMMENT(PCL_COMMENT162,5867
+    #define PCL_CLOSE(PCL_CLOSE163,5929
+    #define PCL_EXTRACT(PCL_EXTRACT164,5981
+    #define PCL_FEXTRACT(PCL_FEXTRACT165,6043
+    #define PCL_CLEAN(PCL_CLEAN166,6098
+    #define PCL_ORIENT(PCL_ORIENT168,6151
+    #define PCL_SUBSUM(PCL_SUBSUM169,6213
+    #define PCL_REDUCE_LEFT(PCL_REDUCE_LEFT171,6277
+    #define PCL_REDUCE_RIGHT(PCL_REDUCE_RIGHT173,6407
+    #define PCL_R_REDUCE(PCL_R_REDUCE176,6539
+    #define PCL_E_REDUCE(PCL_E_REDUCE177,6603
+    #define PCL_SAVE(PCL_SAVE179,6673
+    #define PCL_INIT_CP(PCL_INIT_CP181,6741
+    #define PCL_INIT_ECP(PCL_INIT_ECP185,7011
+    #define PCL_NEWCP(PCL_NEWCP186,7071
+    #define PCL_INTERMED(PCL_INTERMED187,7138
+    #define PCL_INIT(PCL_INIT191,7203
+    #define PCL_EXIT(PCL_EXIT192,7226
+    #define PCL_OPEN(PCL_OPEN193,7253
+    #define PCL_COMMENT(PCL_COMMENT194,7303
+    #define PCL_CLOSE(PCL_CLOSE195,7340
+    #define PCL_EXTRACT(PCL_EXTRACT196,7364
+    #define PCL_FEXTRACT(PCL_FEXTRACT197,7401
+    #define PCL_CLEAN(PCL_CLEAN198,7428
+    #define PCL_ORIENT(PCL_ORIENT200,7453
+    #define PCL_SUBSUM(PCL_SUBSUM201,7488
+    #define PCL_REDUCE_LEFT(PCL_REDUCE_LEFT203,7522
+    #define PCL_REDUCE_RIGHT(PCL_REDUCE_RIGHT204,7556
+    #define PCL_R_REDUCE(PCL_R_REDUCE206,7592
+    #define PCL_E_REDUCE(PCL_E_REDUCE207,7627
+    #define PCL_SAVE(PCL_SAVE209,7667
+    #define PCL_INIT_CP(PCL_INIT_CP211,7695
+    #define PCL_INIT_ECP(PCL_INIT_ECP212,7735
+    #define PCL_NEWCP(PCL_NEWCP213,7766
+    #define PCL_INTERMED(PCL_INTERMED214,7804
+
+polynom.c,510
+#define MAXVAR 46,1119
+#define ClearVars(ClearVars54,1266
+#define AddVar(AddVar55,1304
+polynom  *newpoly 99,2719
+static void delete 141,3742
+void deletepoly 158,4173
+static char     *skip 182,4716
+static char     *scanident 203,5275
+static char  *getbracket 227,5865
+static function readfunction 266,6830
+static long readexp 327,8601
+static polynom *readfactor 362,9473
+static polynom *readpolynom 436,11177
+long    polyval 536,13847
+polynom    *getpolynom 584,15640
+void printpoly 602,16189
+
+polynom.h,270
+#define     __POLYNOM19,546
+typedef enum opcodes opcodes27,759
+                          op_pot                        } opcode;opcode32,931
+typedef struct polycell polycell34,998
+                                                        } polynom;polynom41,1319
+
+reduce.c,237
+static bool    creduce 67,1861
+static bool    rreduce 96,2664
+static bool    ereduce 134,3691
+bool    reduce 206,5599
+bool    Rreduce 353,9323
+bool    Ereduce 387,10316
+bool    reduce_pair 420,11203
+bool    CheckReduce 450,12109
+
+reduce.h,28
+#define     __REDUCE26,820
+
+referee.c,727
+long     Referee 126,3884
+static long  NoReferee 201,6247
+static void   InsertRefRule 231,7394
+static void   InsertRefEqu 254,7926
+static void   InsertRefGoal 299,10123
+static void   LTestRule 328,10843
+static void   LTestEqu 344,11179
+static void LTestGoal 382,13263
+static void  LastSelect 414,13943
+static void   TestRule 479,15581
+static void   TestEqu 503,16318
+static void TestGoal 550,18772
+static void  StatisticSelect 581,19459
+static void  GoalTestSelect 665,21649
+static long  StatisticReferee 709,22845
+static long  ExtendedReferee 786,25624
+static long  FeelGoodReferee 911,30864
+static void   TestDivRule 992,33979
+static void   TestDivEqu 1017,34605
+static long  DivergenceReferee 1049,35487
+
+referee.h,1455
+#define    __REFEREE26,830
+#define     REF_SIZE_R 46,1677
+#define     REF_SIZE_E 47,1712
+#define     REF_SIZE_CP 48,1747
+#define     REF_SIZE_G 49,1782
+#define     REF_SIZE_CG 50,1817
+#define     REF_NEW_R 51,1852
+#define     REF_RED_R 52,1887
+#define     REF_DEL_R 53,1922
+#define     REF_NEW_E 54,1957
+#define     REF_RED_E 55,1992
+#define     REF_DEL_E 56,2027
+#define     REF_NEW_CP 57,2062
+#define     REF_DEL_CP 58,2097
+#define     REF_NEW_G 59,2132
+#define     REF_RED_G 60,2167
+#define     REF_NEW_CG 61,2202
+#define     REF_REDCOUNT 62,2237
+#define     REF_NOMASTER 64,2323
+#define     REF_LAST_CP 67,2393
+#define     REF_LAST_CG 68,2428
+#define     REF_PAST_FAC 69,2463
+#define     REF_NEXT_CP 70,2498
+#define     REF_NEXT_CG 71,2533
+#define     REF_FUTURE_FAC 72,2568
+#define     REF_CORRECCT_FAC 73,2603
+#define     REF_MAX_RULE 79,2791
+#define     REF_MAX_EQU 80,2866
+#define     REF_MAX_GOAL 81,2941
+#define     REF_RULE_LOW 83,3017
+#define     REF_EQU_LOW 84,3092
+#define     REF_GOAL_LOW 85,3167
+#define     REF_RED_COUNT 87,3203
+#define     REF_RED_RIGHT 88,3278
+#define     REF_RED_LEFT 89,3353
+#define     REF_RED_EQU 90,3428
+#define     REF_RED_GOAL 91,3503
+#define     REF_SUBSUM 92,3578
+#define     REF_CP_COUNT 94,3654
+#define     REF_CG_COUNT 95,3729
+#define     REFFILESUFFIX 98,3806
+#define     NOREFEREE 100,3844
+		} report;report124,4701
+               } RefFrame;RefFrame143,5667
+
+s_scanner.c,917
+typedef struct scannerstatecellscannerstatecell33,1204
+}ScannerStateCell, *ScannerState_p;ScannerState_p48,1513
+#define AllocScannerStateCell(AllocScannerStateCell50,1550
+#define FreeScannerStateCell(FreeScannerStateCell52,1643
+static void push_scanner_state(159,5615
+static void pop_scanner_state(198,6705
+static char next_char(246,7969
+static void scan_ident(280,8650
+static void scan_number(348,10246
+void scan_string(388,11290
+static void scan_line_comment(430,12447
+static void scan_C_comment(456,13048
+bool FileExists(491,13952
+void InitScanner(526,14717
+void EndScanner(564,15481
+void ScannerError(591,16086
+TokenType NextToken(614,16639
+TokenType NextRealToken(706,18336
+bool TestToken(735,19041
+bool TestIdent(768,19922
+void CheckToken(797,20734
+void CheckIdent(825,21511
+void AcceptToken(861,22462
+void AcceptIdent(883,23018
+bool ParseBool(903,23452
+double ParseReal(937,24350
+
+s_scanner.h,123
+#define _s_scanner21,701
+} TokenType;TokenType57,2219
+#define isidchar(isidchar70,2733
+#define ischar(ischar71,2783
+
+scanner.c,668
+#define FILEINITIAL 77,2561
+#define MAXFILES 78,2634
+                 Symbol code;       } SymbolEntry;SymbolEntry88,3103
+               } file_des;file_des101,3682
+short    OpenInput 519,22741
+void    CloseInput 571,24324
+void    SetUppercase 601,25287
+static void    NextChar 618,25761
+static void Skip 667,27388
+static void SkipLine 684,27890
+static bool    ScanIdent 705,28518
+static Symbol   ScanSymbol 755,30086
+bool    IsNumber 802,31577
+Symbol  GetSymbol 831,32371
+bool    GetFilename 877,33461
+void    PrintScanText 907,34168
+void    PrintSymbol 925,34749
+void    SetScanMode 965,36075
+bool   Check_Symbol 1008,38352
+bool EOI 1052,40035
+
+scanner.h,299
+#define __SCANNER61,2141
+} Symbol;Symbol192,7573
+	       DOM_MODE, PLAN_MODE, SPEC_MODE, REF_MODE, NULL_MODE } ScanMode;ScanMode196,7645
+typedef enum { CHECK_EXP, CHECK_GA, CHECK_SPEC } ChekMode;ChekMode200,7870
+#define SkipSpace(SkipSpace250,10217
+#define SkipSymbol(SkipSymbol275,11902
+
+socket.c,225
+void    WriteStream 78,2179
+void    ReadStream 119,3199
+void    WriteInt 157,4085
+int     ReadInt 201,4971
+void    WriteString 245,5859
+void    ReadString 267,6450
+void WriteDouble 296,7969
+double ReadDouble 319,9386
+
+socket.h,164
+#define     __SOCKET23,661
+#define          ANSI31,890
+#define          INTBUFFER 32,912
+#define          BROADCAST 34,949
+#define          Close(Close36,981
+
+subst.c,787
+void    initsubst 78,2171
+subst *newsubst 100,2889
+static subst *newmatch 160,4570
+static void deletes 213,5889
+static void deletem 241,6648
+void deletesubst 264,7199
+void deletematch 285,7671
+term    *dassoc 313,8521
+term    *assoc 341,9343
+term    *substitute 368,10120
+term    *dsubstitute 403,11043
+static bool hcombine 440,11975
+static void  sadd 467,12684
+static void  sunion 496,13477
+bool    combine 521,14191
+void    addsubst 547,14857
+static void  addmatch 571,15590
+void    printsubst 593,16176
+static bool cunify 626,17116
+static bool  dunify 661,18081
+bool    unify 748,20223
+static bool cmatch 798,21464
+static bool  dmatch 833,22446
+bool    match 881,23684
+bool goal_in_goal_match(925,25702
+subst   *copysubst 959,26550
+REORG_FUNCTION(981,26993
+
+subst.h,145
+#define __SUBST24,664
+typedef struct substcell substcell35,897
+                                                        } subst;subst42,1228
+
+systime.c,288
+void  interrupt_handler 90,2413
+static void  quit_handler 133,3528
+static void  ti_handler 191,4810
+static void  hangup 213,5376
+void    InitKillHandler 233,5838
+void    InitInterruptHandler 251,6210
+void    settimer 276,6921
+long    systime 326,8143
+void    fprinttime 351,8759
+
+systime.h,25
+#define __SYSTIME19,543
+
+team.c,835
+#define         PLAN_LOGFILE 146,4734
+#define         DEF_EXPERT_DIR 150,4940
+#define         DEF_REFEREE_DIR 151,4983
+#define         DEF_DOMAIN_DIR 152,5027
+#define         DEF_PROTOCOL_DIR 153,5070
+#define         DEF_KNOWLEDGE_DIR 154,5115
+static void    SyntaxError 320,11879
+static void CheckError 339,12442
+static short ReadExperts 376,14255
+static void    ParseConfig 516,18172
+void  SetConfiguration 758,26222
+void SetRefParams 1941,64284
+static void  Execute 2064,70717
+void    StartXpert 2123,73048
+void    StartTeam 2290,79309
+void    TerminateTeam 2607,89355
+static void StartNextCycle 2656,91209
+static void BuildAndSendNextStartsystem(2766,96244
+static void     Master 3022,105888
+static void ReceiveNextStartsystem 3238,114278
+static void     Slave 3329,117742
+void    StartCompletion 3450,121814
+
+team.h,212
+#define     __TEAM26,801
+#define     SINGLE 40,1113
+#define     MASTER 41,1152
+#define     EXPERT 42,1191
+#define     SPECIAL 43,1230
+#define     REFEREE 44,1269
+               } ObjEntry;ObjEntry56,1741
+
+term.c,1182
+#define          varstrlen 60,2106
+void    initterm 80,2565
+function  FindFunction 102,3151
+function  NewFunction 128,3735
+void    SetArguments 158,4704
+void    SetCancellation 190,5766
+void    SetOrdertype 218,6726
+void    SetWeight 245,7563
+bool    CheckFunctions 277,8618
+void    PrintFunctions 305,9261
+term    *newterm 345,10595
+void    deletet 422,12629
+void    deleteterm 448,13253
+term    *copyterm 470,13799
+bool  occur 500,14580
+bool  foccur 529,15312
+bool    equal 557,15974
+bool    member 588,16726
+void    printterm 616,17339
+long    depth 653,18156
+void    prettyprint 691,19280
+void    fprettyprint 742,20764
+long    sprettylen 791,22141
+void    sprettyprint 830,23201
+void    prettyterm 886,24582
+void    fprettyterm 907,25104
+bool    varoccur 936,25916
+void    newvars 964,26626
+void    tnewvars 995,27397
+void    getvars 1021,28101
+vartree *tgetvars 1049,28758
+term    *copynew 1077,29535
+term    *tcopynew 1111,30343
+long    getweight 1133,30840
+long    lgetweight 1159,31422
+long     testweight 1176,31669
+bool    checkweight 1194,31973
+short   count_func 1214,32435
+short   count_var 1229,32644
+REORG_FUNCTION(1250,33040
+
+term.h,704
+#define __TERM71,3355
+typedef struct termcell termcell85,3647
+                          struct termcell   *argument[0]; } term;term91,3927
+                 term       *freelist;              } FunctionInfo;FunctionInfo100,4266
+                 short      preorder[MAXFUNCTION];  } OrderInfo;OrderInfo104,4418
+#define varp(varp129,5138
+#define funcp(funcp130,5180
+#define constp(constp131,5222
+#define Arity(Arity133,5266
+#define Weight(Weight134,5309
+#define FreeList(FreeList135,5353
+#define CheckCancel(CheckCancel137,5400
+#define LPOFGreater(LPOFGreater139,5466
+#define RPOFGreater(RPOFGreater140,5556
+#define NewVariable 142,5647
+#define IncVarCount(IncVarCount143,5685
+
+termpair.c,2390
+#define     CACHESIZE 56,2195
+void    inittermpair 102,3508
+termpair    *newpair 127,4399
+void    deletepair 202,6392
+void    printtpair 240,7308
+void    fprinttpair 281,8441
+char    *sprinttpair 307,9234
+void    SwapSides 358,10655
+static bool     hequal 383,11373
+bool    tpequal 432,12636
+static bool    hsubsum 476,13758
+bool    tpsubsum 533,15396
+void    tpnewvars 551,15979
+void    tpcopynew 576,16750
+void    Add 604,17559
+void    Insert 633,18251
+void    Delete 685,19540
+void      AddRule 718,20370
+void      AddEqu 728,20625
+void      AddCP 737,20805
+void      AddGoal 746,20990
+void      AddCritGoal 755,21157
+void use_cache(787,23121
+void    InsertRule 889,26464
+void      InsertEqu 900,26762
+void      InsertCP 910,27008
+void      InsertGoal 983,28800
+void      InsertCritGoal 992,28971
+void    NInsertRule 1013,29620
+void    NInsertEqu 1023,29875
+void    NInsertCP 1032,30078
+void    NInsertGoal 1096,31631
+void    NInsertCritGoal 1104,31762
+void    ReInsertRule 1126,32511
+void    ReInsertCP 1148,33224
+void      DeleteRule 1164,33655
+void      DeleteEqu 1171,33782
+void      DeleteCP 1178,33894
+void      DeleteGoal 1187,34042
+void      DeleteCritGoal 1194,34149
+termpair  *RuleByNumber 1217,34745
+termpair  *EquByNumber 1249,35513
+termpair  *CPByNumber 1277,36203
+termpair  *GoalByNumber 1307,37714
+termpair  *CGByNumber 1337,39247
+bool    Empty 1364,39918
+termpair  *DelFirst 1392,40801
+termpair  *DelLast 1429,41703
+short   FindPair 1472,42698
+termpair    *FindSubsum 1503,43507
+void    InititalSet 1530,44133
+void    ClearSet 1553,44636
+void    TPClearData 1583,45292
+void    TPClearCPCache 1607,45855
+void    TPClearCPCachePtr 1618,45997
+void    TPClearCGCache 1647,47485
+void    TPClearCGCachePtr 1678,49107
+REORG_FUNCTION(1699,49518
+void  ForAllRulesDo 1739,50798
+void  ForAllFRulesDo 1772,51773
+void  ForAllEquDo 1800,52576
+void  ForAllCPsDo 1828,53361
+void  ForAllGoalsDo 1856,54142
+void  ForAllCritGoalsDo 1884,54931
+void    PrintSet 1914,55677
+void    PrintRules 1938,56163
+void    PrintEquations 1967,56757
+void      MoveSet 1995,57673
+void      MergeCPs 2018,58373
+void MergeCGs 2046,59882
+bool      Cancellation 2081,60936
+long      SumWeightCP 2138,62443
+void    CheckSet 2165,62923
+void     CheckPairs 2184,63325
+long akt_termpaare_anz_best 2221,65473
+void PrintAllPairs 2251,67328
+
+termpair.h,1660
+#define __TERMPAIR107,4945
+typedef struct pclidcellpclidcell124,5276
+}PclIdCell,*PclId_p;PclId_p129,5344
+typedef struct tpcell tpcell134,5375
+                                                        } termpair;termpair173,7063
+typedef struct tpset tpset178,7372
+                        long              setcount;     } pairset;pairset181,7520
+#define ClrReferee(ClrReferee205,8273
+#define Referee_Red_Count(Referee_Red_Count216,8942
+#define Referee_Red_Right(Referee_Red_Right217,8998
+#define Referee_Red_Left(Referee_Red_Left218,9054
+#define Referee_Red_Equation(Referee_Red_Equation219,9109
+#define Referee_Red_Goal(Referee_Red_Goal220,9163
+#define Referee_Subsum(Referee_Subsum221,9218
+#define Referee_CountCP(Referee_CountCP222,9271
+#define         INITIAL 231,9530
+#define         NEW 232,9605
+#define         MODIFIED 233,9680
+#define         CLEARED 234,9755
+#define         MARKED 235,9830
+#define         State(State238,9907
+#define         New(New239,9949
+#define         Initial(Initial240,9997
+#define         Modify(Modify241,10049
+#define         Clear(Clear242,10103
+#define         Mark(Mark243,10155
+#define         EmptySet 245,10207
+#define         RuleCounter 247,10258
+#define         EquCounter 248,10309
+#define         CPCounter 249,10361
+#define         GoalCounter 250,10417
+#define         CGCounter 251,10465
+#define         UNKNOWN 254,10523
+#define         RULE 255,10598
+#define         EQUATION 256,10673
+#define         CRITPAIR 257,10748
+#define         GOAL 258,10823
+#define         CRITGOAL 259,10898
+#define SizeOf(SizeOf262,10975
+#define IsAct(IsAct264,11019
+
+transfer.c,1042
+void      SendPolynom 116,3513
+polynom   *ReceivePolynom 148,4484
+static void     termput 194,6062
+static term   *termget 233,7027
+static void  sendtermpair 274,8121
+static termpair  *recvtermpair 311,9281
+static void  sendcritpair 368,11841
+static void  sendcritgoal 463,15184
+static termpair  *recvcrittermpair 555,17950
+static void  getcpparents 600,19096
+static void  getcgparents 695,22498
+void      GetCpParents 781,24486
+void      GetCgParents 806,25917
+void      SendPair 836,26766
+termpair  *ReceivePair 857,27346
+void      SendRules 879,27884
+void      SendEquations 897,28425
+void      SendCriticalPairs 916,28979
+void      SendGoals 948,29787
+void      SendCriticalGoals 967,30330
+void      ReceiveRules 1000,31224
+void      ReceiveEquations 1036,32253
+void      ReceiveCriticalPairs 1071,33223
+void      ReceiveGoals 1117,34495
+void      ReceiveCriticalGoals 1138,35084
+void    SendAllPairs 1179,36118
+void    ReceiveAllPairs 1213,37260
+void    SendReport 1258,38799
+void    ReceiveReport 1289,39560
+
+transfer.h,56
+#define    __TRANSFER20,560
+#define    BUFSIZE 28,765
+
+vartree.c,329
+void    VTinit 56,1517
+static vartree *new 78,2238
+static void delete 139,3737
+static void rdelete 162,4302
+void    VTclear 190,4997
+void    VTadd 210,5597
+variable    VTfind 245,6518
+variable    VTfindinc 275,7310
+short   VTfindcount 307,8093
+bool    VTless 337,8906
+bool    VTpartof 376,9914
+void VTprint 409,10626
+
+vartree.h,145
+#define __VARTREE38,1683
+typedef struct vtree vtree50,1916
+                                                        } vartree;vartree58,2226

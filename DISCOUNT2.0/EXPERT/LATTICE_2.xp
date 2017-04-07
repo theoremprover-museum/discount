@@ -1,0 +1,65 @@
+EXPERTENNAME                 LATTICE_2
+
+EXP_OR_SPEC                  E
+
+CP_FUNKTION                  ADD_RWEIGHT
+#CP_FUNKTION                  MAX_RWEIGHT_LAT
+                             F_GEWICHT : 1,5 ; 2
+                             V_GEWICHT : 1,5 ; 1
+                             RED_INST  : 0,1 ; 1
+			     #F_GEW_LIST : u : 10 ; n : 10
+
+#CP_FUNKTION                  OCCNEST
+			     #F_GEWICHT  : 1,5 ; 2
+                             #V_GEWICHT  : 1,5 ; 1
+                             #RED_INST   : 0,1 ; 1
+                             #ALL_FUNS   : 0,1 ; 1
+
+
+CG_FUNKTION                  UNIF_GOAL
+                             F_GEWICHT    : 1,5 ; 2
+                             V_GEWICHT    : 1,5 ; 1
+                             MIN_STRUCT   : 0,5 ; 4
+
+FAIRNESS                     N
+
+GUTE_GUTACHTER
+
+GUTE_DOMAENEN 
+
+ROBUSTHEIT                   0.6
+
+WISSENSANTEIL                0.9
+
+BEWEISPHASE                  ANFANG  0.5
+                             MITTE   0.5
+                             ENDE    0.7
+
+ZYKLUSDAUER                  ANFANG  (1,10)
+                             MITTE   (1,10)
+                             ENDE    (1,10)
+
+AEHNLICHE_EXP
+
+#NACHFOLGER                   (MAX_RWEIGHT_LAT, RED_INST     : 0,1  ; 0
+				       #F_GEWICHT  : 1,5 ; 2
+				       #V_GEWICHT  : 1,5 ; 1, 0.5 )
+
+NACHFOLGER                   (GOALSIM, RED_INST     : 0,1  ; 0
+				       NO_MATCH     : 0,1000 ; 10
+				       DOUBLE_MATCH : 0,100 ; 1
+				       SINGLE_MATCH : 0,100 ; 50, 0.5 )
+# Die letzte Zahl ( hier 0.5 ) gibt die Guete des Experten an !)
+
+UNVERTRAEGL
+
+MOEGL_TEAMEXP                (GOALSIM, RED_INST     : 0,1  ; 0
+                                       MIND_ANZ_FKT : 0,5  ; 1
+                                       MIND_ANZ_VAR : 0,5  ; 1
+                                       NOMATCH      : 0,1000  ; 100
+                                       DOUBLEMATCH  : 0,8  ; 1
+                                       SINGLEMATCH  : 0,100  ; 5, 0.5)
+
+PROZEDUR      xyz
+
+BESCHREIBUNG 

@@ -1,0 +1,26 @@
+domain.h: DGICount - Anzahl der Domains in DomainGlobalInfo
+domain.h: DomainGlobalInfo - Infos ueber alle Domains
+database.c: AktDomNr - Nummer der bearbeiteten Dom!
+
+
+Vorgehen: 
+
+Test, ob DGICount<MAXDOM_ANZ-1 (Sonst Fehler)
+Domain eintragen in DomainGlobalInfo[MAXDOM_ANZ-1]
+ - nur Sig in dom_funktion[MAXFUNCTION], dom_fkt_anz 
+   und Spezifikation in def_gleichungen[MAX_DEF], def_anz
+
+AktDomNr = MAXDOM_ANZ-1 ;
+SuchModus = SFIND_FIRST;
+FindAndTestAllMatches();
+FoundDomainCount != 0 -> Sie gilt, Subst ist in
+DomainGlobalInfo[AktDomNr].dom_funktion[1..anzahl].fmatch enthalten
+-> Daraus NormSubst bauen
+
+Fuer_alle_weiteren_Dom
+   Lesen, (Subst stehen lassen - Trick ;-)
+   Testen, ob die Subst moeglich ist.
+   if(FindRules()) 
+      Integrieren (sonst wegwerfen)
+end
+

@@ -1,0 +1,562 @@
+
+extract.c,66
+void main(60,2964
+void InitIo(107,4701
+void PrintInfo(215,7620
+
+lemma.c,122
+void main(68,3378
+void InitIo(113,5344
+#define INT_OPTS 115,5395
+#define REAL_OPTS 116,5415
+void PrintInfo(331,11878
+
+mextract.c,66
+void main(63,2584
+void InitIo(187,6399
+void PrintInfo(318,9868
+
+nameadmin.c,191
+void InsertIdentifier(48,2610
+BOOL EraseIdentifier(93,4453
+Id_p GetIdentifierAddr(130,6059
+Id_p RemoveIdentifier(165,7707
+BOOL SetPclIdentifier(199,9489
+BOOL GetPclIdentifier(241,11383
+
+parse.c,610
+void Parse_tc_Step(88,3831
+void NextRealToken(177,6415
+void Print_tc_Step(204,7743
+void parse_term(281,12125
+void parse_arglist(310,13533
+void parse_place(350,15209
+void parse_assign(387,16806
+void parse_reduce(415,18177
+void parse_buildcp(458,19816
+void parse_subsum(510,21685
+void parse_initial(542,23122
+void parse_delete(567,24379
+void parse_clear(589,25609
+void parse_swap(611,26836
+void parse_termpair(634,27998
+tc_IdType Check_tc_ids(673,29547
+void AcceptTok(733,30855
+void check(756,32237
+BOOL test(789,33947
+void AcceptId(819,35443
+void check_id(849,37391
+BOOL test_id(926,41031
+
+pcl2tree.c,65
+void main(61,2544
+void InitIo(94,4213
+void PrintInfo(196,6949
+
+pcl_analyse.c,92
+void get_parents(52,2857
+NumListList_p GetStepParents(95,4599
+void ExtractProof(126,6056
+
+pcl_buildtree.c,192
+void get_parents_real(56,2529
+void insert_identifier(107,4758
+PclIdList_p merge_Id_lists(141,6655
+PclIdList_p GetStepParentsReal(176,8395
+void BuildTree(209,10020
+void TreeOut(284,12116
+
+pcl_doio.c,166
+void EndIo(57,2574
+void OpenOutput(81,3776
+void OpenInput(108,5103
+void ReadFile(139,6672
+void ReadIn(165,8015
+void PrintOut(204,9614
+void PrintBack(230,10975
+
+pcl_eqchains.c,300
+void print_eq_just(53,2977
+void FreeEqChain(140,5720
+void PrintEqChain(192,8078
+EqChain_p CopyEqChain(252,10328
+EqChain_p ConcatEqChains(320,13162
+EqChain_p SwapEqChain(364,15209
+void CutEqChain(415,17742
+EqChain_p CleanEqChain(469,19771
+EqChain_p S(528,21986
+Subst_p EqChainVars(580,24372
+
+pcl_fproof.c,290
+EqChain_p proof_self(66,3146
+EqChain_p proof_tes_red(131,5528
+EqChain_p proof_cp(214,8383
+EqChain_p proof_orient(339,13258
+EqChain_p proof_instance(372,14779
+EqChain_p proof_f_step(438,17380
+void AllStepsNewVars(487,18912
+EqChain_p ProofFStep(516,20387
+long ProofForward(562,22503
+
+pcl_latexout.c,116
+void L_print_eq_just(47,2707
+void L_PrintTerm(113,5483
+void L_PrintEqChain(208,8340
+void L_PrintSubst(280,10838
+
+pcl_lemma.c,717
+NumListList_p convert_pcl_ids(87,3675
+ void SetSyntacticParams(130,5636
+ void SetOftenParams(155,7103
+ void SetImportantParams(177,8406
+ void SetTreeParams(198,9723
+ void SetCompletionParams(226,11567
+ void SetPartitionParams(258,13342
+ void SetNegativeParams(278,14571
+long JustWeight(308,15995
+long ChainLen(364,18448
+NumListList_p GetExits(418,20767
+NumListList_p GetUsed(477,23655
+long ValueExits(532,26194
+BOOL IsNoLemma(564,27640
+BOOL IsSyntaxLemma(620,30056
+BOOL IsOftenLemma(680,32675
+BOOL IsImportantLemma(709,34158
+BOOL IsTreeLemma(742,35710
+BOOL IsCompletionLemma(776,37400
+BOOL IsPartitionLemma(804,38869
+BOOL IsLemma(837,40735
+void ForgetLemmas(936,44413
+void FindLemmas(976,46240
+
+pcl_mem.c,101
+char* typ_malloc(65,3479
+void typ_free(102,5246
+char* secure_malloc(146,7291
+void Error(193,8930
+
+pcl_minianalyse.c,165
+void get_parents(54,1762
+NumListList_p GetStepParents(96,3075
+void CalculateProofDistances(125,3821
+void ExtractProofLevels(183,5298
+void ExtractProof(223,6461
+
+pcl_minidoio.c,195
+void EndIo(58,2227
+void OpenOutput(82,3429
+void OpenInput(109,4756
+void ReadFile(140,6405
+void ReadIn(166,7832
+void PrintOut(210,9528
+void PrintBack(236,10897
+long ProtocolSize(263,11538
+
+pcl_mininorm.c,477
+StepType max_step_type(64,1962
+void FreeNumListTree(179,4400
+void FreeStringTree(209,5199
+BOOL NumListTreeInsert(242,6124
+NumListTree_p NumListTreeFind(367,9959
+void PrintNumListTree(409,10812
+void StringTreeInsert(444,11853
+StringTree_p StringTreeFind(490,12911
+void PrintStringTree(532,13749
+miniJust_p RenumJust(568,14749
+miniStep_p FindStepById(621,16344
+miniStep_p FindStepByIdBack(664,17490
+long NormalizeProof(700,18316
+long StrongNormalizeProof(760,19861
+
+pcl_miniparse.c,792
+void FreeminiJust(90,3985
+void FreeminiStep(144,6304
+void PrintPlace(176,7831
+void PrintJust(198,9107
+void PrintStep(264,12203
+void NextRealToken(323,14657
+miniStep_p ParseStep(349,15950
+NumList_p parse_numlist(465,19162
+String_p parse_term(513,21014
+String_p parse_arglist(546,22621
+char* parse_place(598,24575
+String_p parse_termpair(644,26339
+miniJust_p parse_just(681,27854
+miniJust_p parse_initial(739,29748
+miniJust_p parse_hypothesis(767,31134
+miniJust_p parse_orient(795,32529
+miniJust_p parse_cp(840,34229
+miniJust_p parse_tes_red(886,35995
+miniJust_p parse_instance(934,37835
+miniJust_p parse_quotation(971,39390
+void AcceptTok(1001,40872
+void check(1024,42254
+BOOL test(1052,43730
+void AcceptId(1086,45336
+void check_id(1116,47284
+BOOL test_id(1193,50924
+
+pcl_miniprinter.c,26
+void InitPrinter(49,2511
+
+pcl_miniterms.c,52
+void PrintTerm(44,2334
+void PrintTermPair(65,3607
+
+pcl_parse.c,806
+void FreeStep(82,3280
+void FreeJust(114,4805
+void FreeStep_pList(169,7174
+void PrintPlace(206,8695
+void PrintJust(233,10016
+void PrintStepPure(299,12347
+void PrintStep(350,14659
+void NextRealToken(373,15903
+Step_p ParseStep(399,17196
+NumList_p parse_numlist(514,20342
+Term_p parse_term(560,22032
+Term_p parse_arglist(607,23799
+Place_p parse_place(654,25472
+Pair_p parse_termpair(705,27245
+Just_p parse_just(745,28705
+Just_p parse_initial(802,30510
+Just_p parse_hypothesis(829,31803
+Just_p parse_orient(856,33105
+Just_p parse_cp(900,34712
+Just_p parse_tes_red(945,36382
+Just_p parse_instance(992,38126
+Just_p parse_quotation(1028,39588
+void AcceptTok(1058,41063
+void check(1081,42445
+BOOL test(1109,43921
+void AcceptId(1143,45527
+void check_id(1173,47475
+BOOL test_id(1267,51758
+
+pcl_printer.c,26
+void InitPrinter(48,2506
+
+pcl_printproof.c,126
+EqChain_p find_goal(68,1970
+void p_ascii(109,3708
+void p_latex(198,6967
+void p_prolog(291,9785
+void PrintProof(381,12434
+
+pcl_prologout.c,60
+void P_print_eq_just(45,2112
+void P_PrintEqChain(100,3721
+
+pcl_scan.c,270
+void InitScanner(95,3650
+void NextToken(140,5416
+void PrintToken(231,8877
+void RdErr(261,10244
+char nextchar(293,11964
+void scan_ident(326,13199
+void scan_line_comment(419,15680
+void scan_C_comment(450,17030
+void setliteral(492,18591
+void settextval(527,19999
+
+pcl_strings.c,310
+#define STRSIZE 18,427
+String_p  AllocString(46,1137
+void FreeString(76,2679
+char* secure_strdup(108,4112
+char* AppendString(143,5955
+char* ViewString(198,7471
+char* GetCopyOfString(230,9056
+char* AppendChar(270,10825
+char* SetString(312,11921
+long StringLength(335,12443
+void ResetString(362,13689
+
+pcl_subst.c,504
+Subst_p subst_var(75,3509
+BOOL occur(105,4919
+Term_p  apply_subst_list(149,6591
+char* pretty_var(178,7931
+void FreeSubst(231,9814
+Subst_p ApplySubstSubst(265,11407
+Subst_p CopySubst(294,12752
+void PrintSubst(330,14239
+Term_p ApplySubst(364,15790
+Subst_p ConcatSubst(407,17490
+BOOL Match(453,19530
+BOOL Mgu(536,22473
+Subst_p UniqSubst(634,26215
+Subst_p PrettySubst(685,28402
+Term_p MakeUniq(755,30850
+Term_p MakePretty(783,32141
+Pair_p MakePrettyPair(811,32744
+Subst_p VarList(850,34617
+
+pcl_terms.c,407
+void FreeTerm(51,2560
+void FreeArgs(76,3808
+void FreeTermList(101,5055
+long TermLength(134,6464
+long NumberOfFuncs(177,8031
+void FreePair(211,9437
+void PrintTerm(238,10872
+void PrintArgList(271,12292
+void PrintTermPair(299,13624
+Term_p CopyTerm(331,15035
+Term_p Subterm(380,17026
+Term_p Replace(439,19263
+Term_p ReplaceThis(500,21208
+BOOL TermEqual(543,23160
+Term_p ConcatTermLists(592,25120
+
+pcl_types.c,452
+void FreeNumList(49,1983
+void FreeNumListList(79,2738
+void FreePlace(109,4146
+NumList_p CopyNumList(143,5730
+long CmpNumList(181,7558
+NumList_p ConcatNumList(225,9131
+void PrintNumList(261,10540
+void PrintIdList(295,12080
+NumListList_p CopyNumListList(324,13609
+NumListList_p InsertNumList(371,15913
+NumListList_p MergeNumListLists(420,18347
+NumListList_p RemoveElems(458,20255
+void PrintNumListList(508,22218
+void PrintComment(545,23945
+
+proof.c,66
+void main(69,3142
+void InitIo(137,5470
+void PrintInfo(258,8688
+
+revert.c,227
+typedef struct linecelllinecell23,1108
+} LineCell, *Line_p;Line_p28,1211
+void main(93,3712
+void PrintInfo(221,7017
+void  WritePart(261,9660
+void DoRead(315,11505
+char* ReadLine(351,13031
+char* secure_malloc(418,15044
+
+rextract.c,70
+void main(76,3498
+void PrintInfo(211,7049
+void DoExtract(262,10649
+
+scan.c,270
+void InitScanner(79,3458
+void NextToken(123,5049
+void PrintToken(219,8813
+void RdErr(249,10180
+char nextchar(281,11900
+void scan_ident(316,13227
+void scan_line_comment(382,15173
+void scan_C_comment(413,16517
+void setliteral(454,18060
+void settextval(489,19468
+
+trans.c,173
+#define CPRINT 18,881
+void main(88,3881
+void PrintInfo(201,6968
+void Translate(237,9237
+Id_p GetAnchor(577,26098
+long GetPclNum(615,27751
+void PrintPclStep(649,29553
+
+nameadmin.h,95
+#define __nameadmin19,878
+typedef struct idcell idcell25,1143
+} IdCell, *Id_p;Id_p36,1435
+
+parse.h,153
+} tc_IdType;tc_IdType27,996
+} tc_OpType;tc_OpType40,1138
+typedef struct tc_stepdatatc_stepdata45,1155
+} tc_StepData, *tc_Step_p;tc_Step_p67,1550
+
+pcl_analyse.h,28
+#define _pcl_analyse20,363
+
+pcl_buildtree.h,128
+#define _pcl_buildtree20,379
+typedef struct pclidlistcellpclidlistcell30,636
+}PclIdListCell,*PclIdList_p;PclIdList_p37,914
+
+pcl_defs.h,899
+#define _pcl_defs21,657
+#define DNULL 38,1056
+#define DALLOC 39,1078
+#define DMAIN 40,1100
+#define DPARSETC 41,1122
+#define DTOKEN 42,1144
+#define DMPARSE 43,1167
+#define DSTRINGS 44,1189
+#define DSCAN 45,1211
+#define DNEXTCHAR 46,1233
+#define DTMEM 47,1255
+#define DPROOF 48,1277
+#define DTEQ 49,1299
+#define DMATCH 50,1321
+#define DEBUGFLAG 51,1343
+#define DEBUG(DEBUG53,1371
+#define iswhite(iswhite62,1657
+#define ischar(ischar63,1713
+#define FREE(FREE65,1746
+#define min(min67,1788
+#define max(max68,1826
+#define FAKE_RETURN 73,2006
+#define TRUE 81,2267
+#define FALSE 82,2282
+typedef int BOOL;BOOL84,2299
+}StepType;StepType100,2703
+}PairType;PairType106,2746
+}OpType;OpType119,2870
+#define NO_ERROR 128,3112
+#define OPTION_ERROR 129,3137
+#define SYNTAX_ERROR 130,3162
+#define IO_ERROR 131,3187
+#define OUT_OF_MEM 132,3212
+#define OTHER_ERROR 133,3237
+
+pcl_doio.h,89
+#define _pcl_doio17,858
+#define VERBOSE(VERBOSE23,927
+#define VERBOUT(VERBOUT24,970
+
+pcl_eqchains.h,205
+#define _pcl_eqchains20,887
+typedef struct eqchaincell eqchaincell28,1156
+}EqChainCell,*EqChain_p;EqChain_p36,1358
+typedef struct eqtermcelleqtermcell39,1385
+}EqTermCell,*EqTerm_p;EqTerm_p44,1488
+
+pcl_fproof.h,27
+#define _pcl_fproof19,937
+
+pcl_latexout.h,29
+#define _pcl_latexout20,890
+
+pcl_lemma.h,647
+#define _pcl_lemma20,909
+#define S_AVERAGE_SIZE 25,1060
+#define S_MAX_SIZE 26,1091
+#define S_MIN_FAK 27,1118
+#define S_MAX_FAK 28,1140
+#define I_LEMMA_WEIGHT 29,1162
+#define O_MIN_USED 30,1194
+#define T_WEIGHT_FACTOR 31,1221
+#define T_OFFSET 32,1249
+#define C_INIT_WEIGHT 33,1274
+#define C_HYPO_WEIGHT 34,1304
+#define C_ORIENT_WEIGHT 35,1334
+#define C_CP_WEIGHT 36,1366
+#define C_REDU_WEIGHT 37,1394
+#define C_INST_WEIGHT 38,1424
+#define C_QUOT_WEIGHT 39,1454
+#define C_LEMMA_WEIGHT 40,1484
+#define P_MAX_LENGTH 41,1516
+#define U_MIN_LENGTH 42,1546
+#define U_MIN_USED 43,1575
+#define ITERATE 48,1746
+#define CRITERIA 49,1768
+
+pcl_mem.h,97
+#define _pcl_mem29,1565
+#define MakeAlloc(MakeAlloc38,1830
+#define MakeFree(MakeFree40,1916
+
+pcl_minianalyse.h,32
+#define _pcl_minianalyse21,465
+
+pcl_minidoio.h,62
+#define _pcl_minidoio16,402
+#define VERBOSE(VERBOSE49,1268
+
+pcl_mininorm.h,245
+#define _pcl_mininorm19,543
+typedef struct numlisttreecell numlisttreecell31,827
+}NumListTreeCell,*NumListTree_p;NumListTree_p40,1181
+typedef struct stringtreecell stringtreecell43,1216
+}StringTreeCell,*StringTree_p;StringTree_p50,1441
+
+pcl_miniparse.h,293
+#define _pcl_miniparse20,362
+typedef union miniargtypeminiargtype31,662
+}miniJArg_p;miniJArg_p35,750
+typedef struct minijustcellminijustcell38,765
+}miniJustCell,*miniJust_p;miniJust_p45,904
+typedef struct ministepcellministepcell48,933
+}miniStepCell,*miniStep_p;miniStep_p58,1155
+
+pcl_miniprinter.h,32
+#define _pcl_miniprinter21,890
+
+pcl_miniterms.h,30
+#define _pcl_miniterms19,865
+
+pcl_parse.h,343
+#define _pcl_parse24,910
+typedef union argtypeargtype34,1178
+}JArg_p;JArg_p42,1316
+typedef struct justcelljustcell46,1328
+}JustCell,*Just_p;Just_p53,1464
+typedef struct step_plistcellstep_plistcell55,1484
+}Step_pListCell,*Step_pList_p;Step_pList_p60,1612
+typedef struct stepcellstepcell63,1645
+}StepCell,*Step_p;Step_p88,3029
+
+pcl_printer.h,28
+#define _pcl_printer20,885
+
+pcl_printproof.h,63
+#define _pcl_printproof23,944
+}OutputType;OutputType37,1246
+
+pcl_prologout.h,30
+#define _pcl_prologout20,407
+
+pcl_scan.h,160
+#define _pcl_scan16,382
+#define isidchar(isidchar28,660
+} TokenType;TokenType55,1661
+typedef struct tokentoken59,1677
+} Token, *Token_p;Token_p67,1852
+
+pcl_strings.h,150
+#define _pcl_strings21,457
+typedef struct stringcellstringcell30,726
+} StringCell, *String_p;String_p35,820
+#define LOWER_STR(LOWER_STR45,1134
+
+pcl_subst.h,108
+#define _pcl_subst22,1036
+typedef struct substcellsubstcell29,1301
+}SubstCell, *Subst_p;Subst_p34,1412
+
+pcl_terms.h,180
+#define _pcl_terms21,909
+typedef struct termcelltermcell28,1174
+} TermCell, *Term_p;Term_p39,1483
+typedef struct paircellpaircell41,1505
+} PairCell, *Pair_p;Pair_p46,1610
+
+pcl_types.h,328
+#define _pcl_types21,430
+typedef struct numlistcellnumlistcell29,681
+}NumListCell,*NumList_p;NumList_p33,769
+typedef struct numlistlistcell numlistlistcell36,796
+}NumListListCell,*NumListList_p;NumListList_p42,1040
+typedef struct placetypeplacetype46,1076
+}PlaceCell,*Place_p;Place_p50,1142
+}ExStep;ExStep58,1220
+
+scan.h,101
+} TokenType;TokenType42,1882
+typedef struct tokentoken46,1898
+} Token, *Token_p;Token_p54,2073
+
+systeminclude.h,31
+#define _systeminclude24,1185

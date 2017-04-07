@@ -1,0 +1,36 @@
+#/usr/bin/csh
+if($3 == "") then
+   echo "Error: Three Arguments needed: unknown_weight, learn_influence, proofs_weight!"
+   exit 1;
+endif
+
+date > ../report.tet1r_$1.$2.$3
+pwd >> ../report.tet1r_$1.$2.$3
+
+foreach file   (\
+ax_antisyma ax_antisymb ax_glb1a ax_glb1b ax_glb1c ax_glb1d ax_glb2a\
+ax_glb2b ax_glb3a ax_glb3b ax_lub1a ax_lub1b ax_lub1c ax_lub1d\
+ax_lub2a ax_lub2b ax_lub3a ax_lub3b ax_mono1a ax_mono1b\
+ax_mono1c ax_mono2a ax_mono2b ax_mono2c ax_refla ax_reflb ax_transa\
+ax_transb distrnu distrun lat1a lat1b lat2a lat2b lat3a lat3b lat4\
+p01a p01b p02a p02b p03a p03b p03c p03d p04a p04b p04c p04d p05a p05b\
+p06a p06b p06c p06d p07 p08a p08b p09a p09b p10 p11 p12 p12x p17a p17b\
+p18 p19 p20 p20x p21 p21x p22a p22b p23 p23x p33 p38a p38b p39a p39b\
+p39c p39d p40a p8_9a p8_9b)
+
+limit cputime 1000
+ln -s ../$file
+echo "discount2 -s -x c_1tet_learn -U $1 -I $2 -R $3 -K C_KNOWLEDGE $file"
+echo "discount2 -s -x c_1tet_learn -U $1 -I $2 -R $3 -K ../COMPLETE_KNOWLEDGE $file" >> ../report.tet1r_$1.$2.$3
+if( { discount2 -s -x c_1tet_learn -U $1 -I $2 -R $3 -K ../COMPLETE_KNOWLEDGE $file } ) then
+   echo "Erfolg! "
+   tail -28 $file.0 | head -1 >> ../report.tet1r_$1.$2.$3
+   tail -21 $file.0 | head -2 | cut -c40- | cut -c -11 | cat - run_bc_ops | dc >> ../report.tet1r_$1.$2.$3
+else
+   echo "Misserfolg! "
+   echo XXX >> ../report.tet1r_$1.$2.$3
+   echo YYY >> ../report.tet1r_$1.$2.$3
+endif
+rm $file.0 $file
+echo --- >> ../report.tet1r_$1.$2.$3
+end

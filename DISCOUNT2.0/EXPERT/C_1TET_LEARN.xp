@@ -1,0 +1,50 @@
+EXPERTENNAME                 C_1TET_LEARN
+
+EXP_OR_SPEC                  E
+
+CP_FUNKTION                  1TET_LEARN
+	                     RED_INST         : 0,1     ; 0
+                             PROOFS_WEIGHT    : 0,10000 ; 1
+                             UNKNOWN_PENALTY  : 0,10000 ; 3
+	                     LEARN_INFLUENCE  : 0,10000 ; 5
+                             
+
+
+CG_FUNKTION                  DIFF_GOAL
+                             F_GEWICHT    : 1,5 ; 2
+                             V_GEWICHT    : 1,5 ; 1
+                             MIN_STRUCT   : 0,5 ; 4
+
+FAIRNESS                     Y
+
+GUTE_GUTACHTER               (STATISTIC, ,1)
+
+GUTE_DOMAENEN                
+
+ROBUSTHEIT                   0.8
+
+WISSENSANTEIL                1.0
+
+BEWEISPHASE                  ANFANG  1.0
+                             MITTE   1.0
+                             ENDE    0.5
+
+ZYKLUSDAUER                  ANFANG  (1,10)
+                             MITTE   (1,10)
+                             ENDE    (1,10)
+
+AEHNLICHE_EXP
+
+NACHFOLGER                   (GOALMATCH, RED_INST     : 0,1  ; 0
+					 NO_MATCH     : 0,1000 ; 10
+					 DOUBLE_MATCH : 0,100 ; 1
+					 SINGLE_MATCH : 0,100 ; 50, 0.5 )
+# Die letzte Zahl ( hier 0.5 ) gibt die Guete des Experten an !)
+
+UNVERTRAEGL
+
+MOEGL_TEAMEXP
+
+PROZEDUR    xyz
+
+BESCHREIBUNG q	ywetryqt2eyrtqwyetryqtwey

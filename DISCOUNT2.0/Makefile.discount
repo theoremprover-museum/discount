@@ -1,0 +1,1599 @@
+#===============================================================================
+#
+#  Makefile f"ur das DISCOUNT-System. Erzeugt die (ausf"uhrbare)
+#  Datei 'discount'. Compiliert wird ohne die definierten Symbole,
+#  die pcl bzw. rdiscount erzeugen.
+#
+# Autor: Stephan Schulz und makedepend
+#
+#===============================================================================
+
+VERSION    =
+
+include Makefile.common
+
+#===============================================================================
+#     	Linken
+#===============================================================================
+
+
+discount : wall $(DIRTY_OBJECTS)
+	$(CC) $(CFLAGS) -o discount $(OBJECTS) $(LIBS) 
+
+
+#===============================================================================
+#     Manche Objecte werden mit -Wall -Wno-implicit gebaut...
+#===============================================================================
+
+
+wall : $(WALL_OBJECTS)
+wall := CFLAGS = $(GLOBAL) $(WARN)
+
+
+
+#===============================================================================
+#       Aufraeumen
+#===============================================================================
+
+clean :
+	rm *.o
+
+
+
+# DO NOT DELETE THIS LINE -- make depend depends on it.
+
+br_error.o: /usr/include/stdio.h /usr/include/libio.h
+br_error.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h br_error.h
+br_error.o: br_types.h complet.h systime.h /usr/include/sys/time.h
+br_error.o: /usr/include/features.h /usr/include/linux/types.h
+br_error.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+br_error.o: /usr/include/asm/types.h /usr/include/linux/time.h
+br_error.o: /usr/include/time.h /usr/include/sys/types.h
+br_error.o: /usr/include/sys/bitypes.h error.h defines.h
+br_error.o: /usr/include/sys/param.h /usr/include/limits.h
+br_error.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+br_error.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+br_error.o: /usr/include/asm/param.h /usr/include/ctype.h
+br_error.o: /usr/include/endian.h /usr/include/bytesex.h
+br_error.o: /usr/include/string.h
+br_error.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+br_error.o: /usr/include/unistd.h /usr/include/posix_opt.h
+br_error.o: /usr/include/gnu/types.h /usr/include/confname.h
+br_error.o: /usr/include/stdlib.h /usr/include/errno.h
+br_error.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+br_error.o: /usr/include/alloca.h referee.h expert.h domain.h scanner.h
+br_error.o: termpair.h newmem.h /usr/include/memory.h term.h polynom.h
+br_error.o: vartree.h /usr/include/values.h cpweight.h order.h subst.h
+br_error.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+br_error.o: /usr/include/huge_val.h /usr/include/nan.h
+br_error.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+br_error.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+br_error.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+br_error.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+br_error.o: exp_def_next_cycletime.h learn_exaselect.h team.h
+br_recv.o: /usr/include/sys/types.h /usr/include/linux/types.h
+br_recv.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+br_recv.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+br_recv.o: /usr/include/sys/param.h /usr/include/features.h
+br_recv.o: /usr/include/sys/cdefs.h /usr/include/limits.h
+br_recv.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+br_recv.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+br_recv.o: /usr/include/asm/param.h /usr/include/sys/socket.h
+br_recv.o: /usr/include/linux/socket.h /usr/include/asm/socket.h
+br_recv.o: /usr/include/asm/sockios.h /usr/include/linux/sockios.h
+br_recv.o: /usr/include/linux/uio.h /usr/include/netinet/in.h
+br_recv.o: /usr/include/linux/in.h /usr/include/asm/byteorder.h
+br_recv.o: /usr/include/netdb.h /usr/include/paths.h /usr/include/net/if.h
+br_recv.o: /usr/include/linux/if.h br_types.h complet.h systime.h
+br_recv.o: /usr/include/sys/time.h /usr/include/linux/time.h
+br_recv.o: /usr/include/time.h error.h defines.h /usr/include/ctype.h
+br_recv.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/stdio.h
+br_recv.o: /usr/include/libio.h /usr/include/_G_config.h
+br_recv.o: /usr/include/string.h
+br_recv.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+br_recv.o: /usr/include/unistd.h /usr/include/posix_opt.h
+br_recv.o: /usr/include/gnu/types.h /usr/include/confname.h
+br_recv.o: /usr/include/stdlib.h /usr/include/errno.h
+br_recv.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+br_recv.o: /usr/include/alloca.h referee.h expert.h domain.h scanner.h
+br_recv.o: termpair.h newmem.h /usr/include/memory.h term.h polynom.h
+br_recv.o: vartree.h /usr/include/values.h cpweight.h order.h subst.h
+br_recv.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+br_recv.o: /usr/include/huge_val.h /usr/include/nan.h
+br_recv.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+br_recv.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+br_recv.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+br_recv.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+br_recv.o: exp_def_next_cycletime.h learn_exaselect.h team.h br_util.h
+br_recv.o: br_error.h br_recv.h
+br_send.o: /usr/include/stdlib.h /usr/include/features.h
+br_send.o: /usr/include/sys/cdefs.h
+br_send.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+br_send.o: /usr/include/errno.h /usr/include/linux/errno.h
+br_send.o: /usr/include/asm/errno.h /usr/include/alloca.h
+br_send.o: /usr/include/sys/types.h /usr/include/linux/types.h
+br_send.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+br_send.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+br_send.o: /usr/include/sys/time.h /usr/include/linux/time.h
+br_send.o: /usr/include/time.h /usr/include/sys/param.h /usr/include/limits.h
+br_send.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+br_send.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+br_send.o: /usr/include/asm/param.h /usr/include/sys/socket.h
+br_send.o: /usr/include/linux/socket.h /usr/include/asm/socket.h
+br_send.o: /usr/include/asm/sockios.h /usr/include/linux/sockios.h
+br_send.o: /usr/include/linux/uio.h /usr/include/netinet/in.h
+br_send.o: /usr/include/linux/in.h /usr/include/asm/byteorder.h
+br_send.o: /usr/include/netdb.h /usr/include/paths.h /usr/include/net/if.h
+br_send.o: /usr/include/linux/if.h br_types.h complet.h systime.h error.h
+br_send.o: defines.h /usr/include/ctype.h /usr/include/endian.h
+br_send.o: /usr/include/bytesex.h /usr/include/stdio.h /usr/include/libio.h
+br_send.o: /usr/include/_G_config.h /usr/include/string.h
+br_send.o: /usr/include/unistd.h /usr/include/posix_opt.h
+br_send.o: /usr/include/gnu/types.h /usr/include/confname.h referee.h
+br_send.o: expert.h domain.h scanner.h termpair.h newmem.h
+br_send.o: /usr/include/memory.h term.h polynom.h vartree.h
+br_send.o: /usr/include/values.h cpweight.h order.h subst.h
+br_send.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+br_send.o: /usr/include/huge_val.h /usr/include/nan.h
+br_send.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+br_send.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+br_send.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+br_send.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+br_send.o: exp_def_next_cycletime.h learn_exaselect.h team.h br_util.h
+br_send.o: br_error.h
+br_stat.o: br_stat.h /usr/include/stdio.h /usr/include/libio.h
+br_stat.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h br_types.h
+br_stat.o: complet.h systime.h /usr/include/sys/time.h
+br_stat.o: /usr/include/features.h /usr/include/linux/types.h
+br_stat.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+br_stat.o: /usr/include/asm/types.h /usr/include/linux/time.h
+br_stat.o: /usr/include/time.h /usr/include/sys/types.h
+br_stat.o: /usr/include/sys/bitypes.h error.h defines.h
+br_stat.o: /usr/include/sys/param.h /usr/include/limits.h
+br_stat.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+br_stat.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+br_stat.o: /usr/include/asm/param.h /usr/include/ctype.h
+br_stat.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/string.h
+br_stat.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+br_stat.o: /usr/include/unistd.h /usr/include/posix_opt.h
+br_stat.o: /usr/include/gnu/types.h /usr/include/confname.h
+br_stat.o: /usr/include/stdlib.h /usr/include/errno.h
+br_stat.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+br_stat.o: /usr/include/alloca.h referee.h expert.h domain.h scanner.h
+br_stat.o: termpair.h newmem.h /usr/include/memory.h term.h polynom.h
+br_stat.o: vartree.h /usr/include/values.h cpweight.h order.h subst.h
+br_stat.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+br_stat.o: /usr/include/huge_val.h /usr/include/nan.h
+br_stat.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+br_stat.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+br_stat.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+br_stat.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+br_stat.o: exp_def_next_cycletime.h learn_exaselect.h team.h br_time.h
+br_time.o: br_time.h /usr/include/sys/time.h /usr/include/features.h
+br_time.o: /usr/include/sys/cdefs.h /usr/include/linux/types.h
+br_time.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+br_time.o: /usr/include/asm/types.h /usr/include/linux/time.h
+br_time.o: /usr/include/time.h /usr/include/sys/types.h
+br_time.o: /usr/include/sys/bitypes.h br_types.h complet.h systime.h error.h
+br_time.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+br_time.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+br_time.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+br_time.o: /usr/include/asm/param.h /usr/include/ctype.h
+br_time.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/stdio.h
+br_time.o: /usr/include/libio.h /usr/include/_G_config.h
+br_time.o: /usr/include/string.h
+br_time.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+br_time.o: /usr/include/unistd.h /usr/include/posix_opt.h
+br_time.o: /usr/include/gnu/types.h /usr/include/confname.h
+br_time.o: /usr/include/stdlib.h /usr/include/errno.h
+br_time.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+br_time.o: /usr/include/alloca.h referee.h expert.h domain.h scanner.h
+br_time.o: termpair.h newmem.h /usr/include/memory.h term.h polynom.h
+br_time.o: vartree.h /usr/include/values.h cpweight.h order.h subst.h
+br_time.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+br_time.o: /usr/include/huge_val.h /usr/include/nan.h
+br_time.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+br_time.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+br_time.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+br_time.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+br_time.o: exp_def_next_cycletime.h learn_exaselect.h team.h br_stat.h
+br_util.o: /usr/include/sys/types.h /usr/include/linux/types.h
+br_util.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+br_util.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+br_util.o: /usr/include/sys/param.h /usr/include/features.h
+br_util.o: /usr/include/sys/cdefs.h /usr/include/limits.h
+br_util.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+br_util.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+br_util.o: /usr/include/asm/param.h /usr/include/sys/socket.h
+br_util.o: /usr/include/linux/socket.h /usr/include/asm/socket.h
+br_util.o: /usr/include/asm/sockios.h /usr/include/linux/sockios.h
+br_util.o: /usr/include/linux/uio.h /usr/include/netinet/in.h
+br_util.o: /usr/include/linux/in.h /usr/include/asm/byteorder.h
+br_util.o: /usr/include/netdb.h /usr/include/paths.h /usr/include/net/if.h
+br_util.o: /usr/include/linux/if.h /usr/include/errno.h
+br_util.o: /usr/include/linux/errno.h /usr/include/asm/errno.h br_types.h
+br_util.o: complet.h systime.h /usr/include/sys/time.h
+br_util.o: /usr/include/linux/time.h /usr/include/time.h error.h defines.h
+br_util.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+br_util.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+br_util.o: /usr/include/string.h
+br_util.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+br_util.o: /usr/include/unistd.h /usr/include/posix_opt.h
+br_util.o: /usr/include/gnu/types.h /usr/include/confname.h
+br_util.o: /usr/include/stdlib.h /usr/include/alloca.h referee.h expert.h
+br_util.o: domain.h scanner.h termpair.h newmem.h /usr/include/memory.h
+br_util.o: term.h polynom.h vartree.h /usr/include/values.h cpweight.h
+br_util.o: order.h subst.h learn_tsmexperts.h learn_tsm.h learn_tets.h
+br_util.o: /usr/include/math.h /usr/include/huge_val.h /usr/include/nan.h
+br_util.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+br_util.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+br_util.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+br_util.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+br_util.o: exp_def_next_cycletime.h learn_exaselect.h team.h br_error.h
+buildcp.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+buildcp.o: /usr/include/sys/cdefs.h defines.h /usr/include/sys/param.h
+buildcp.o: /usr/include/features.h /usr/include/limits.h
+buildcp.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+buildcp.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+buildcp.o: /usr/include/asm/param.h /usr/include/sys/types.h
+buildcp.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+buildcp.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+buildcp.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+buildcp.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/string.h
+buildcp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+buildcp.o: /usr/include/unistd.h /usr/include/posix_opt.h
+buildcp.o: /usr/include/gnu/types.h /usr/include/confname.h
+buildcp.o: /usr/include/stdlib.h /usr/include/errno.h
+buildcp.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+buildcp.o: /usr/include/alloca.h error.h vartree.h polynom.h term.h
+buildcp.o: /usr/include/memory.h termpair.h systime.h /usr/include/sys/time.h
+buildcp.o: /usr/include/linux/time.h /usr/include/time.h newmem.h
+buildcp.o: /usr/include/values.h subst.h order.h scanner.h cpweight.h
+buildcp.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+buildcp.o: /usr/include/huge_val.h /usr/include/nan.h
+buildcp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+buildcp.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+buildcp.o: learn_specific.h learn_mixterms.h parsedom.h domain.h
+buildcp.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+buildcp.o: database.h exp_def_next_cycletime.h learn_exaselect.h team.h
+buildcp.o: expert.h reduce.h pcl.h complet.h referee.h buildcp.h
+comphase.o: /usr/include/stdio.h /usr/include/libio.h
+comphase.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+comphase.o: /usr/include/stdlib.h /usr/include/features.h
+comphase.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+comphase.o: /usr/include/errno.h /usr/include/linux/errno.h
+comphase.o: /usr/include/asm/errno.h /usr/include/alloca.h
+comphase.o: /usr/include/sys/param.h /usr/include/limits.h
+comphase.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+comphase.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+comphase.o: /usr/include/asm/param.h /usr/include/sys/types.h
+comphase.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+comphase.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+comphase.o: /usr/include/sys/bitypes.h /usr/include/string.h defines.h
+comphase.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+comphase.o: /usr/include/unistd.h /usr/include/posix_opt.h
+comphase.o: /usr/include/gnu/types.h /usr/include/confname.h error.h
+comphase.o: termpair.h systime.h /usr/include/sys/time.h
+comphase.o: /usr/include/linux/time.h /usr/include/time.h newmem.h
+comphase.o: /usr/include/memory.h term.h polynom.h vartree.h
+comphase.o: /usr/include/values.h cpweight.h order.h scanner.h subst.h
+comphase.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+comphase.o: /usr/include/huge_val.h /usr/include/nan.h
+comphase.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+comphase.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+comphase.o: learn_specific.h learn_mixterms.h parsedom.h domain.h
+comphase.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+comphase.o: database.h exp_def_next_cycletime.h learn_exaselect.h team.h
+comphase.o: expert.h complet.h referee.h socket.h exp_set_next_config.h
+comphase.o: transfer.h history.h br_types.h
+complet.o: /usr/include/sys/time.h /usr/include/features.h
+complet.o: /usr/include/sys/cdefs.h /usr/include/linux/types.h
+complet.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+complet.o: /usr/include/asm/types.h /usr/include/linux/time.h
+complet.o: /usr/include/time.h /usr/include/sys/types.h
+complet.o: /usr/include/sys/bitypes.h /usr/include/sys/resource.h
+complet.o: /usr/include/limits.h /usr/include/posix1_lim.h
+complet.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+complet.o: /usr/include/linux/resource.h /usr/include/asm/resource.h
+complet.o: /usr/include/memory.h list.h error.h defines.h
+complet.o: /usr/include/sys/param.h /usr/include/linux/param.h
+complet.o: /usr/include/asm/param.h /usr/include/ctype.h
+complet.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/stdio.h
+complet.o: /usr/include/libio.h /usr/include/_G_config.h
+complet.o: /usr/include/string.h
+complet.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+complet.o: /usr/include/unistd.h /usr/include/posix_opt.h
+complet.o: /usr/include/gnu/types.h /usr/include/confname.h
+complet.o: /usr/include/stdlib.h /usr/include/errno.h
+complet.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+complet.o: /usr/include/alloca.h newmem.h reduce.h termpair.h systime.h
+complet.o: term.h polynom.h vartree.h /usr/include/values.h order.h scanner.h
+complet.o: pcl.h subst.h complet.h referee.h expert.h domain.h cpweight.h
+complet.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+complet.o: /usr/include/huge_val.h /usr/include/nan.h
+complet.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+complet.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+complet.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+complet.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+complet.o: exp_def_next_cycletime.h learn_exaselect.h team.h buildcp.h
+complet.o: history.h
+cpweight.o: cpweight.h order.h scanner.h error.h defines.h
+cpweight.o: /usr/include/sys/param.h /usr/include/features.h
+cpweight.o: /usr/include/sys/cdefs.h /usr/include/limits.h
+cpweight.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+cpweight.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+cpweight.o: /usr/include/asm/param.h /usr/include/sys/types.h
+cpweight.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+cpweight.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+cpweight.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+cpweight.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/stdio.h
+cpweight.o: /usr/include/libio.h /usr/include/_G_config.h
+cpweight.o: /usr/include/string.h
+cpweight.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+cpweight.o: /usr/include/unistd.h /usr/include/posix_opt.h
+cpweight.o: /usr/include/gnu/types.h /usr/include/confname.h
+cpweight.o: /usr/include/stdlib.h /usr/include/errno.h
+cpweight.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+cpweight.o: /usr/include/alloca.h term.h /usr/include/memory.h polynom.h
+cpweight.o: vartree.h subst.h termpair.h systime.h /usr/include/sys/time.h
+cpweight.o: /usr/include/linux/time.h /usr/include/time.h newmem.h
+cpweight.o: /usr/include/values.h learn_tsmexperts.h learn_tsm.h learn_tets.h
+cpweight.o: /usr/include/math.h /usr/include/huge_val.h /usr/include/nan.h
+cpweight.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+cpweight.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+cpweight.o: learn_specific.h learn_mixterms.h parsedom.h domain.h
+cpweight.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+cpweight.o: database.h exp_def_next_cycletime.h learn_exaselect.h team.h
+cpweight.o: expert.h
+database.o: /usr/include/stdio.h /usr/include/libio.h
+database.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+database.o: /usr/include/sys/param.h /usr/include/features.h
+database.o: /usr/include/limits.h /usr/include/posix1_lim.h
+database.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+database.o: /usr/include/linux/param.h /usr/include/asm/param.h
+database.o: /usr/include/sys/types.h /usr/include/linux/types.h
+database.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+database.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h defines.h
+database.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+database.o: /usr/include/string.h
+database.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+database.o: /usr/include/unistd.h /usr/include/posix_opt.h
+database.o: /usr/include/gnu/types.h /usr/include/confname.h
+database.o: /usr/include/stdlib.h /usr/include/errno.h
+database.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+database.o: /usr/include/alloca.h error.h /usr/include/memory.h list.h
+database.o: newmem.h vartree.h polynom.h term.h termpair.h systime.h
+database.o: /usr/include/sys/time.h /usr/include/linux/time.h
+database.o: /usr/include/time.h /usr/include/values.h subst.h order.h
+database.o: scanner.h cpweight.h learn_tsmexperts.h learn_tsm.h learn_tets.h
+database.o: /usr/include/math.h /usr/include/huge_val.h /usr/include/nan.h
+database.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+database.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+database.o: learn_specific.h learn_mixterms.h parsedom.h domain.h
+database.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+database.o: database.h exp_def_next_cycletime.h learn_exaselect.h team.h
+database.o: expert.h reduce.h pcl.h complet.h referee.h buildcp.h
+database.o: exp_set_next_config.h
+discount.o: /usr/include/sys/time.h /usr/include/features.h
+discount.o: /usr/include/sys/cdefs.h /usr/include/linux/types.h
+discount.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+discount.o: /usr/include/asm/types.h /usr/include/linux/time.h
+discount.o: /usr/include/time.h /usr/include/sys/types.h
+discount.o: /usr/include/sys/bitypes.h /usr/include/sys/resource.h
+discount.o: /usr/include/limits.h /usr/include/posix1_lim.h
+discount.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+discount.o: /usr/include/linux/resource.h /usr/include/asm/resource.h
+discount.o: vartree.h error.h defines.h /usr/include/sys/param.h
+discount.o: /usr/include/linux/param.h /usr/include/asm/param.h
+discount.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+discount.o: /usr/include/stdio.h /usr/include/libio.h
+discount.o: /usr/include/_G_config.h /usr/include/string.h
+discount.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+discount.o: /usr/include/unistd.h /usr/include/posix_opt.h
+discount.o: /usr/include/gnu/types.h /usr/include/confname.h
+discount.o: /usr/include/stdlib.h /usr/include/errno.h
+discount.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+discount.o: /usr/include/alloca.h order.h scanner.h term.h
+discount.o: /usr/include/memory.h polynom.h cpweight.h subst.h termpair.h
+discount.o: systime.h newmem.h /usr/include/values.h learn_tsmexperts.h
+discount.o: learn_tsm.h learn_tets.h /usr/include/math.h
+discount.o: /usr/include/huge_val.h /usr/include/nan.h
+discount.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+discount.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+discount.o: learn_specific.h learn_mixterms.h parsedom.h domain.h
+discount.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+discount.o: database.h exp_def_next_cycletime.h learn_exaselect.h team.h
+discount.o: expert.h reduce.h buildcp.h complet.h referee.h parser.h pcl.h
+discount.o: parseexp.h br_types.h comphase.h
+domain.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+domain.o: /usr/include/sys/cdefs.h /usr/include/stdlib.h
+domain.o: /usr/include/features.h
+domain.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+domain.o: /usr/include/errno.h /usr/include/linux/errno.h
+domain.o: /usr/include/asm/errno.h /usr/include/alloca.h
+domain.o: /usr/include/sys/param.h /usr/include/limits.h
+domain.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+domain.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+domain.o: /usr/include/asm/param.h /usr/include/sys/types.h
+domain.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+domain.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+domain.o: /usr/include/sys/bitypes.h /usr/include/string.h domain.h scanner.h
+domain.o: error.h defines.h /usr/include/ctype.h /usr/include/endian.h
+domain.o: /usr/include/bytesex.h /usr/include/unistd.h
+domain.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+domain.o: /usr/include/confname.h termpair.h systime.h
+domain.o: /usr/include/sys/time.h /usr/include/linux/time.h
+domain.o: /usr/include/time.h newmem.h /usr/include/memory.h term.h polynom.h
+domain.o: vartree.h /usr/include/values.h database.h exp_form_next_t.h team.h
+domain.o: expert.h parsedom.h
+error.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+error.o: /usr/include/sys/cdefs.h error.h defines.h /usr/include/sys/param.h
+error.o: /usr/include/features.h /usr/include/limits.h
+error.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+error.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+error.o: /usr/include/asm/param.h /usr/include/sys/types.h
+error.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+error.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+error.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+error.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/string.h
+error.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+error.o: /usr/include/unistd.h /usr/include/posix_opt.h
+error.o: /usr/include/gnu/types.h /usr/include/confname.h
+error.o: /usr/include/stdlib.h /usr/include/errno.h
+error.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+error.o: /usr/include/alloca.h
+exp_class_nont_exp.o: /usr/include/stdio.h /usr/include/libio.h
+exp_class_nont_exp.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_class_nont_exp.o: /usr/include/stdlib.h /usr/include/features.h
+exp_class_nont_exp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_class_nont_exp.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_class_nont_exp.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_class_nont_exp.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_class_nont_exp.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+exp_class_nont_exp.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+exp_class_nont_exp.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_class_nont_exp.o: /usr/include/linux/types.h
+exp_class_nont_exp.o: /usr/include/linux/posix_types.h
+exp_class_nont_exp.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+exp_class_nont_exp.o: /usr/include/sys/bitypes.h defines.h
+exp_class_nont_exp.o: /usr/include/ctype.h /usr/include/endian.h
+exp_class_nont_exp.o: /usr/include/bytesex.h /usr/include/string.h
+exp_class_nont_exp.o: /usr/include/unistd.h /usr/include/posix_opt.h
+exp_class_nont_exp.o: /usr/include/gnu/types.h /usr/include/confname.h
+exp_class_nont_exp.o: error.h polynom.h vartree.h term.h
+exp_class_nont_exp.o: /usr/include/memory.h termpair.h systime.h
+exp_class_nont_exp.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_class_nont_exp.o: /usr/include/time.h newmem.h /usr/include/values.h
+exp_class_nont_exp.o: scanner.h domain.h referee.h expert.h database.h
+exp_class_nont_exp.o: exp_class_nont_exp.h team.h
+exp_class_t_exp.o: /usr/include/stdio.h /usr/include/libio.h
+exp_class_t_exp.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_class_t_exp.o: /usr/include/stdlib.h /usr/include/features.h
+exp_class_t_exp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_class_t_exp.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_class_t_exp.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_class_t_exp.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_class_t_exp.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+exp_class_t_exp.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+exp_class_t_exp.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_class_t_exp.o: /usr/include/linux/types.h
+exp_class_t_exp.o: /usr/include/linux/posix_types.h
+exp_class_t_exp.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+exp_class_t_exp.o: /usr/include/sys/bitypes.h defines.h /usr/include/ctype.h
+exp_class_t_exp.o: /usr/include/endian.h /usr/include/bytesex.h
+exp_class_t_exp.o: /usr/include/string.h /usr/include/unistd.h
+exp_class_t_exp.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+exp_class_t_exp.o: /usr/include/confname.h error.h polynom.h vartree.h term.h
+exp_class_t_exp.o: /usr/include/memory.h termpair.h systime.h
+exp_class_t_exp.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_class_t_exp.o: /usr/include/time.h newmem.h /usr/include/values.h
+exp_class_t_exp.o: scanner.h domain.h referee.h expert.h database.h
+exp_class_t_exp.o: exp_class_t_exp.h exp_form_next_t.h team.h
+exp_def_break.o: /usr/include/stdio.h /usr/include/libio.h
+exp_def_break.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_def_break.o: /usr/include/stdlib.h /usr/include/features.h
+exp_def_break.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_def_break.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_def_break.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_def_break.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_def_break.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+exp_def_break.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+exp_def_break.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_def_break.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+exp_def_break.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+exp_def_break.o: /usr/include/sys/bitypes.h defines.h /usr/include/ctype.h
+exp_def_break.o: /usr/include/endian.h /usr/include/bytesex.h
+exp_def_break.o: /usr/include/string.h /usr/include/unistd.h
+exp_def_break.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+exp_def_break.o: /usr/include/confname.h error.h polynom.h vartree.h term.h
+exp_def_break.o: /usr/include/memory.h termpair.h systime.h
+exp_def_break.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_def_break.o: /usr/include/time.h newmem.h /usr/include/values.h scanner.h
+exp_def_break.o: domain.h referee.h expert.h database.h
+exp_def_break.o: exp_prepare_t_select.h exp_def_break.h team.h
+exp_def_next_cycletime.o: /usr/include/stdio.h /usr/include/libio.h
+exp_def_next_cycletime.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_def_next_cycletime.o: /usr/include/stdlib.h /usr/include/features.h
+exp_def_next_cycletime.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_def_next_cycletime.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_def_next_cycletime.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_def_next_cycletime.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_def_next_cycletime.o: /usr/include/posix1_lim.h
+exp_def_next_cycletime.o: /usr/include/linux/limits.h
+exp_def_next_cycletime.o: /usr/include/posix2_lim.h
+exp_def_next_cycletime.o: /usr/include/linux/param.h /usr/include/asm/param.h
+exp_def_next_cycletime.o: /usr/include/sys/types.h /usr/include/linux/types.h
+exp_def_next_cycletime.o: /usr/include/linux/posix_types.h
+exp_def_next_cycletime.o: /usr/include/asm/posix_types.h
+exp_def_next_cycletime.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+exp_def_next_cycletime.o: defines.h /usr/include/ctype.h
+exp_def_next_cycletime.o: /usr/include/endian.h /usr/include/bytesex.h
+exp_def_next_cycletime.o: /usr/include/string.h /usr/include/unistd.h
+exp_def_next_cycletime.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+exp_def_next_cycletime.o: /usr/include/confname.h error.h polynom.h vartree.h
+exp_def_next_cycletime.o: term.h /usr/include/memory.h termpair.h systime.h
+exp_def_next_cycletime.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_def_next_cycletime.o: /usr/include/time.h newmem.h /usr/include/values.h
+exp_def_next_cycletime.o: scanner.h domain.h referee.h expert.h database.h
+exp_def_next_cycletime.o: exp_def_next_cycletime.h team.h
+exp_form_next_t.o: /usr/include/stdio.h /usr/include/libio.h
+exp_form_next_t.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_form_next_t.o: /usr/include/stdlib.h /usr/include/features.h
+exp_form_next_t.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_form_next_t.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_form_next_t.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_form_next_t.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_form_next_t.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+exp_form_next_t.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+exp_form_next_t.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_form_next_t.o: /usr/include/linux/types.h
+exp_form_next_t.o: /usr/include/linux/posix_types.h
+exp_form_next_t.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+exp_form_next_t.o: /usr/include/sys/bitypes.h defines.h /usr/include/ctype.h
+exp_form_next_t.o: /usr/include/endian.h /usr/include/bytesex.h
+exp_form_next_t.o: /usr/include/string.h /usr/include/unistd.h
+exp_form_next_t.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+exp_form_next_t.o: /usr/include/confname.h error.h polynom.h vartree.h term.h
+exp_form_next_t.o: /usr/include/memory.h termpair.h systime.h
+exp_form_next_t.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_form_next_t.o: /usr/include/time.h newmem.h /usr/include/values.h
+exp_form_next_t.o: scanner.h domain.h referee.h expert.h database.h
+exp_form_next_t.o: exp_form_next_t.h exp_prepare_t_select.h team.h
+exp_handle_domain_phase.o: /usr/include/stdio.h /usr/include/libio.h
+exp_handle_domain_phase.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_handle_domain_phase.o: /usr/include/stdlib.h /usr/include/features.h
+exp_handle_domain_phase.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_handle_domain_phase.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_handle_domain_phase.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_handle_domain_phase.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_handle_domain_phase.o: /usr/include/posix1_lim.h
+exp_handle_domain_phase.o: /usr/include/linux/limits.h
+exp_handle_domain_phase.o: /usr/include/posix2_lim.h
+exp_handle_domain_phase.o: /usr/include/linux/param.h
+exp_handle_domain_phase.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_handle_domain_phase.o: /usr/include/linux/types.h
+exp_handle_domain_phase.o: /usr/include/linux/posix_types.h
+exp_handle_domain_phase.o: /usr/include/asm/posix_types.h
+exp_handle_domain_phase.o: /usr/include/asm/types.h
+exp_handle_domain_phase.o: /usr/include/sys/bitypes.h defines.h
+exp_handle_domain_phase.o: /usr/include/ctype.h /usr/include/endian.h
+exp_handle_domain_phase.o: /usr/include/bytesex.h /usr/include/string.h
+exp_handle_domain_phase.o: /usr/include/unistd.h /usr/include/posix_opt.h
+exp_handle_domain_phase.o: /usr/include/gnu/types.h /usr/include/confname.h
+exp_handle_domain_phase.o: error.h polynom.h vartree.h term.h
+exp_handle_domain_phase.o: /usr/include/memory.h termpair.h systime.h
+exp_handle_domain_phase.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_handle_domain_phase.o: /usr/include/time.h newmem.h /usr/include/values.h
+exp_handle_domain_phase.o: scanner.h domain.h referee.h expert.h database.h
+exp_handle_domain_phase.o: exp_def_next_cycletime.h exp_handle_domain_phase.h
+exp_handle_domain_phase.o: exp_form_next_t.h team.h
+exp_handle_static_exp.o: /usr/include/stdio.h /usr/include/libio.h
+exp_handle_static_exp.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_handle_static_exp.o: /usr/include/stdlib.h /usr/include/features.h
+exp_handle_static_exp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_handle_static_exp.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_handle_static_exp.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_handle_static_exp.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_handle_static_exp.o: /usr/include/posix1_lim.h
+exp_handle_static_exp.o: /usr/include/linux/limits.h
+exp_handle_static_exp.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+exp_handle_static_exp.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_handle_static_exp.o: /usr/include/linux/types.h
+exp_handle_static_exp.o: /usr/include/linux/posix_types.h
+exp_handle_static_exp.o: /usr/include/asm/posix_types.h
+exp_handle_static_exp.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+exp_handle_static_exp.o: defines.h /usr/include/ctype.h /usr/include/endian.h
+exp_handle_static_exp.o: /usr/include/bytesex.h /usr/include/string.h
+exp_handle_static_exp.o: /usr/include/unistd.h /usr/include/posix_opt.h
+exp_handle_static_exp.o: /usr/include/gnu/types.h /usr/include/confname.h
+exp_handle_static_exp.o: error.h polynom.h vartree.h term.h
+exp_handle_static_exp.o: /usr/include/memory.h termpair.h systime.h
+exp_handle_static_exp.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_handle_static_exp.o: /usr/include/time.h newmem.h /usr/include/values.h
+exp_handle_static_exp.o: scanner.h domain.h referee.h expert.h database.h
+exp_handle_static_exp.o: exp_handle_static_exp.h team.h
+exp_prepare_t_select.o: /usr/include/stdio.h /usr/include/libio.h
+exp_prepare_t_select.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_prepare_t_select.o: /usr/include/stdlib.h /usr/include/features.h
+exp_prepare_t_select.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_prepare_t_select.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_prepare_t_select.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_prepare_t_select.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_prepare_t_select.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+exp_prepare_t_select.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+exp_prepare_t_select.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_prepare_t_select.o: /usr/include/linux/types.h
+exp_prepare_t_select.o: /usr/include/linux/posix_types.h
+exp_prepare_t_select.o: /usr/include/asm/posix_types.h
+exp_prepare_t_select.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+exp_prepare_t_select.o: defines.h /usr/include/ctype.h /usr/include/endian.h
+exp_prepare_t_select.o: /usr/include/bytesex.h /usr/include/string.h
+exp_prepare_t_select.o: /usr/include/unistd.h /usr/include/posix_opt.h
+exp_prepare_t_select.o: /usr/include/gnu/types.h /usr/include/confname.h
+exp_prepare_t_select.o: error.h polynom.h vartree.h term.h
+exp_prepare_t_select.o: /usr/include/memory.h termpair.h systime.h
+exp_prepare_t_select.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_prepare_t_select.o: /usr/include/time.h newmem.h /usr/include/values.h
+exp_prepare_t_select.o: scanner.h domain.h referee.h expert.h database.h
+exp_prepare_t_select.o: exp_prepare_t_select.h exp_value_exp.h
+exp_prepare_t_select.o: exp_def_break.h exp_class_nont_exp.h team.h
+exp_set_next_config.o: /usr/include/stdio.h /usr/include/libio.h
+exp_set_next_config.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_set_next_config.o: /usr/include/stdlib.h /usr/include/features.h
+exp_set_next_config.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_set_next_config.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_set_next_config.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_set_next_config.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_set_next_config.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+exp_set_next_config.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+exp_set_next_config.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_set_next_config.o: /usr/include/linux/types.h
+exp_set_next_config.o: /usr/include/linux/posix_types.h
+exp_set_next_config.o: /usr/include/asm/posix_types.h
+exp_set_next_config.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+exp_set_next_config.o: defines.h /usr/include/ctype.h /usr/include/endian.h
+exp_set_next_config.o: /usr/include/bytesex.h /usr/include/string.h
+exp_set_next_config.o: /usr/include/unistd.h /usr/include/posix_opt.h
+exp_set_next_config.o: /usr/include/gnu/types.h /usr/include/confname.h
+exp_set_next_config.o: error.h polynom.h vartree.h term.h
+exp_set_next_config.o: /usr/include/memory.h termpair.h systime.h
+exp_set_next_config.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_set_next_config.o: /usr/include/time.h newmem.h /usr/include/values.h
+exp_set_next_config.o: scanner.h domain.h referee.h expert.h database.h
+exp_set_next_config.o: exp_set_next_config.h team.h
+exp_value_exp.o: /usr/include/stdio.h /usr/include/libio.h
+exp_value_exp.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+exp_value_exp.o: /usr/include/stdlib.h /usr/include/features.h
+exp_value_exp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+exp_value_exp.o: /usr/include/errno.h /usr/include/linux/errno.h
+exp_value_exp.o: /usr/include/asm/errno.h /usr/include/alloca.h
+exp_value_exp.o: /usr/include/sys/param.h /usr/include/limits.h
+exp_value_exp.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+exp_value_exp.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+exp_value_exp.o: /usr/include/asm/param.h /usr/include/sys/types.h
+exp_value_exp.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+exp_value_exp.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+exp_value_exp.o: /usr/include/sys/bitypes.h /usr/include/math.h
+exp_value_exp.o: /usr/include/huge_val.h /usr/include/endian.h
+exp_value_exp.o: /usr/include/bytesex.h /usr/include/nan.h
+exp_value_exp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+exp_value_exp.o: /usr/include/values.h /usr/include/ieee754.h
+exp_value_exp.o: /usr/include/ieee854.h defines.h /usr/include/ctype.h
+exp_value_exp.o: /usr/include/string.h /usr/include/unistd.h
+exp_value_exp.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+exp_value_exp.o: /usr/include/confname.h error.h polynom.h vartree.h term.h
+exp_value_exp.o: /usr/include/memory.h termpair.h systime.h
+exp_value_exp.o: /usr/include/sys/time.h /usr/include/linux/time.h
+exp_value_exp.o: /usr/include/time.h newmem.h scanner.h domain.h referee.h
+exp_value_exp.o: expert.h database.h exp_value_exp.h team.h
+expert.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+expert.o: /usr/include/sys/cdefs.h /usr/include/stdlib.h
+expert.o: /usr/include/features.h
+expert.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+expert.o: /usr/include/errno.h /usr/include/linux/errno.h
+expert.o: /usr/include/asm/errno.h /usr/include/alloca.h
+expert.o: /usr/include/sys/param.h /usr/include/limits.h
+expert.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+expert.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+expert.o: /usr/include/asm/param.h /usr/include/sys/types.h
+expert.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+expert.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+expert.o: /usr/include/sys/bitypes.h defines.h /usr/include/ctype.h
+expert.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/string.h
+expert.o: /usr/include/unistd.h /usr/include/posix_opt.h
+expert.o: /usr/include/gnu/types.h /usr/include/confname.h error.h domain.h
+expert.o: scanner.h termpair.h systime.h /usr/include/sys/time.h
+expert.o: /usr/include/linux/time.h /usr/include/time.h newmem.h
+expert.o: /usr/include/memory.h term.h polynom.h vartree.h
+expert.o: /usr/include/values.h referee.h expert.h database.h
+expert.o: exp_class_nont_exp.h exp_class_t_exp.h exp_def_break.h
+expert.o: exp_def_next_cycletime.h exp_form_next_t.h
+expert.o: exp_handle_domain_phase.h exp_handle_static_exp.h
+expert.o: exp_prepare_t_select.h exp_value_exp.h exp_set_next_config.h team.h
+expert.o: parseexp.h complet.h cpweight.h order.h subst.h learn_tsmexperts.h
+expert.o: learn_tsm.h learn_tets.h /usr/include/math.h
+expert.o: /usr/include/huge_val.h /usr/include/nan.h
+expert.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+expert.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+expert.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+expert.o: learn_lpairs.h learn_lterms.h s_scanner.h learn_exaselect.h
+history.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+history.o: /usr/include/sys/cdefs.h /usr/include/string.h
+history.o: /usr/include/features.h
+history.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h defines.h
+history.o: /usr/include/sys/param.h /usr/include/limits.h
+history.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+history.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+history.o: /usr/include/asm/param.h /usr/include/sys/types.h
+history.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+history.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+history.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+history.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/unistd.h
+history.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+history.o: /usr/include/confname.h /usr/include/stdlib.h /usr/include/errno.h
+history.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+history.o: /usr/include/alloca.h error.h vartree.h polynom.h term.h
+history.o: /usr/include/memory.h termpair.h systime.h /usr/include/sys/time.h
+history.o: /usr/include/linux/time.h /usr/include/time.h newmem.h
+history.o: /usr/include/values.h subst.h domain.h scanner.h referee.h
+history.o: expert.h history.h team.h
+learn_cpweight.o: learn_cpweight.h learn_specific.h learn_mixterms.h term.h
+learn_cpweight.o: error.h defines.h /usr/include/sys/param.h
+learn_cpweight.o: /usr/include/features.h /usr/include/sys/cdefs.h
+learn_cpweight.o: /usr/include/limits.h /usr/include/posix1_lim.h
+learn_cpweight.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+learn_cpweight.o: /usr/include/linux/param.h /usr/include/asm/param.h
+learn_cpweight.o: /usr/include/sys/types.h /usr/include/linux/types.h
+learn_cpweight.o: /usr/include/linux/posix_types.h
+learn_cpweight.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_cpweight.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_cpweight.o: /usr/include/endian.h /usr/include/bytesex.h
+learn_cpweight.o: /usr/include/stdio.h /usr/include/libio.h
+learn_cpweight.o: /usr/include/_G_config.h /usr/include/string.h
+learn_cpweight.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_cpweight.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_cpweight.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_cpweight.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_cpweight.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_cpweight.o: /usr/include/alloca.h /usr/include/memory.h polynom.h
+learn_cpweight.o: vartree.h parsedom.h domain.h scanner.h termpair.h
+learn_cpweight.o: systime.h /usr/include/sys/time.h /usr/include/linux/time.h
+learn_cpweight.o: /usr/include/time.h newmem.h /usr/include/values.h
+learn_cpweight.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+learn_cpweight.o: database.h exp_def_next_cycletime.h
+learn_exaselect.o: learn_exaselect.h learn_lpairs.h learn_lterms.h newmem.h
+learn_exaselect.o: /usr/include/memory.h /usr/include/features.h
+learn_exaselect.o: /usr/include/sys/cdefs.h error.h defines.h
+learn_exaselect.o: /usr/include/sys/param.h /usr/include/limits.h
+learn_exaselect.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_exaselect.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_exaselect.o: /usr/include/asm/param.h /usr/include/sys/types.h
+learn_exaselect.o: /usr/include/linux/types.h
+learn_exaselect.o: /usr/include/linux/posix_types.h
+learn_exaselect.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_exaselect.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_exaselect.o: /usr/include/endian.h /usr/include/bytesex.h
+learn_exaselect.o: /usr/include/stdio.h /usr/include/libio.h
+learn_exaselect.o: /usr/include/_G_config.h /usr/include/string.h
+learn_exaselect.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_exaselect.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_exaselect.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_exaselect.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_exaselect.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_exaselect.o: /usr/include/alloca.h s_scanner.h vartree.h learn_nterms.h
+learn_exaselect.o: termpair.h systime.h /usr/include/sys/time.h
+learn_exaselect.o: /usr/include/linux/time.h /usr/include/time.h term.h
+learn_exaselect.o: polynom.h /usr/include/values.h learn_tsm.h learn_tets.h
+learn_exaselect.o: /usr/include/math.h /usr/include/huge_val.h
+learn_exaselect.o: /usr/include/nan.h
+learn_exaselect.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+learn_exaselect.o: /usr/include/ieee754.h /usr/include/ieee854.h
+learn_exaselect.o: learn_cpweight.h learn_specific.h learn_mixterms.h
+learn_exaselect.o: parsedom.h domain.h scanner.h database.h
+learn_exaselect.o: exp_def_next_cycletime.h
+learn_exaselect_notree.o: learn_exaselect.h learn_lpairs.h learn_lterms.h
+learn_exaselect_notree.o: newmem.h /usr/include/memory.h
+learn_exaselect_notree.o: /usr/include/features.h /usr/include/sys/cdefs.h
+learn_exaselect_notree.o: error.h defines.h /usr/include/sys/param.h
+learn_exaselect_notree.o: /usr/include/limits.h /usr/include/posix1_lim.h
+learn_exaselect_notree.o: /usr/include/linux/limits.h
+learn_exaselect_notree.o: /usr/include/posix2_lim.h
+learn_exaselect_notree.o: /usr/include/linux/param.h /usr/include/asm/param.h
+learn_exaselect_notree.o: /usr/include/sys/types.h /usr/include/linux/types.h
+learn_exaselect_notree.o: /usr/include/linux/posix_types.h
+learn_exaselect_notree.o: /usr/include/asm/posix_types.h
+learn_exaselect_notree.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+learn_exaselect_notree.o: /usr/include/ctype.h /usr/include/endian.h
+learn_exaselect_notree.o: /usr/include/bytesex.h /usr/include/stdio.h
+learn_exaselect_notree.o: /usr/include/libio.h /usr/include/_G_config.h
+learn_exaselect_notree.o: /usr/include/string.h
+learn_exaselect_notree.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_exaselect_notree.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_exaselect_notree.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_exaselect_notree.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_exaselect_notree.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_exaselect_notree.o: /usr/include/alloca.h s_scanner.h vartree.h
+learn_exaselect_notree.o: learn_nterms.h termpair.h systime.h
+learn_exaselect_notree.o: /usr/include/sys/time.h /usr/include/linux/time.h
+learn_exaselect_notree.o: /usr/include/time.h term.h polynom.h
+learn_exaselect_notree.o: /usr/include/values.h learn_tsm.h learn_tets.h
+learn_exaselect_notree.o: /usr/include/math.h /usr/include/huge_val.h
+learn_exaselect_notree.o: /usr/include/nan.h
+learn_exaselect_notree.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+learn_exaselect_notree.o: /usr/include/ieee754.h /usr/include/ieee854.h
+learn_exaselect_notree.o: learn_cpweight.h learn_specific.h learn_mixterms.h
+learn_exaselect_notree.o: parsedom.h domain.h scanner.h database.h
+learn_exaselect_notree.o: exp_def_next_cycletime.h
+learn_exaselect_tree.o: learn_exaselect.h learn_lpairs.h learn_lterms.h
+learn_exaselect_tree.o: newmem.h /usr/include/memory.h
+learn_exaselect_tree.o: /usr/include/features.h /usr/include/sys/cdefs.h
+learn_exaselect_tree.o: error.h defines.h /usr/include/sys/param.h
+learn_exaselect_tree.o: /usr/include/limits.h /usr/include/posix1_lim.h
+learn_exaselect_tree.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+learn_exaselect_tree.o: /usr/include/linux/param.h /usr/include/asm/param.h
+learn_exaselect_tree.o: /usr/include/sys/types.h /usr/include/linux/types.h
+learn_exaselect_tree.o: /usr/include/linux/posix_types.h
+learn_exaselect_tree.o: /usr/include/asm/posix_types.h
+learn_exaselect_tree.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+learn_exaselect_tree.o: /usr/include/ctype.h /usr/include/endian.h
+learn_exaselect_tree.o: /usr/include/bytesex.h /usr/include/stdio.h
+learn_exaselect_tree.o: /usr/include/libio.h /usr/include/_G_config.h
+learn_exaselect_tree.o: /usr/include/string.h
+learn_exaselect_tree.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_exaselect_tree.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_exaselect_tree.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_exaselect_tree.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_exaselect_tree.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_exaselect_tree.o: /usr/include/alloca.h s_scanner.h vartree.h
+learn_exaselect_tree.o: learn_nterms.h termpair.h systime.h
+learn_exaselect_tree.o: /usr/include/sys/time.h /usr/include/linux/time.h
+learn_exaselect_tree.o: /usr/include/time.h term.h polynom.h
+learn_exaselect_tree.o: /usr/include/values.h learn_tsm.h learn_tets.h
+learn_exaselect_tree.o: /usr/include/math.h /usr/include/huge_val.h
+learn_exaselect_tree.o: /usr/include/nan.h
+learn_exaselect_tree.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+learn_exaselect_tree.o: /usr/include/ieee754.h /usr/include/ieee854.h
+learn_exaselect_tree.o: learn_cpweight.h learn_specific.h learn_mixterms.h
+learn_exaselect_tree.o: parsedom.h domain.h scanner.h database.h
+learn_exaselect_tree.o: exp_def_next_cycletime.h
+learn_lpairs.o: learn_lpairs.h learn_lterms.h newmem.h /usr/include/memory.h
+learn_lpairs.o: /usr/include/features.h /usr/include/sys/cdefs.h error.h
+learn_lpairs.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+learn_lpairs.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_lpairs.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_lpairs.o: /usr/include/asm/param.h /usr/include/sys/types.h
+learn_lpairs.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+learn_lpairs.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_lpairs.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_lpairs.o: /usr/include/endian.h /usr/include/bytesex.h
+learn_lpairs.o: /usr/include/stdio.h /usr/include/libio.h
+learn_lpairs.o: /usr/include/_G_config.h /usr/include/string.h
+learn_lpairs.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_lpairs.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_lpairs.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_lpairs.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_lpairs.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_lpairs.o: /usr/include/alloca.h s_scanner.h vartree.h learn_nterms.h
+learn_lpairs.o: termpair.h systime.h /usr/include/sys/time.h
+learn_lpairs.o: /usr/include/linux/time.h /usr/include/time.h term.h
+learn_lpairs.o: polynom.h /usr/include/values.h
+learn_lterms.o: learn_lterms.h newmem.h /usr/include/memory.h
+learn_lterms.o: /usr/include/features.h /usr/include/sys/cdefs.h error.h
+learn_lterms.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+learn_lterms.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_lterms.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_lterms.o: /usr/include/asm/param.h /usr/include/sys/types.h
+learn_lterms.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+learn_lterms.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_lterms.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_lterms.o: /usr/include/endian.h /usr/include/bytesex.h
+learn_lterms.o: /usr/include/stdio.h /usr/include/libio.h
+learn_lterms.o: /usr/include/_G_config.h /usr/include/string.h
+learn_lterms.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_lterms.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_lterms.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_lterms.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_lterms.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_lterms.o: /usr/include/alloca.h s_scanner.h vartree.h learn_nterms.h
+learn_lterms.o: termpair.h systime.h /usr/include/sys/time.h
+learn_lterms.o: /usr/include/linux/time.h /usr/include/time.h term.h
+learn_lterms.o: polynom.h /usr/include/values.h
+learn_mixterms.o: learn_mixterms.h term.h error.h defines.h
+learn_mixterms.o: /usr/include/sys/param.h /usr/include/features.h
+learn_mixterms.o: /usr/include/sys/cdefs.h /usr/include/limits.h
+learn_mixterms.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_mixterms.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_mixterms.o: /usr/include/asm/param.h /usr/include/sys/types.h
+learn_mixterms.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+learn_mixterms.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_mixterms.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_mixterms.o: /usr/include/endian.h /usr/include/bytesex.h
+learn_mixterms.o: /usr/include/stdio.h /usr/include/libio.h
+learn_mixterms.o: /usr/include/_G_config.h /usr/include/string.h
+learn_mixterms.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_mixterms.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_mixterms.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_mixterms.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_mixterms.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_mixterms.o: /usr/include/alloca.h /usr/include/memory.h polynom.h
+learn_mixterms.o: vartree.h parsedom.h domain.h scanner.h termpair.h
+learn_mixterms.o: systime.h /usr/include/sys/time.h /usr/include/linux/time.h
+learn_mixterms.o: /usr/include/time.h newmem.h /usr/include/values.h
+learn_mixterms.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+learn_nterms.o: learn_nterms.h termpair.h systime.h /usr/include/sys/time.h
+learn_nterms.o: /usr/include/features.h /usr/include/sys/cdefs.h
+learn_nterms.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+learn_nterms.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_nterms.o: /usr/include/linux/time.h /usr/include/time.h
+learn_nterms.o: /usr/include/sys/types.h /usr/include/sys/bitypes.h error.h
+learn_nterms.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+learn_nterms.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_nterms.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_nterms.o: /usr/include/asm/param.h /usr/include/ctype.h
+learn_nterms.o: /usr/include/endian.h /usr/include/bytesex.h
+learn_nterms.o: /usr/include/stdio.h /usr/include/libio.h
+learn_nterms.o: /usr/include/_G_config.h /usr/include/string.h
+learn_nterms.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_nterms.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_nterms.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_nterms.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_nterms.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_nterms.o: /usr/include/alloca.h newmem.h /usr/include/memory.h term.h
+learn_nterms.o: polynom.h vartree.h /usr/include/values.h
+learn_specific.o: learn_specific.h learn_mixterms.h term.h error.h defines.h
+learn_specific.o: /usr/include/sys/param.h /usr/include/features.h
+learn_specific.o: /usr/include/sys/cdefs.h /usr/include/limits.h
+learn_specific.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_specific.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_specific.o: /usr/include/asm/param.h /usr/include/sys/types.h
+learn_specific.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+learn_specific.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_specific.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_specific.o: /usr/include/endian.h /usr/include/bytesex.h
+learn_specific.o: /usr/include/stdio.h /usr/include/libio.h
+learn_specific.o: /usr/include/_G_config.h /usr/include/string.h
+learn_specific.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_specific.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_specific.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_specific.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_specific.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_specific.o: /usr/include/alloca.h /usr/include/memory.h polynom.h
+learn_specific.o: vartree.h parsedom.h domain.h scanner.h termpair.h
+learn_specific.o: systime.h /usr/include/sys/time.h /usr/include/linux/time.h
+learn_specific.o: /usr/include/time.h newmem.h /usr/include/values.h
+learn_specific.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+learn_specific.o: database.h exp_def_next_cycletime.h
+learn_tets.o: learn_tets.h /usr/include/math.h /usr/include/features.h
+learn_tets.o: /usr/include/sys/cdefs.h /usr/include/huge_val.h
+learn_tets.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/nan.h
+learn_tets.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+learn_tets.o: /usr/include/values.h /usr/include/ieee754.h
+learn_tets.o: /usr/include/ieee854.h learn_cpweight.h learn_specific.h
+learn_tets.o: learn_mixterms.h term.h error.h defines.h
+learn_tets.o: /usr/include/sys/param.h /usr/include/limits.h
+learn_tets.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_tets.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_tets.o: /usr/include/asm/param.h /usr/include/sys/types.h
+learn_tets.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+learn_tets.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_tets.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_tets.o: /usr/include/stdio.h /usr/include/libio.h
+learn_tets.o: /usr/include/_G_config.h /usr/include/string.h
+learn_tets.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_tets.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_tets.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_tets.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_tets.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_tets.o: /usr/include/alloca.h /usr/include/memory.h polynom.h vartree.h
+learn_tets.o: parsedom.h domain.h scanner.h termpair.h systime.h
+learn_tets.o: /usr/include/sys/time.h /usr/include/linux/time.h
+learn_tets.o: /usr/include/time.h newmem.h learn_nterms.h learn_lpairs.h
+learn_tets.o: learn_lterms.h s_scanner.h database.h exp_def_next_cycletime.h
+learn_tsm.o: learn_tsm.h learn_tets.h /usr/include/math.h
+learn_tsm.o: /usr/include/features.h /usr/include/sys/cdefs.h
+learn_tsm.o: /usr/include/huge_val.h /usr/include/endian.h
+learn_tsm.o: /usr/include/bytesex.h /usr/include/nan.h
+learn_tsm.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+learn_tsm.o: /usr/include/values.h /usr/include/ieee754.h
+learn_tsm.o: /usr/include/ieee854.h learn_cpweight.h learn_specific.h
+learn_tsm.o: learn_mixterms.h term.h error.h defines.h
+learn_tsm.o: /usr/include/sys/param.h /usr/include/limits.h
+learn_tsm.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_tsm.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_tsm.o: /usr/include/asm/param.h /usr/include/sys/types.h
+learn_tsm.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+learn_tsm.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_tsm.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_tsm.o: /usr/include/stdio.h /usr/include/libio.h
+learn_tsm.o: /usr/include/_G_config.h /usr/include/string.h
+learn_tsm.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_tsm.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_tsm.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_tsm.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_tsm.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_tsm.o: /usr/include/alloca.h /usr/include/memory.h polynom.h vartree.h
+learn_tsm.o: parsedom.h domain.h scanner.h termpair.h systime.h
+learn_tsm.o: /usr/include/sys/time.h /usr/include/linux/time.h
+learn_tsm.o: /usr/include/time.h newmem.h learn_nterms.h learn_lpairs.h
+learn_tsm.o: learn_lterms.h s_scanner.h database.h exp_def_next_cycletime.h
+learn_tsmexperts.o: learn_tsmexperts.h learn_tsm.h learn_tets.h
+learn_tsmexperts.o: /usr/include/math.h /usr/include/features.h
+learn_tsmexperts.o: /usr/include/sys/cdefs.h /usr/include/huge_val.h
+learn_tsmexperts.o: /usr/include/endian.h /usr/include/bytesex.h
+learn_tsmexperts.o: /usr/include/nan.h
+learn_tsmexperts.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+learn_tsmexperts.o: /usr/include/values.h /usr/include/ieee754.h
+learn_tsmexperts.o: /usr/include/ieee854.h learn_cpweight.h learn_specific.h
+learn_tsmexperts.o: learn_mixterms.h term.h error.h defines.h
+learn_tsmexperts.o: /usr/include/sys/param.h /usr/include/limits.h
+learn_tsmexperts.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+learn_tsmexperts.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+learn_tsmexperts.o: /usr/include/asm/param.h /usr/include/sys/types.h
+learn_tsmexperts.o: /usr/include/linux/types.h
+learn_tsmexperts.o: /usr/include/linux/posix_types.h
+learn_tsmexperts.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+learn_tsmexperts.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+learn_tsmexperts.o: /usr/include/stdio.h /usr/include/libio.h
+learn_tsmexperts.o: /usr/include/_G_config.h /usr/include/string.h
+learn_tsmexperts.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+learn_tsmexperts.o: /usr/include/unistd.h /usr/include/posix_opt.h
+learn_tsmexperts.o: /usr/include/gnu/types.h /usr/include/confname.h
+learn_tsmexperts.o: /usr/include/stdlib.h /usr/include/errno.h
+learn_tsmexperts.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+learn_tsmexperts.o: /usr/include/alloca.h /usr/include/memory.h polynom.h
+learn_tsmexperts.o: vartree.h parsedom.h domain.h scanner.h termpair.h
+learn_tsmexperts.o: systime.h /usr/include/sys/time.h
+learn_tsmexperts.o: /usr/include/linux/time.h /usr/include/time.h newmem.h
+learn_tsmexperts.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+learn_tsmexperts.o: database.h exp_def_next_cycletime.h learn_exaselect.h
+list.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+list.o: /usr/include/sys/cdefs.h /usr/include/string.h
+list.o: /usr/include/features.h
+list.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h list.h error.h
+list.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+list.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+list.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+list.o: /usr/include/asm/param.h /usr/include/sys/types.h
+list.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+list.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+list.o: /usr/include/sys/bitypes.h /usr/include/ctype.h /usr/include/endian.h
+list.o: /usr/include/bytesex.h /usr/include/unistd.h /usr/include/posix_opt.h
+list.o: /usr/include/gnu/types.h /usr/include/confname.h
+list.o: /usr/include/stdlib.h /usr/include/errno.h /usr/include/linux/errno.h
+list.o: /usr/include/asm/errno.h /usr/include/alloca.h /usr/include/memory.h
+list.o: newmem.h
+memory.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+memory.o: /usr/include/sys/cdefs.h /usr/include/signal.h
+memory.o: /usr/include/features.h /usr/include/sys/types.h
+memory.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+memory.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+memory.o: /usr/include/sys/bitypes.h /usr/include/linux/signal.h
+memory.o: /usr/include/asm/signal.h /usr/include/memory.h
+newmem.o: newmem.h /usr/include/memory.h /usr/include/features.h
+newmem.o: /usr/include/sys/cdefs.h error.h defines.h /usr/include/sys/param.h
+newmem.o: /usr/include/limits.h /usr/include/posix1_lim.h
+newmem.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+newmem.o: /usr/include/linux/param.h /usr/include/asm/param.h
+newmem.o: /usr/include/sys/types.h /usr/include/linux/types.h
+newmem.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+newmem.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+newmem.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+newmem.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+newmem.o: /usr/include/string.h
+newmem.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+newmem.o: /usr/include/unistd.h /usr/include/posix_opt.h
+newmem.o: /usr/include/gnu/types.h /usr/include/confname.h
+newmem.o: /usr/include/stdlib.h /usr/include/errno.h
+newmem.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+newmem.o: /usr/include/alloca.h
+order.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+order.o: /usr/include/sys/cdefs.h defines.h /usr/include/sys/param.h
+order.o: /usr/include/features.h /usr/include/limits.h
+order.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+order.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+order.o: /usr/include/asm/param.h /usr/include/sys/types.h
+order.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+order.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+order.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+order.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/string.h
+order.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+order.o: /usr/include/unistd.h /usr/include/posix_opt.h
+order.o: /usr/include/gnu/types.h /usr/include/confname.h
+order.o: /usr/include/stdlib.h /usr/include/errno.h
+order.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+order.o: /usr/include/alloca.h error.h vartree.h polynom.h term.h
+order.o: /usr/include/memory.h scanner.h order.h
+parsedom.o: /usr/include/stdio.h /usr/include/libio.h
+parsedom.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+parsedom.o: /usr/include/stdlib.h /usr/include/features.h
+parsedom.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+parsedom.o: /usr/include/errno.h /usr/include/linux/errno.h
+parsedom.o: /usr/include/asm/errno.h /usr/include/alloca.h
+parsedom.o: /usr/include/sys/param.h /usr/include/limits.h
+parsedom.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+parsedom.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+parsedom.o: /usr/include/asm/param.h /usr/include/sys/types.h
+parsedom.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+parsedom.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+parsedom.o: /usr/include/sys/bitypes.h defines.h /usr/include/ctype.h
+parsedom.o: /usr/include/endian.h /usr/include/bytesex.h
+parsedom.o: /usr/include/string.h /usr/include/unistd.h
+parsedom.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+parsedom.o: /usr/include/confname.h error.h scanner.h polynom.h vartree.h
+parsedom.o: term.h /usr/include/memory.h termpair.h systime.h
+parsedom.o: /usr/include/sys/time.h /usr/include/linux/time.h
+parsedom.o: /usr/include/time.h newmem.h /usr/include/values.h complet.h
+parsedom.o: referee.h expert.h domain.h cpweight.h order.h subst.h
+parsedom.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+parsedom.o: /usr/include/huge_val.h /usr/include/nan.h
+parsedom.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+parsedom.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+parsedom.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+parsedom.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+parsedom.o: exp_def_next_cycletime.h learn_exaselect.h team.h parser.h
+parsedom.o: parseexp.h
+parseexp.o: parseexp.h complet.h systime.h /usr/include/sys/time.h
+parseexp.o: /usr/include/features.h /usr/include/sys/cdefs.h
+parseexp.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+parseexp.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+parseexp.o: /usr/include/linux/time.h /usr/include/time.h
+parseexp.o: /usr/include/sys/types.h /usr/include/sys/bitypes.h error.h
+parseexp.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+parseexp.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+parseexp.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+parseexp.o: /usr/include/asm/param.h /usr/include/ctype.h
+parseexp.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/stdio.h
+parseexp.o: /usr/include/libio.h /usr/include/_G_config.h
+parseexp.o: /usr/include/string.h
+parseexp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+parseexp.o: /usr/include/unistd.h /usr/include/posix_opt.h
+parseexp.o: /usr/include/gnu/types.h /usr/include/confname.h
+parseexp.o: /usr/include/stdlib.h /usr/include/errno.h
+parseexp.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+parseexp.o: /usr/include/alloca.h referee.h expert.h domain.h scanner.h
+parseexp.o: termpair.h newmem.h /usr/include/memory.h term.h polynom.h
+parseexp.o: vartree.h /usr/include/values.h cpweight.h order.h subst.h
+parseexp.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+parseexp.o: /usr/include/huge_val.h /usr/include/nan.h
+parseexp.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+parseexp.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+parseexp.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+parseexp.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+parseexp.o: exp_def_next_cycletime.h learn_exaselect.h team.h
+parseplan.o: /usr/include/stdlib.h /usr/include/features.h
+parseplan.o: /usr/include/sys/cdefs.h
+parseplan.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+parseplan.o: /usr/include/errno.h /usr/include/linux/errno.h
+parseplan.o: /usr/include/asm/errno.h /usr/include/alloca.h
+parseplan.o: /usr/include/stdio.h /usr/include/libio.h
+parseplan.o: /usr/include/_G_config.h /usr/include/sys/param.h
+parseplan.o: /usr/include/limits.h /usr/include/posix1_lim.h
+parseplan.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+parseplan.o: /usr/include/linux/param.h /usr/include/asm/param.h
+parseplan.o: /usr/include/sys/types.h /usr/include/linux/types.h
+parseplan.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+parseplan.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h defines.h
+parseplan.o: /usr/include/ctype.h /usr/include/endian.h
+parseplan.o: /usr/include/bytesex.h /usr/include/string.h
+parseplan.o: /usr/include/unistd.h /usr/include/posix_opt.h
+parseplan.o: /usr/include/gnu/types.h /usr/include/confname.h error.h
+parseplan.o: polynom.h vartree.h term.h /usr/include/memory.h termpair.h
+parseplan.o: systime.h /usr/include/sys/time.h /usr/include/linux/time.h
+parseplan.o: /usr/include/time.h newmem.h /usr/include/values.h complet.h
+parseplan.o: referee.h expert.h domain.h scanner.h cpweight.h order.h subst.h
+parseplan.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+parseplan.o: /usr/include/huge_val.h /usr/include/nan.h
+parseplan.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+parseplan.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+parseplan.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+parseplan.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+parseplan.o: exp_def_next_cycletime.h learn_exaselect.h team.h
+parseplan.o: exp_class_t_exp.h exp_value_exp.h exp_def_break.h
+parseplan.o: exp_class_nont_exp.h exp_form_next_t.h parseexp.h parseplan.h
+parseprk.o: parseprk.h s_scanner.h defines.h /usr/include/sys/param.h
+parseprk.o: /usr/include/features.h /usr/include/sys/cdefs.h
+parseprk.o: /usr/include/limits.h /usr/include/posix1_lim.h
+parseprk.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+parseprk.o: /usr/include/linux/param.h /usr/include/asm/param.h
+parseprk.o: /usr/include/sys/types.h /usr/include/linux/types.h
+parseprk.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+parseprk.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+parseprk.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+parseprk.o: /usr/include/stdio.h /usr/include/libio.h
+parseprk.o: /usr/include/_G_config.h /usr/include/string.h
+parseprk.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+parseprk.o: /usr/include/unistd.h /usr/include/posix_opt.h
+parseprk.o: /usr/include/gnu/types.h /usr/include/confname.h
+parseprk.o: /usr/include/stdlib.h /usr/include/errno.h
+parseprk.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+parseprk.o: /usr/include/alloca.h newmem.h /usr/include/memory.h error.h
+parser.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+parser.o: /usr/include/sys/cdefs.h /usr/include/string.h
+parser.o: /usr/include/features.h
+parser.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+parser.o: /usr/include/sys/param.h /usr/include/limits.h
+parser.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+parser.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+parser.o: /usr/include/asm/param.h /usr/include/sys/types.h
+parser.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+parser.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+parser.o: /usr/include/sys/bitypes.h defines.h /usr/include/ctype.h
+parser.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/unistd.h
+parser.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+parser.o: /usr/include/confname.h /usr/include/stdlib.h /usr/include/errno.h
+parser.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+parser.o: /usr/include/alloca.h error.h /usr/include/memory.h vartree.h
+parser.o: polynom.h term.h termpair.h systime.h /usr/include/sys/time.h
+parser.o: /usr/include/linux/time.h /usr/include/time.h newmem.h
+parser.o: /usr/include/values.h order.h scanner.h parser.h cpweight.h subst.h
+parser.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+parser.o: /usr/include/huge_val.h /usr/include/nan.h
+parser.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+parser.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+parser.o: learn_specific.h learn_mixterms.h parsedom.h domain.h
+parser.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h database.h
+parser.o: exp_def_next_cycletime.h learn_exaselect.h team.h expert.h
+parser.o: complet.h referee.h
+parseref.o: termpair.h systime.h /usr/include/sys/time.h
+parseref.o: /usr/include/features.h /usr/include/sys/cdefs.h
+parseref.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+parseref.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+parseref.o: /usr/include/linux/time.h /usr/include/time.h
+parseref.o: /usr/include/sys/types.h /usr/include/sys/bitypes.h error.h
+parseref.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+parseref.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+parseref.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+parseref.o: /usr/include/asm/param.h /usr/include/ctype.h
+parseref.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/stdio.h
+parseref.o: /usr/include/libio.h /usr/include/_G_config.h
+parseref.o: /usr/include/string.h
+parseref.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+parseref.o: /usr/include/unistd.h /usr/include/posix_opt.h
+parseref.o: /usr/include/gnu/types.h /usr/include/confname.h
+parseref.o: /usr/include/stdlib.h /usr/include/errno.h
+parseref.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+parseref.o: /usr/include/alloca.h newmem.h /usr/include/memory.h term.h
+parseref.o: polynom.h vartree.h /usr/include/values.h complet.h referee.h
+parseref.o: expert.h domain.h scanner.h cpweight.h order.h subst.h
+parseref.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+parseref.o: /usr/include/huge_val.h /usr/include/nan.h
+parseref.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+parseref.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+parseref.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+parseref.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+parseref.o: exp_def_next_cycletime.h learn_exaselect.h team.h parseexp.h
+parseref.o: parseref.h
+pcl.o: pcl.h subst.h termpair.h systime.h /usr/include/sys/time.h
+pcl.o: /usr/include/features.h /usr/include/sys/cdefs.h
+pcl.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+pcl.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+pcl.o: /usr/include/linux/time.h /usr/include/time.h /usr/include/sys/types.h
+pcl.o: /usr/include/sys/bitypes.h error.h defines.h /usr/include/sys/param.h
+pcl.o: /usr/include/limits.h /usr/include/posix1_lim.h
+pcl.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+pcl.o: /usr/include/linux/param.h /usr/include/asm/param.h
+pcl.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+pcl.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+pcl.o: /usr/include/string.h
+pcl.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+pcl.o: /usr/include/unistd.h /usr/include/posix_opt.h
+pcl.o: /usr/include/gnu/types.h /usr/include/confname.h /usr/include/stdlib.h
+pcl.o: /usr/include/errno.h /usr/include/linux/errno.h
+pcl.o: /usr/include/asm/errno.h /usr/include/alloca.h newmem.h
+pcl.o: /usr/include/memory.h term.h polynom.h vartree.h /usr/include/values.h
+pcl.o: complet.h referee.h expert.h domain.h scanner.h cpweight.h order.h
+pcl.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+pcl.o: /usr/include/huge_val.h /usr/include/nan.h
+pcl.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+pcl.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+pcl.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+pcl.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+pcl.o: exp_def_next_cycletime.h learn_exaselect.h team.h
+polynom.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+polynom.o: /usr/include/sys/cdefs.h /usr/include/string.h
+polynom.o: /usr/include/features.h
+polynom.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+polynom.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+polynom.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+polynom.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+polynom.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+polynom.o: /usr/include/asm/param.h /usr/include/sys/types.h
+polynom.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+polynom.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+polynom.o: /usr/include/sys/bitypes.h /usr/include/unistd.h
+polynom.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+polynom.o: /usr/include/confname.h /usr/include/stdlib.h /usr/include/errno.h
+polynom.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+polynom.o: /usr/include/alloca.h error.h /usr/include/memory.h vartree.h
+polynom.o: polynom.h term.h scanner.h
+reduce.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+reduce.o: /usr/include/sys/cdefs.h reduce.h termpair.h systime.h
+reduce.o: /usr/include/sys/time.h /usr/include/features.h
+reduce.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+reduce.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+reduce.o: /usr/include/linux/time.h /usr/include/time.h
+reduce.o: /usr/include/sys/types.h /usr/include/sys/bitypes.h error.h
+reduce.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+reduce.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+reduce.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+reduce.o: /usr/include/asm/param.h /usr/include/ctype.h /usr/include/endian.h
+reduce.o: /usr/include/bytesex.h /usr/include/string.h
+reduce.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+reduce.o: /usr/include/unistd.h /usr/include/posix_opt.h
+reduce.o: /usr/include/gnu/types.h /usr/include/confname.h
+reduce.o: /usr/include/stdlib.h /usr/include/errno.h
+reduce.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+reduce.o: /usr/include/alloca.h newmem.h /usr/include/memory.h term.h
+reduce.o: polynom.h vartree.h /usr/include/values.h order.h scanner.h pcl.h
+reduce.o: subst.h complet.h referee.h expert.h domain.h cpweight.h
+reduce.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+reduce.o: /usr/include/huge_val.h /usr/include/nan.h
+reduce.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+reduce.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+reduce.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+reduce.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+reduce.o: exp_def_next_cycletime.h learn_exaselect.h team.h
+referee.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+referee.o: /usr/include/sys/cdefs.h /usr/include/sys/param.h
+referee.o: /usr/include/features.h /usr/include/limits.h
+referee.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+referee.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+referee.o: /usr/include/asm/param.h /usr/include/sys/types.h
+referee.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+referee.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+referee.o: /usr/include/sys/bitypes.h error.h defines.h /usr/include/ctype.h
+referee.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/string.h
+referee.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+referee.o: /usr/include/unistd.h /usr/include/posix_opt.h
+referee.o: /usr/include/gnu/types.h /usr/include/confname.h
+referee.o: /usr/include/stdlib.h /usr/include/errno.h
+referee.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+referee.o: /usr/include/alloca.h systime.h /usr/include/sys/time.h
+referee.o: /usr/include/linux/time.h /usr/include/time.h vartree.h polynom.h
+referee.o: term.h /usr/include/memory.h termpair.h newmem.h
+referee.o: /usr/include/values.h subst.h order.h scanner.h cpweight.h
+referee.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+referee.o: /usr/include/huge_val.h /usr/include/nan.h
+referee.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+referee.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+referee.o: learn_specific.h learn_mixterms.h parsedom.h domain.h
+referee.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+referee.o: database.h exp_def_next_cycletime.h learn_exaselect.h team.h
+referee.o: expert.h reduce.h pcl.h complet.h referee.h parseref.h
+s_scanner.o: s_scanner.h defines.h /usr/include/sys/param.h
+s_scanner.o: /usr/include/features.h /usr/include/sys/cdefs.h
+s_scanner.o: /usr/include/limits.h /usr/include/posix1_lim.h
+s_scanner.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+s_scanner.o: /usr/include/linux/param.h /usr/include/asm/param.h
+s_scanner.o: /usr/include/sys/types.h /usr/include/linux/types.h
+s_scanner.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+s_scanner.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+s_scanner.o: /usr/include/ctype.h /usr/include/endian.h
+s_scanner.o: /usr/include/bytesex.h /usr/include/stdio.h /usr/include/libio.h
+s_scanner.o: /usr/include/_G_config.h /usr/include/string.h
+s_scanner.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+s_scanner.o: /usr/include/unistd.h /usr/include/posix_opt.h
+s_scanner.o: /usr/include/gnu/types.h /usr/include/confname.h
+s_scanner.o: /usr/include/stdlib.h /usr/include/errno.h
+s_scanner.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+s_scanner.o: /usr/include/alloca.h newmem.h /usr/include/memory.h error.h
+scanner.o: /usr/include/ctype.h /usr/include/features.h
+scanner.o: /usr/include/sys/cdefs.h /usr/include/endian.h
+scanner.o: /usr/include/bytesex.h /usr/include/stdio.h /usr/include/libio.h
+scanner.o: /usr/include/_G_config.h /usr/include/string.h
+scanner.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h scanner.h
+scanner.o: error.h defines.h /usr/include/sys/param.h /usr/include/limits.h
+scanner.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+scanner.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+scanner.o: /usr/include/asm/param.h /usr/include/sys/types.h
+scanner.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+scanner.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+scanner.o: /usr/include/sys/bitypes.h /usr/include/unistd.h
+scanner.o: /usr/include/posix_opt.h /usr/include/gnu/types.h
+scanner.o: /usr/include/confname.h /usr/include/stdlib.h /usr/include/errno.h
+scanner.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+scanner.o: /usr/include/alloca.h
+socket.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+socket.o: /usr/include/sys/cdefs.h /usr/include/string.h
+socket.o: /usr/include/features.h
+socket.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+socket.o: /usr/include/sys/param.h /usr/include/limits.h
+socket.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+socket.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+socket.o: /usr/include/asm/param.h /usr/include/sys/types.h
+socket.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+socket.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+socket.o: /usr/include/sys/bitypes.h /usr/include/sys/socket.h
+socket.o: /usr/include/linux/socket.h /usr/include/asm/socket.h
+socket.o: /usr/include/asm/sockios.h /usr/include/linux/sockios.h
+socket.o: /usr/include/linux/uio.h /usr/include/netinet/in.h
+socket.o: /usr/include/linux/in.h /usr/include/asm/byteorder.h
+socket.o: /usr/include/netdb.h /usr/include/paths.h defines.h
+socket.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+socket.o: /usr/include/unistd.h /usr/include/posix_opt.h
+socket.o: /usr/include/gnu/types.h /usr/include/confname.h
+socket.o: /usr/include/stdlib.h /usr/include/errno.h
+socket.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+socket.o: /usr/include/alloca.h error.h socket.h br_types.h complet.h
+socket.o: systime.h /usr/include/sys/time.h /usr/include/linux/time.h
+socket.o: /usr/include/time.h referee.h expert.h domain.h scanner.h
+socket.o: termpair.h newmem.h /usr/include/memory.h term.h polynom.h
+socket.o: vartree.h /usr/include/values.h cpweight.h order.h subst.h
+socket.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+socket.o: /usr/include/huge_val.h /usr/include/nan.h
+socket.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+socket.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+socket.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+socket.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+socket.o: exp_def_next_cycletime.h learn_exaselect.h team.h
+subst.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+subst.o: /usr/include/sys/cdefs.h /usr/include/memory.h
+subst.o: /usr/include/features.h subst.h termpair.h systime.h
+subst.o: /usr/include/sys/time.h /usr/include/linux/types.h
+subst.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+subst.o: /usr/include/asm/types.h /usr/include/linux/time.h
+subst.o: /usr/include/time.h /usr/include/sys/types.h
+subst.o: /usr/include/sys/bitypes.h error.h defines.h
+subst.o: /usr/include/sys/param.h /usr/include/limits.h
+subst.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+subst.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+subst.o: /usr/include/asm/param.h /usr/include/ctype.h /usr/include/endian.h
+subst.o: /usr/include/bytesex.h /usr/include/string.h
+subst.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+subst.o: /usr/include/unistd.h /usr/include/posix_opt.h
+subst.o: /usr/include/gnu/types.h /usr/include/confname.h
+subst.o: /usr/include/stdlib.h /usr/include/errno.h
+subst.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+subst.o: /usr/include/alloca.h newmem.h term.h polynom.h vartree.h
+subst.o: /usr/include/values.h
+systime.o: /usr/include/signal.h /usr/include/features.h
+systime.o: /usr/include/sys/cdefs.h /usr/include/sys/types.h
+systime.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+systime.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+systime.o: /usr/include/sys/bitypes.h /usr/include/linux/signal.h
+systime.o: /usr/include/asm/signal.h /usr/include/sys/time.h
+systime.o: /usr/include/linux/time.h /usr/include/time.h systime.h error.h
+systime.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+systime.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+systime.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+systime.o: /usr/include/asm/param.h /usr/include/ctype.h
+systime.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/stdio.h
+systime.o: /usr/include/libio.h /usr/include/_G_config.h
+systime.o: /usr/include/string.h
+systime.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+systime.o: /usr/include/unistd.h /usr/include/posix_opt.h
+systime.o: /usr/include/gnu/types.h /usr/include/confname.h
+systime.o: /usr/include/stdlib.h /usr/include/errno.h
+systime.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+systime.o: /usr/include/alloca.h br_types.h complet.h referee.h expert.h
+systime.o: domain.h scanner.h termpair.h newmem.h /usr/include/memory.h
+systime.o: term.h polynom.h vartree.h /usr/include/values.h cpweight.h
+systime.o: order.h subst.h learn_tsmexperts.h learn_tsm.h learn_tets.h
+systime.o: /usr/include/math.h /usr/include/huge_val.h /usr/include/nan.h
+systime.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+systime.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+systime.o: learn_specific.h learn_mixterms.h parsedom.h learn_nterms.h
+systime.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+systime.o: exp_def_next_cycletime.h learn_exaselect.h team.h pcl.h
+team.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+team.o: /usr/include/sys/cdefs.h /usr/include/string.h
+team.o: /usr/include/features.h
+team.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+team.o: /usr/include/sys/types.h /usr/include/linux/types.h
+team.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+team.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+team.o: /usr/include/sys/socket.h /usr/include/linux/socket.h
+team.o: /usr/include/asm/socket.h /usr/include/asm/sockios.h
+team.o: /usr/include/linux/sockios.h /usr/include/linux/uio.h
+team.o: /usr/include/netinet/in.h /usr/include/linux/in.h
+team.o: /usr/include/asm/byteorder.h /usr/include/netdb.h
+team.o: /usr/include/paths.h defines.h /usr/include/sys/param.h
+team.o: /usr/include/limits.h /usr/include/posix1_lim.h
+team.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+team.o: /usr/include/linux/param.h /usr/include/asm/param.h
+team.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+team.o: /usr/include/unistd.h /usr/include/posix_opt.h
+team.o: /usr/include/gnu/types.h /usr/include/confname.h
+team.o: /usr/include/stdlib.h /usr/include/errno.h /usr/include/linux/errno.h
+team.o: /usr/include/asm/errno.h /usr/include/alloca.h error.h polynom.h
+team.o: vartree.h term.h /usr/include/memory.h termpair.h systime.h
+team.o: /usr/include/sys/time.h /usr/include/linux/time.h /usr/include/time.h
+team.o: newmem.h /usr/include/values.h subst.h order.h scanner.h cpweight.h
+team.o: learn_tsmexperts.h learn_tsm.h learn_tets.h /usr/include/math.h
+team.o: /usr/include/huge_val.h /usr/include/nan.h
+team.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+team.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+team.o: learn_specific.h learn_mixterms.h parsedom.h domain.h learn_nterms.h
+team.o: learn_lpairs.h learn_lterms.h s_scanner.h database.h
+team.o: exp_def_next_cycletime.h learn_exaselect.h team.h expert.h reduce.h
+team.o: buildcp.h complet.h referee.h parser.h socket.h transfer.h
+team.o: exp_value_exp.h exp_set_next_config.h parseexp.h parseprk.h pcl.h
+team.o: parseplan.h parseref.h comphase.h br_types.h
+term.o: term.h error.h defines.h /usr/include/sys/param.h
+term.o: /usr/include/features.h /usr/include/sys/cdefs.h
+term.o: /usr/include/limits.h /usr/include/posix1_lim.h
+term.o: /usr/include/linux/limits.h /usr/include/posix2_lim.h
+term.o: /usr/include/linux/param.h /usr/include/asm/param.h
+term.o: /usr/include/sys/types.h /usr/include/linux/types.h
+term.o: /usr/include/linux/posix_types.h /usr/include/asm/posix_types.h
+term.o: /usr/include/asm/types.h /usr/include/sys/bitypes.h
+term.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+term.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+term.o: /usr/include/string.h
+term.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+term.o: /usr/include/unistd.h /usr/include/posix_opt.h
+term.o: /usr/include/gnu/types.h /usr/include/confname.h
+term.o: /usr/include/stdlib.h /usr/include/errno.h /usr/include/linux/errno.h
+term.o: /usr/include/asm/errno.h /usr/include/alloca.h /usr/include/memory.h
+term.o: polynom.h vartree.h
+termpair.o: subst.h termpair.h systime.h /usr/include/sys/time.h
+termpair.o: /usr/include/features.h /usr/include/sys/cdefs.h
+termpair.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+termpair.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+termpair.o: /usr/include/linux/time.h /usr/include/time.h
+termpair.o: /usr/include/sys/types.h /usr/include/sys/bitypes.h error.h
+termpair.o: defines.h /usr/include/sys/param.h /usr/include/limits.h
+termpair.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+termpair.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+termpair.o: /usr/include/asm/param.h /usr/include/ctype.h
+termpair.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/stdio.h
+termpair.o: /usr/include/libio.h /usr/include/_G_config.h
+termpair.o: /usr/include/string.h
+termpair.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+termpair.o: /usr/include/unistd.h /usr/include/posix_opt.h
+termpair.o: /usr/include/gnu/types.h /usr/include/confname.h
+termpair.o: /usr/include/stdlib.h /usr/include/errno.h
+termpair.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+termpair.o: /usr/include/alloca.h newmem.h /usr/include/memory.h term.h
+termpair.o: polynom.h vartree.h /usr/include/values.h
+transfer.o: /usr/include/stdio.h /usr/include/libio.h
+transfer.o: /usr/include/_G_config.h /usr/include/sys/cdefs.h
+transfer.o: /usr/include/string.h /usr/include/features.h
+transfer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+transfer.o: /usr/include/sys/param.h /usr/include/limits.h
+transfer.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+transfer.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+transfer.o: /usr/include/asm/param.h /usr/include/sys/types.h
+transfer.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+transfer.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+transfer.o: /usr/include/sys/bitypes.h /usr/include/sys/socket.h
+transfer.o: /usr/include/linux/socket.h /usr/include/asm/socket.h
+transfer.o: /usr/include/asm/sockios.h /usr/include/linux/sockios.h
+transfer.o: /usr/include/linux/uio.h /usr/include/netinet/in.h
+transfer.o: /usr/include/linux/in.h /usr/include/asm/byteorder.h
+transfer.o: /usr/include/netdb.h /usr/include/paths.h defines.h
+transfer.o: /usr/include/ctype.h /usr/include/endian.h /usr/include/bytesex.h
+transfer.o: /usr/include/unistd.h /usr/include/posix_opt.h
+transfer.o: /usr/include/gnu/types.h /usr/include/confname.h
+transfer.o: /usr/include/stdlib.h /usr/include/errno.h
+transfer.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+transfer.o: /usr/include/alloca.h error.h polynom.h vartree.h term.h
+transfer.o: /usr/include/memory.h termpair.h systime.h
+transfer.o: /usr/include/sys/time.h /usr/include/linux/time.h
+transfer.o: /usr/include/time.h newmem.h /usr/include/values.h subst.h
+transfer.o: order.h scanner.h cpweight.h learn_tsmexperts.h learn_tsm.h
+transfer.o: learn_tets.h /usr/include/math.h /usr/include/huge_val.h
+transfer.o: /usr/include/nan.h
+transfer.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/float.h
+transfer.o: /usr/include/ieee754.h /usr/include/ieee854.h learn_cpweight.h
+transfer.o: learn_specific.h learn_mixterms.h parsedom.h domain.h
+transfer.o: learn_nterms.h learn_lpairs.h learn_lterms.h s_scanner.h
+transfer.o: database.h exp_def_next_cycletime.h learn_exaselect.h team.h
+transfer.o: expert.h reduce.h complet.h referee.h socket.h transfer.h pcl.h
+vartree.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+vartree.o: /usr/include/sys/cdefs.h /usr/include/memory.h
+vartree.o: /usr/include/features.h vartree.h error.h defines.h
+vartree.o: /usr/include/sys/param.h /usr/include/limits.h
+vartree.o: /usr/include/posix1_lim.h /usr/include/linux/limits.h
+vartree.o: /usr/include/posix2_lim.h /usr/include/linux/param.h
+vartree.o: /usr/include/asm/param.h /usr/include/sys/types.h
+vartree.o: /usr/include/linux/types.h /usr/include/linux/posix_types.h
+vartree.o: /usr/include/asm/posix_types.h /usr/include/asm/types.h
+vartree.o: /usr/include/sys/bitypes.h /usr/include/ctype.h
+vartree.o: /usr/include/endian.h /usr/include/bytesex.h /usr/include/string.h
+vartree.o: /usr/lib/gcc-lib/i486-linux/2.7.2.1/include/stddef.h
+vartree.o: /usr/include/unistd.h /usr/include/posix_opt.h
+vartree.o: /usr/include/gnu/types.h /usr/include/confname.h
+vartree.o: /usr/include/stdlib.h /usr/include/errno.h
+vartree.o: /usr/include/linux/errno.h /usr/include/asm/errno.h
+vartree.o: /usr/include/alloca.h

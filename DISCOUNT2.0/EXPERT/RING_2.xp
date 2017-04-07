@@ -1,0 +1,49 @@
+EXPERTENNAME                 RING_2
+
+EXP_OR_SPEC                  E
+
+CP_FUNKTION                  ADD_RWEIGHT
+		             F_GEWICHT : 1,10 ; 2
+		             V_GEWICHT : 1,8  ; 1
+			     RED_INST  : 0,1  ; 1
+
+CG_FUNKTION                  DIFF_GOAL  
+		             F_GEWICHT  : 1,50 ; 2
+		             V_GEWICHT  : 1,8  ; 1
+			     MIN_STRUCT : 0,1  ; 4
+
+FAIRNESS                     Y
+
+
+
+GUTE_GUTACHTER               (STATISTIC, ,1)
+
+#GUTE_DOMAENEN                ALL
+GUTE_DOMAENEN                (RING, 0.9)
+                             
+
+ROBUSTHEIT                   0.8
+
+WISSENSANTEIL                0.7
+
+BEWEISPHASE                  ANFANG  0.5       	
+			     MITTE   0.5
+			     ENDE    0.5
+
+ZYKLUSDAUER                  ANFANG  (1,10)
+			     MITTE   (1,10)
+			     ENDE    (1,10)
+
+AEHNLICHE_EXP              (MAX_WEIGHT, V_GEWICHT : 1,10;6, 0)
+
+NACHFOLGER                 (ADD_RWEIGHT, F_GEWICHT : 1,10 ; 2
+					V_GEWICHT : 1,8  ; 1
+					RED_INST  : 0,1  ; 1, 0.8 )
+
+UNVERTRAEGL
+
+MOEGL_TEAMEXP
+
+PROZEDUR                   xyz
+
+BESCHREIBUNG               wertljwejlhrtyiwehrjtgjwehrtgjwehjrkhtgjkwerjhkghse

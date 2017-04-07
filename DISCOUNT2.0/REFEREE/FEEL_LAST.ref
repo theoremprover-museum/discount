@@ -1,0 +1,28 @@
+GUTACHTERNAME           FEEL_LAST
+
+BEURTEILE_FKT  FEELGOOD    LETZTE_CP        : 0,10; 3
+			   LETZTE_CG        : 0,10; 3
+			   VERGANGEN_FAKTOR : 0,10; 5
+			   NAECHSTE_CP      : 0,5; 1
+			   NAECHSTE_CG      : 0,5; 1
+		           ZUKUNFTS_FAKTOR  : 0,10; 2   
+			   KORREKTUR_FAKTOR : 0,10; 3
+
+RESULTATE_FKT  LAST        MAX_REGELN     : 0,10;3
+			   MAX_GLEICH     : 0,5; 1
+			   MAX_ZIELE      : 0,5; 1
+			   SCHWELLE_REGELN: 0,20; 10
+			   SCHWELLE_GLEICH: 0,20; 10
+			   SCHWELLE_ZIELE : 0,20; 10
+
+GEEIGNETE_EXP
+
+GEEIGNETE_DOM
+
+ROBUSTHEIT                 0.8
+
+WISSENSANTEIL              0
+
+AEHNLICHE_GA
+
+LEITER_MOEGLICH            1   /* Experte kann Leiter werden */

@@ -1,0 +1,20 @@
+#------------------------------------------------------------------------------
+#   Beispiel2 (auch pl2)
+#------------------------------------------------------------------------------
+
+MODE            PROOF
+
+NAME            luka2
+
+ORDERING        LPO
+		C > N > T > Ap 
+
+EQUATIONS       C (T,x) = x
+		C (p,C (q,p)) = T
+		C (C (p,C (q,r)),C (C (p,q),C (p,r))) = T
+		C (C (p,C (q,r)),C (q,C (p,r))) = T
+		C (C (p,q), C (N (q),N (p))) = T
+		C (N (N (p)), p) = T
+		C (p, N (N (p))) = T
+
+CONCLUSION      C (C (N (Ap),Ap),Ap) = T

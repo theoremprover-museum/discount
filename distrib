@@ -1,0 +1,1 @@
+tar -c -v -z -X notthese -f NEWDISCOUNT.tgz DISCOUNT2.0 LEARN PCL README distrib notthese

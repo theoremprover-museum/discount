@@ -1,0 +1,28 @@
+# Domaene boole'sche Ringe :
+
+# Beispiel : Assoziativitaet von a (aassoz)
+
+#------------------------------------------------------------------------------
+#   Beispiel:   bool5b
+#               (Beweisbeispiel)
+
+MODE        PROOF
+
+NAME        bool5b
+
+ORDERING    LPO
+            n > a > o > 1 > 0 > x0 > x1 > x2
+
+EQUATIONS   o (x,y) = o (y,x)                   # Commutativity
+            a (x,y) = a (y,x)
+                               
+            a (x,o (y,z)) = o (a (x,y),a (x,z)) # Distributivity
+            o (x,a (y,z)) = a (o (x,y),o (x,z))
+
+            o (x,0) = x                         # Neutral elements
+            a (x,1) = x
+
+            a (x,n (x)) = 0                     # Complement
+            o (x,n (x)) = 1
+
+CONCLUSION  a(a(x0,x1),x2) = a(x0,a(x1,x2))

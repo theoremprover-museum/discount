@@ -1,0 +1,22 @@
+#/usr/bin/csh
+
+foreach file   (\
+ax_antisyma ax_antisymb ax_glb1a ax_glb1b ax_glb1c ax_glb1d ax_glb2a\
+ax_glb2b ax_glb3a ax_glb3b ax_lub1a ax_lub1b ax_lub1c ax_lub1d\
+ax_lub2a ax_lub2b ax_lub3a ax_lub3b ax_mono1a ax_mono1b ax_mono1c\
+ax_mono2a ax_mono2b ax_mono2c ax_refla ax_reflb ax_transa ax_transb\
+lat1a lat1b lat2a lat2b lat3a lat3b\
+)
+
+limit cputime 2000
+ln -s ../$file
+echo "pcl2 -s -x max $file"
+if( { pcl2 -s -x max $file } ) then
+   echo "Erfolg!"
+   kb_insert -k LAT_MAXINC_KNOWLEDGE -e max_$file $file.xtr
+   rm $file.xtr
+else
+   echo "Misserfolg!"
+endif
+rm $file.0 $file
+end

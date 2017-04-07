@@ -1,0 +1,38 @@
+DOMAENENNAME           AUSSAGENLOGIK
+
+SIGNATUR         C : 2    T : 0   N : 1  
+
+DEF_GLEICH       C (T,x) = x
+		 C (p,C (q,p)) = T
+		 C (C (p,C (q,r)),C (C (p,q),C (p,r))) = T
+		 C (C (p,C (q,r)),C (q,C (p,r))) = T
+		 C (C (p,q), C (N (q),N (p))) = T
+		 C (N (N (p)), p) = T
+		 C (p, N (N (p))) = T
+
+STARTTEAM       (AUSSAGENLOGIK_1, ; STAT_LAST_1,)
+		(AUSSAGENLOGIK_2, ; STAT_LAST_1,)
+
+ZYKLENZAHL        2
+
+ZYKLENDAUER     (10,50;5)
+
+GUTE_EXP           
+
+UNGEEIGN_EXP
+
+GUTE_GA              
+
+UEBER_DOM
+
+SPEZIAL_DOM
+
+VERWANDT_DOM
+
+BEKANNTE_RES         #C (N (C (N (C (x,y)),z)),x) = T
+
+BESCHREIBUNG
+
+LITERATUR
+
+BEISPIELE

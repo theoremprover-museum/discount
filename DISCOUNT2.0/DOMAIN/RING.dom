@@ -1,0 +1,42 @@
+DOMAENENNAME           RING
+
+SIGNATUR         add : 2    null : 0 
+		 minus : 1  mul : 2
+
+DEF_GLEICH       add(x,y) = add(y,x)                          # Kommutativitaet von add
+                 add(x,null) = x                              # neutrale Element von add
+		 add(x,minus(x)) = null                       # inverse Element von add
+		 add(add(x,y),z) = add(x,add(y,z))            # Assoziativitaet von add
+
+                 mul(mul(x,y),z) = mul(x,mul(y,z))            # Assoziativitaet von mul
+		 add(mul(x,y),mul(x,z)) = mul( x, add(y,z))   # Distributiv-
+		 add(mul(x,y),mul(z,y)) = mul(add(x,z),y)     # gesetze
+
+STARTTEAM       (RING_1, ; STAT_LAST_1, )
+                (RING_2, ; STAT_LAST_1, )
+
+ZYKLENZAHL        20
+
+#ZYKLENDAUER       (10,100;16)
+ZYKLENDAUER       (10,100;25)
+#ZYKLENDAUER       (10,100;12)
+
+GUTE_EXP
+
+UNGEEIGN_EXP
+
+GUTE_GA
+
+UEBER_DOM
+
+SPEZIAL_DOM
+
+VERWANDT_DOM
+
+BEKANNTE_RES
+
+BESCHREIBUNG
+
+LITERATUR
+
+BEISPIELE

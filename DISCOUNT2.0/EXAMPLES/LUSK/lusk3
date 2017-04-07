@@ -1,0 +1,44 @@
+#-----------------------------------------------------------------------------
+#   Beispiel:   Lusk 3
+#
+#   groesseres Beweisbeispiel mit XKBO 
+#
+#------------------------------------------------------------------------------
+#
+#   E.L. Lusk & R.A. Overbeek:
+#   Reasoning about Equality
+#
+#   Journal of Automated Reasoning II (1985) 209-228
+#
+#------------------------------------------------------------------------------
+#   Problem 3:  In a ring, if x*x = x for all x in the ring, i
+#               then x*y = y*x for all x,y in the ring.
+#
+#               Funktionen:     f   : Multiplikation *
+#                               g   : Inverses
+#                               e   : Neutrales Element
+#                               a,b : Konstanten
+#
+
+
+MODE        PROOF
+
+NAME        Lusk3
+
+ORDERING    XKBO
+            f:5 > j:4 > g:3 > 0:1 > b:1 > a:1  # > 0:1
+
+EQUATIONS   j (0,x)       = x                   # 0 ist a left identity for sum
+            j (x,0)       = x                   # 0 ist a right identity for sum
+            j (g (x),x)   = 0                   # there exists a left inverse for sum
+            j (x,g (x))   = 0                   # there exists a right inverse for sum
+            j (j (x,y),z) = j (x,j (y,z))       # associativity of addition
+            j (x,y)       = j(y,x)              # commutativity of addition
+            f (f (x,y),z) = f (x,f (y,z))       # associativity of multiplication
+            f (x,j (y,z)) = j (f (x,y),f (x,z)) # distributivity axioms
+            f (j (x,y),z) = j (f (x,z),f (y,z)) #
+            f (x,x)       = x                   # special hypothese: x*x = x
+
+CONCLUSION  f (a,b) = f (b,a)                   # theorem
+
+

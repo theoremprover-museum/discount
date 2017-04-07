@@ -1,0 +1,43 @@
+DOMAENENNAME           BOOLRING
+
+SIGNATUR         and : 2    or : 2 
+		 not : 1    null : 0  eins : 0
+
+DEF_GLEICH       or(x,y) = or(y,x)                          # Kommutativitaet von or
+                 and(x,y) = and(y,x)                        # Kommutativitaet von and
+
+		 and(x, or(y,z)) = or( and(x,y), and(x,z) ) # Distributivitaet
+		 or(x, and(y,z)) = and( or(x,y), or(x,z) )  # Distributivitaet
+
+		 or(x,null) = x                             # neutrale Element von or
+		 and(x,eins) = x                            # neutrale Element von and
+
+		 and(x, not(x)) = null                      # Komplement
+		 or(x, not(x)) = eins                       # Komplement
+
+STARTTEAM       (BOOLRING_1, ; STAT_LAST_1, )
+                (BOOLRING_2, ; STAT_LAST_1, )
+
+ZYKLENZAHL        9
+
+ZYKLENDAUER     (1,10;2)
+
+GUTE_EXP
+
+UNGEEIGN_EXP
+
+GUTE_GA
+
+UEBER_DOM
+
+SPEZIAL_DOM
+
+VERWANDT_DOM
+
+BEKANNTE_RES
+
+BESCHREIBUNG
+
+LITERATUR
+
+BEISPIELE

@@ -1,0 +1,15 @@
+        0.0.4 : tes-eqn : u(x,y) = u(y,x) : initial
+        0.0.8 : tes-eqn : u(a(),b()) = b() : initial
+        0.0.12 : tes-eqn : f(x,u(y,z)) = u(f(x,y),f(x,z)) : initial
+        0.0.14 : tes-eqn : f(u(x,y),z) = u(f(x,z),f(y,z)) : initial
+        0.0.16 : tes-goal : u(f(i(c()),f(a(),c())),f(i(c()),f(b(),c()))) = f(i(c()),f(b(),c())) : hypothesis
+        1.0.0 : tes-goal : u(f(i(c()),f(b(),c())),f(i(c()),f(a(),c()))) = f(i(c()),f(b(),c())) : tes-red(0.0.16,L,0.0.4,L)
+        1.0.13 : tes-eqn : u(b(),a()) = b() : tes-red(0.0.8,L,0.0.4,L)
+        1.0.14 : tes-rule : u(b(),a()) -> b() : orient(1.0.13,u)
+        1.1.28 : tes-intermed : f(x,u(y,z)) -> u(f(x,y),f(x,z)) : orient(0.0.12,u)
+        5.0.2 : tes-rule : f(u(x,y),z) -> u(f(x,z),f(y,z)) : orient(0.0.14,u)
+        5.0.17 : tes-eqn : u(f(b(),x),f(a(),x)) = f(b(),x) : cp(5.0.2,L.1,1.0.14,L)
+       17.1.1476 : tes-intermed : u(f(b(),x),f(a(),x)) -> f(b(),x) : orient(5.0.17,u)
+       18.0.773 : tes-eqn : u(f(x,f(b(),y)),f(x,f(a(),y))) = f(x,f(b(),y)) : cp(1.1.28,L.2,17.1.1476,L)
+       25.0.3738 : tes-rule : u(f(x,f(b(),y)),f(x,f(a(),y))) -> f(x,f(b(),y)) : orient(18.0.773,u)
+       25.0.3739 : tes-final : f(i(c()),f(b(),c())) = f(i(c()),f(b(),c())) : tes-red(1.0.0,L,25.0.3738,L)

@@ -1,0 +1,44 @@
+#----------------------------------------------------------------
+#
+# Problem by I.Dahn, Humolt-Universitaet, Berlin, Germany
+#
+# Each element in a lattice ordered group can be stated as a 
+# product of it's positive and it's negative part.
+#
+# This is said to be a non-trivial task even for human experts. 
+#
+# It was formerly known as klsens, lattice, verband and lattice3 
+
+
+
+MODE        PROOF
+
+NAME        lat4
+
+ORDERING    LPO
+            i > n > u > f > np > pp > 1 > a
+
+EQUATIONS   n(x,y) = n(y,x)
+            u(x,y) = u(y,x)
+            n(x,n(y,z)) = n(n(x,y),z)
+            u(x,u(y,z)) = u(u(x,y),z)
+            u(x,x) = x
+            n(x,x) = x
+            u(x,n(x,y)) = x
+            n(x,u(x,y)) = x
+            f(x,f(y,z)) = f(f(x,y),z)
+            f(1,x) = x
+            f(i(x),x) = 1
+            i(1) = 1
+            i(i(x)) = x
+            i(f(x,y)) = f(i(y),i(x))
+            f(x,u(y,z)) = u(f(x,y),f(x,z))
+            f(x,n(y,z)) = n(f(x,y),f(x,z))
+            f(u(y,z),x) = u(f(y,x),f(z,x))
+            f(n(y,z),x) = n(f(y,x),f(z,x))
+            pp(x) = u(x,1)
+            np(x) = n(x,1)
+            u(x,n(y,z)) = n(u(x,y),u(x,z))
+            n(x,u(y,z)) = u(n(x,y),n(x,z))
+
+CONCLUSION  a = f(pp(a),np(a))

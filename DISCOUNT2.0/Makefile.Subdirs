@@ -1,0 +1,13 @@
+#===============================================================================#
+# Makefile.Subdirs dient nur dazu, dass make auch in den
+# Subverzeichnissen V_DISCOUNT und V_PCL aufgerufen werden kann. Es
+# wird per link dort als "Makefile" eingetragen.
+#
+# Stephan Schulz, 31.12.1996
+#
+#===============================================================================
+
+repair:
+	cd ..; make
+
+

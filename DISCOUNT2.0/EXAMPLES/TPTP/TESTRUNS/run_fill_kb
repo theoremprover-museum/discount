@@ -1,0 +1,43 @@
+#!/usr/bin/tcsh -f
+
+if( $1 == "" ) then
+    set cpulimit = 150
+    echo "Using default cpu limit ("$cpulimit "seconds)"
+else
+    set cpulimit = $1
+    echo "Using cpu limit "$cpulimit "seconds"
+endif
+
+if( $2 == "" ) then
+    set kb = "KNOWLEDGE"
+    echo "Using default KB ("$kb")"
+else
+    set kb = $2
+    echo "Using KB "$kb""
+endif
+
+set PROBLEMS = "../PROBLEMS/*.dsc"
+
+kb_create -a $kb
+
+foreach file ( $PROBLEMS )
+   set name = `basename $file`
+   if( { ls $name } ) then
+      echo $name already processed
+   else
+      ln -s $file
+      echo "$name"
+      limit cputime $cpulimit
+      if( { discount -s $file } ) then
+         unlimit
+         echo "Erfolg! "
+         pcl -s -F revert $file
+         kb_insert -S -G -k $kb $file.xtr
+         rm $file.xtr
+      else
+         unlimit
+         echo "Misserfolg! "
+      endif
+      rm $file.0
+   endif
+end

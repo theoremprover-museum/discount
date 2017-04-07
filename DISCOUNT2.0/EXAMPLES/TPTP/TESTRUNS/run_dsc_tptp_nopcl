@@ -1,0 +1,73 @@
+#!/usr/bin/tcsh -f
+
+if( $2 == "" ) then
+    set options = "$1"
+    set cpulimit = 150
+    echo "Using options" \"$options\"" and default cpu limit ("$cpulimit "seconds)"
+else
+    set options = "$1"
+    set cpulimit = "$2"
+    echo "Using options" \"$options\"" and cpu limit "$cpulimit "seconds"
+endif
+
+if( $3 == "" ) then
+    echo "Running on complete example set"
+else
+    echo "Running on domain $3"
+endif
+
+if( $4 == "" ) then
+    echo "No special KB-selection"
+    set kb = ""
+else
+    echo "Computing KB dynamically from problem name"
+    set kb = "_$4" 
+endif
+
+echo Hi $kb
+
+set PROBLEMS = "../PROBLEMS/$3*.dsc"
+
+set store_dir = `echo "XTR_$options $cpulimit$4" | tr ' '  '_'`
+set store_file = $store_dir/PROTOCOL
+if( -f $store_file ) then
+    echo Test run exist, reusing $store_file
+    echo Remove and restart if fresh results are desired
+    echo "%%% Newstart" >> $store_file
+else
+    mkdir $store_dir
+    echo "%%% " $options > $store_dir/PROTOCOL
+endif
+
+foreach file ( $PROBLEMS  )
+    if( { grep `basename $file` $store_file } ) then
+	echo $file already processed
+    else
+	echo $file
+	ln -s $file
+	set name = `basename $file`
+	set dom = `echo $name | cut -c1-3`
+	if( { grep "PARAMOD" $name } ) then
+	    set PARA = "E"
+	else
+	    set PARA = "A"
+	endif
+	if( $kb != "" ) then
+	    set kb = "-K KNOWLEDGE_$dom"
+	endif
+	limit cputime $cpulimit 
+        discount -s $options $kb $name
+        unlimit
+	if( { grep "Laufzeit" $name\.0 } ) then
+	    set time = `gawk '/time used:/ {sum += $4} END{print sum}' $name\.0`
+	    if( { grep "Das Ziel konnte bewiesen werden." $name\.0 } ) then
+		echo $name "T" $PARA $time >> $store_file
+	    else
+		echo $name "N" $PARA $time >> $store_file
+	    endif
+	else
+	    echo $name "F" $PARA "max" >> $store_file
+	endif
+	rm ./$name*
+    endif
+end

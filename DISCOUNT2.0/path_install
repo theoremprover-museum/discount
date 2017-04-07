@@ -1,0 +1,14 @@
+#!/bin/sh
+
+awk ' BEGIN {}
+    { if($1 == "DATA_DIR") {           printf("DATA_DIR       %s\n", p)}
+      else if( $1 == "EXPERT_DIR")  {    printf("EXPERT_DIR     %s/EXPERT\n", p)}
+      else if( $1 == "REFEREE_DIR") {    printf("REFEREE_DIR    %s/REFEREE\n", p)}
+      else if( $1 == "DOMAIN_DIR")  {    printf("DOMAIN_DIR     %s/DOMAIN\n", p)}
+      else if( $1 == "KNOWLEDGE_DIR")  {    printf("KNOWLEDGE_DIR     %s/KNOWLEDGE\n", p)}
+      else if( $1 == "SUPERVISOR_FILE")  {    printf("SUPERVISOR_FILE     %s/PLAN/std_plan.CFG\n", p)}
+      else { printf("%s\n", $0) } }
+    END { }  ' p=`pwd` CONFIG/global.cfg > CONFIG/global2.cfg
+
+rm CONFIG/global.cfg
+mv CONFIG/global2.cfg CONFIG/global.cfg

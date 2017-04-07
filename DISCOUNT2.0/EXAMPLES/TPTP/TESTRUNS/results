@@ -1,0 +1,8 @@
+#!/usr/bin/tcsh -f
+
+set TESTS = "XTR_*/PROTOCOL"
+
+foreach file ( $TESTS )
+   evaluate $file
+   echo ""
+end

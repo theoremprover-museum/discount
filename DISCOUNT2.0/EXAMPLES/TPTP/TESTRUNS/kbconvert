@@ -1,0 +1,14 @@
+#!/usr/bin/tcsh -f
+
+if( $1 == "" || $2 == "" ) then
+   echo "Usage: convert OLD_KNOWLEDGE_BASE NEW_KNOWLEDGE_BASE"
+   exit
+endif
+
+set PROBLEMS = "$1/EXAMPLES/*.xtr"
+
+kb_create -a $2
+
+foreach file ( $PROBLEMS )
+   kb_insert -S -G -k $2 $file
+end

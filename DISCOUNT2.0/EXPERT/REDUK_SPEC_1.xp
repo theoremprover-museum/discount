@@ -1,0 +1,11 @@
+EXPERTENNAME                 REDUK_SPEC_1
+
+EXP_OR_SPEC                  S
+
+CP_FUNKTION                  REDUCE_CP   
+			     START     100
+			     REDUCE      1    # 0 oder 1
+			     SUBSUM      1    # 0 oder 1
+			     DOUBLE      1    # 0 oder 1
+
+CG_FUNKTION                  NONE

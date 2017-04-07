@@ -1,0 +1,51 @@
+EXPERTENNAME                 GOALSIM
+
+EXP_OR_SPEC                  E
+
+CP_FUNKTION                  GOALSIM  
+			     RED_INST     : 0,1  ; 0
+			     MIND_ANZ_FKT : 0,5  ; 1
+			     MIND_ANZ_VAR : 0,5  ; 1
+			     NOMATCH      : 0,1000  ; 100
+			     DOUBLEMATCH  : 0,8  ; 1
+			     SINGLEMATCH  : 0,100  ; 5
+
+CG_FUNKTION                  DIFF_GOAL
+                             F_GEWICHT    : 1,5 ; 2
+                             V_GEWICHT    : 1,5 ; 1
+                             MIN_STRUCT   : 0,5 ; 4
+
+FAIRNESS                     Y
+
+GUTE_GUTACHTER               (STATISTIC, ,1)
+
+GUTE_DOMAENEN                (AUSSAGENLOGIK, 0.9)
+
+ROBUSTHEIT                   0.3
+
+WISSENSANTEIL                0.7
+
+BEWEISPHASE                  ANFANG  0.2
+                             MITTE   0.5
+                             ENDE    1
+
+ZYKLUSDAUER                  ANFANG  (1,10)
+                             MITTE   (1,10)
+                             ENDE    (1,10)
+
+AEHNLICHE_EXP
+
+NACHFOLGER                   (GOALSIM, RED_INST     : 0,1  ; 0
+				       MIND_ANZ_FKT : 0,5  ; 1
+				       MIND_ANZ_VAR : 0,5  ; 1
+				       NOMATCH      : 0,1000  ; 100
+				       DOUBLEMATCH  : 0,8  ; 1
+				       SINGLEMATCH  : 0,100  ; 5, 0.5)
+
+UNVERTRAEGL
+
+MOEGL_TEAMEXP
+
+PROZEDUR    xyz
+
+BESCHREIBUNG q	ywetryqt2eyrtqwyetryqtwey
